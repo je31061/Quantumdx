@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/industry-c3a2aa86-a570-4e8f-acec-78da32f6bf80/styles.css">
+  <script src="_ds/industry-c3a2aa86-a570-4e8f-acec-78da32f6bf80/_ds_bundle.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-body: Barlow, "Noto Sans KR", system-ui, sans-serif;
+      --font-heading: "Barlow Condensed", "Noto Sans KR", sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); text-wrap: pretty; word-break: keep-all; }
+    h1, h2, h3 { text-wrap: balance; }
+    a { color: var(--color-accent-700); text-decoration: none; }
+    a:hover { color: var(--color-accent-600); }
+    @keyframes qdx-drift { 0% { transform: translateX(0); } 50% { transform: translateX(-40px); } 100% { transform: translateX(0); } }
+    @keyframes qdx-float { 0% { transform: translateY(0); opacity: .5; } 50% { transform: translateY(-14px); opacity: 1; } 100% { transform: translateY(0); opacity: .5; } }
+  </style>
+</helmet>
+
+<nav class="nav" style="position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--color-bg) 92%, transparent); backdrop-filter: blur(8px); padding-inline: max(clamp(20px, 5vw, 72px), calc((100% - 1200px) / 2 + clamp(20px, 5vw, 72px)))">
+  <span class="nav-brand" style="letter-spacing: 0.12em">{{ brandEn }}</span>
+  <a href="#philosophy" style="white-space: nowrap">Approach</a>
+  <a href="#approach" style="white-space: nowrap">Framework</a>
+  <a href="#deliverables" style="white-space: nowrap">Deliverables</a>
+  <a href="#work" style="white-space: nowrap">Work</a>
+  <a href="#offerings" style="white-space: nowrap">Offerings</a>
+  <a href="#perspective" style="white-space: nowrap">Perspective</a>
+  <a href="#insights" style="white-space: nowrap">Insights</a>
+  <a href="Report.dc.html" style="white-space: nowrap">Report</a>
+  <a href="#contact" style="white-space: nowrap">Contact</a>
+  <button type="button" class="btn btn-primary" onClick="{{ goContact }}">프로젝트 문의</button>
+</nav>
+
+<!-- ① Hero -->
+<header style="position: relative; overflow: hidden; padding: clamp(96px, 14vh, 160px) clamp(20px, 5vw, 72px) clamp(72px, 10vh, 120px)">
+  <sc-if value="{{ heroMotion }}" hint-placeholder-val="{{ true }}">
+    <canvas ref="{{ heroCanvasRef }}" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none"></canvas>
+  </sc-if>
+  <div style="position: relative; max-width: 1200px; margin: 0 auto">
+    <h1 style="margin: 0; font-family: var(--font-heading); font-weight: 350; font-size: clamp(34px, 4.6vw, 64px); line-height: 1.28; letter-spacing: -0.01em; max-width: 21ch; width: 941px; height: 549px"><b>인간의 통찰, AI의 정밀함.<br>하이브리드 인텔리전스로<br>산업의 미래를 다시 설계합니다.</b></h1>
+    <p style="margin: 24px 0 0; font-size: clamp(14px, 1.2vw, 16px); line-height: 1.7; font-weight: 500; color: var(--color-accent-700); max-width: 58ch">컨텀DX는 15년 이상의 엔터프라이즈 시스템(ERP·PLM·MES) 구축과 전환 실무에서 태어난 컨설팅입니다.</p>
+    <p style="margin: 32px 0 0; font-size: clamp(15px, 1.4vw, 18px); line-height: 1.75; color: color-mix(in srgb, var(--color-text) 78%, transparent); max-width: 56ch">컨텀DX는 전략 수립부터 코드 구현까지, 기업의 체질을 AI 중심으로 전환하는 산업 AX/DX 전문 컨설팅 파트너입니다.</p>
+    <div style="display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: 40px">
+      <button type="button" class="btn btn-primary" onClick="{{ goContact }}">프로젝트 문의</button>
+      <button type="button" class="btn btn-ghost" onClick="{{ goApproach }}">우리의 접근법</button>
+    </div>
+  </div>
+</header>
+
+<!-- ② Philosophy -->
+<section id="philosophy" data-reveal="true" style="padding: clamp(72px, 10vh, 120px) clamp(20px, 5vw, 72px)">
+  <div style="max-width: 1200px; margin: 0 auto">
+    <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin-bottom: 12px">01 · Our Approach — Hybrid Intelligence</span>
+    <hr style="height: 1px; border: 0; margin: 0 0 40px; background: var(--color-divider)">
+    <h2 style="margin: 0 0 56px; font-family: var(--font-heading); font-weight: 350; font-size: clamp(26px, 3vw, 40px); line-height: 1.35; max-width: 24ch">기술과 사람이 함께 일할 때,<br>더 멀리 봅니다.</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: clamp(24px, 3vw, 48px)">
+      <div style="border-top: 1px solid var(--color-divider); padding-top: 24px">
+        <span style="font-family: var(--font-heading); font-size: 15px; letter-spacing: 0.08em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">/ 01</span>
+        <h3 style="margin: 16px 0 12px; font-size: 19px; font-weight: 600; line-height: 1.4">데이터와 AI의 예측력</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 74%, transparent)">머신러닝과 데이터 과학이 제공하는 정밀한 예측과 최적화. 감이 아닌 근거로 의사결정의 기준을 바꿉니다.</p>
+      </div>
+      <div style="border-top: 1px solid var(--color-divider); padding-top: 24px">
+        <span style="font-family: var(--font-heading); font-size: 15px; letter-spacing: 0.08em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">/ 02</span>
+        <h3 style="margin: 16px 0 12px; font-size: 19px; font-weight: 600; line-height: 1.4">산업 도메인에 대한 깊은 이해</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 74%, transparent)">제조·에너지·물류의 현장 공정과 시스템을 아는 컨설턴트가 설계합니다. 범용 솔루션이 아닌, 산업의 언어로 만든 답입니다.</p>
+      </div>
+      <div style="border-top: 1px solid var(--color-divider); padding-top: 24px">
+        <span style="font-family: var(--font-heading); font-size: 15px; letter-spacing: 0.08em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">/ 03</span>
+        <h3 style="margin: 16px 0 12px; font-size: 19px; font-weight: 600; line-height: 1.4">조직과 사람에 대한 통찰</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 74%, transparent)">기술은 조직이 받아들일 때 성과가 됩니다. 일하는 방식과 구조까지 함께 바꾸는 것이 하이브리드 인텔리전스입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ③ What We Are Not / What We Are — inverted -->
+<section data-reveal="true" style="background: var(--color-accent-900); color: var(--color-bg); padding: clamp(72px, 10vh, 120px) clamp(20px, 5vw, 72px)">
+  <div style="max-width: 1200px; margin: 0 auto">
+    <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-300); margin-bottom: 12px">02 · What We Are Not / What We Are</span>
+    <hr style="height: 1px; border: 0; margin: 0 0 40px; background: color-mix(in srgb, var(--color-bg) 25%, transparent)">
+    <h2 style="margin: 0 0 64px; font-family: var(--font-heading); font-weight: 350; font-size: clamp(26px, 3vw, 40px); line-height: 1.35; max-width: 26ch">PoC로 끝나는 프로젝트는<br>하지 않습니다.</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(40px, 5vw, 96px)">
+      <div>
+        <h3 style="margin: 0 0 28px; font-family: var(--font-heading); font-size: 17px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; color: color-mix(in srgb, var(--color-bg) 55%, transparent)">우리가 지양하는 것</h3>
+        <ul style="list-style: none; margin: 0; padding: 0; display: grid; gap: 20px">
+          <li style="border-top: 1px solid color-mix(in srgb, var(--color-bg) 18%, transparent); padding-top: 20px; font-size: 17px; line-height: 1.6; color: color-mix(in srgb, var(--color-bg) 62%, transparent)">일회성 PoC로 끝나는 실험</li>
+          <li style="border-top: 1px solid color-mix(in srgb, var(--color-bg) 18%, transparent); padding-top: 20px; font-size: 17px; line-height: 1.6; color: color-mix(in srgb, var(--color-bg) 62%, transparent)">보고서로 끝나는 전략</li>
+          <li style="border-top: 1px solid color-mix(in srgb, var(--color-bg) 18%, transparent); padding-top: 20px; font-size: 17px; line-height: 1.6; color: color-mix(in srgb, var(--color-bg) 62%, transparent)">도입만 하고 방치되는 챗봇</li>
+          <li style="border-top: 1px solid color-mix(in srgb, var(--color-bg) 18%, transparent); padding-top: 20px; font-size: 17px; line-height: 1.6; color: color-mix(in srgb, var(--color-bg) 62%, transparent)">현업과 분리된 기술 실험</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="margin: 0 0 28px; font-family: var(--font-heading); font-size: 17px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; color: var(--color-accent-300)">우리가 지향하는 것</h3>
+        <ul style="list-style: none; margin: 0; padding: 0; display: grid; gap: 20px">
+          <li style="border-top: 1px solid var(--color-accent-400); padding-top: 20px; font-size: 17px; line-height: 1.6; font-weight: 500">프로덕션에서 작동하는 AI</li>
+          <li style="border-top: 1px solid var(--color-accent-400); padding-top: 20px; font-size: 17px; line-height: 1.6; font-weight: 500">전략과 실행이 하나인 팀</li>
+          <li style="border-top: 1px solid var(--color-accent-400); padding-top: 20px; font-size: 17px; line-height: 1.6; font-weight: 500">거버넌스와 조직 변화까지 포함한 전사 전환</li>
+          <li style="border-top: 1px solid var(--color-accent-400); padding-top: 20px; font-size: 17px; line-height: 1.6; font-weight: 500">기업 내부에 내재화되는 역량</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ④ How We Work -->
+<section id="approach" data-reveal="true" style="padding: clamp(72px, 10vh, 120px) clamp(20px, 5vw, 72px)">
+  <div style="max-width: 1200px; margin: 0 auto">
+    <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin-bottom: 12px">03 · Methodology — Strategy-to-Code Framework™</span>
+    <hr style="height: 1px; border: 0; margin: 0 0 40px; background: var(--color-divider)">
+    <h2 style="margin: 0 0 20px; font-family: var(--font-heading); font-weight: 350; font-size: clamp(26px, 3vw, 40px); line-height: 1.35">전략에서 코드까지, 하나의 팀이 끝까지 갑니다.</h2>
+    <p style="margin: 0 0 56px; font-size: 16px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 74%, transparent); max-width: 60ch">진단에서 내재화까지 네 단계. 각 단계의 산출물은 이사회 보고 수준을 기준으로 합니다.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: clamp(28px, 3vw, 44px)">
+      <div class="blueprint" style="position: relative; border: 1px solid var(--color-divider); padding: 28px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <span style="font-family: var(--font-heading); font-size: 28px; font-weight: 500; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">01</span>
+        <h3 style="margin: 20px 0 6px; font-family: var(--font-heading); font-size: 21px; font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase; line-height: 1.3">Diagnose &amp; Strategize</h3>
+        <span style="display: block; font-size: 13px; font-weight: 600; color: var(--color-accent-700); margin-bottom: 14px">진단과 전략</span>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 74%, transparent)">C-level 관점의 AX/DX 진단과 전환 로드맵 수립. 이사회 보고 수준의 전략 산출물.</p>
+        <p style="margin: 14px 0 0; font-size: 13px; line-height: 1.6; font-weight: 600; color: var(--color-accent-700)">산출물 — 전환 전략 보고서 · 우선순위 로드맵</p>
+      </div>
+      <div class="blueprint" style="position: relative; border: 1px solid var(--color-divider); padding: 28px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <span style="font-family: var(--font-heading); font-size: 28px; font-weight: 500; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">02</span>
+        <h3 style="margin: 20px 0 6px; font-family: var(--font-heading); font-size: 21px; font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase; line-height: 1.3">Architect &amp; Govern</h3>
+        <span style="display: block; font-size: 13px; font-weight: 600; color: var(--color-accent-700); margin-bottom: 14px">아키텍처와 거버넌스</span>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 74%, transparent)">데이터 아키텍처 설계와 데이터 거버넌스 체계 수립.</p>
+        <p style="margin: 14px 0 0; font-size: 13px; line-height: 1.6; font-weight: 600; color: var(--color-accent-700)">산출물 — 데이터 아키텍처 설계서 · 거버넌스 체계</p>
+      </div>
+      <div class="blueprint" style="position: relative; border: 1px solid var(--color-divider); padding: 28px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <span style="font-family: var(--font-heading); font-size: 28px; font-weight: 500; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">03</span>
+        <h3 style="margin: 20px 0 6px; font-family: var(--font-heading); font-size: 21px; font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase; line-height: 1.3">Build &amp; Deploy</h3>
+        <span style="display: block; font-size: 13px; font-weight: 600; color: var(--color-accent-700); margin-bottom: 14px">구축과 배포</span>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 74%, transparent)">데이터 과학자·ML 엔지니어·데이터 엔지니어가 맞춤형 AI 모델과 파이프라인을 구축하고 프로덕션에 배포.</p>
+        <p style="margin: 14px 0 0; font-size: 13px; line-height: 1.6; font-weight: 600; color: var(--color-accent-700)">산출물 — 작동하는 AI 모델·파이프라인 · 프로덕션 배포</p>
+      </div>
+      <div class="blueprint" style="position: relative; border: 1px solid var(--color-divider); padding: 28px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <span style="font-family: var(--font-heading); font-size: 28px; font-weight: 500; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">04</span>
+        <h3 style="margin: 20px 0 6px; font-family: var(--font-heading); font-size: 21px; font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase; line-height: 1.3">Transform &amp; Embed</h3>
+        <span style="display: block; font-size: 13px; font-weight: 600; color: var(--color-accent-700); margin-bottom: 14px">전환과 내재화</span>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 74%, transparent)">직원 재교육, 조직 구조 재설계, 운영 체계 이관으로 역량을 기업 내부에 내재화.</p>
+        <p style="margin: 14px 0 0; font-size: 13px; line-height: 1.6; font-weight: 600; color: var(--color-accent-700)">산출물 — 재교육 커리큘럼 · 조직 설계안 · 운영 이관</p>
+      </div>
+    </div>
+    <p style="margin: 40px 0 0; font-size: 15.5px; font-weight: 500; color: color-mix(in srgb, var(--color-text) 80%, transparent)">각 단계는 문서가 아니라 산출물로 끝납니다.</p>
+  </div>
+</section>
+
+<!-- ④-b Deliverables Gallery -->
+<section id="deliverables" data-reveal="true" style="padding: clamp(72px, 10vh, 120px) clamp(20px, 5vw, 72px)">
+  <div style="max-width: 1200px; margin: 0 auto">
+    <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin-bottom: 12px">04 · Deliverables — 산출물 갤러리</span>
+    <hr style="height: 1px; border: 0; margin: 0 0 40px; background: var(--color-divider)">
+    <h2 style="margin: 0 0 56px; font-family: var(--font-heading); font-weight: 350; font-size: clamp(26px, 3vw, 40px); line-height: 1.35; max-width: 26ch">우리의 산출물이 우리의 증명입니다.</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(28px, 3vw, 44px)">
+      <div class="blueprint" style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div aria-hidden="true" style="background: #ffffff; border: 1px solid var(--color-divider); padding: 18px 16px; height: 140px; display: flex; flex-direction: column; gap: 7px; margin-bottom: 22px"><div style="height: 8px; width: 58%; background: color-mix(in srgb, var(--color-text) 82%, transparent)"></div><div style="height: 4px; width: 90%; background: color-mix(in srgb, var(--color-text) 26%, transparent)"></div><div style="height: 4px; width: 84%; background: color-mix(in srgb, var(--color-text) 26%, transparent)"></div><div style="height: 4px; width: 72%; background: color-mix(in srgb, var(--color-text) 26%, transparent)"></div><div style="height: 4px; width: 88%; background: color-mix(in srgb, var(--color-text) 26%, transparent)"></div><div style="height: 4px; width: 46%; background: color-mix(in srgb, var(--color-text) 26%, transparent)"></div></div>
+        <h3 style="margin: 0 0 8px; font-size: 16.5px; font-weight: 600; line-height: 1.4">AX 전환 전략 보고서</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.65; color: color-mix(in srgb, var(--color-text) 70%, transparent)">이사회 의결 수준의 전환 로드맵입니다.</p>
+      </div>
+      <div class="blueprint" style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div aria-hidden="true" style="background: #ffffff; border: 1px solid var(--color-divider); padding: 18px 16px; height: 140px; display: flex; flex-direction: column; gap: 7px; margin-bottom: 22px"><div style="height: 8px; width: 64%; background: color-mix(in srgb, var(--color-text) 82%, transparent)"></div><div style="height: 4px; width: 86%; background: color-mix(in srgb, var(--color-text) 26%, transparent)"></div><div style="display: flex; gap: 7px"><div style="height: 4px; flex: 1; background: color-mix(in srgb, var(--color-text) 26%, transparent)"></div><div style="height: 4px; flex: 1; background: color-mix(in srgb, var(--color-text) 26%, transparent)"></div></div><div style="height: 4px; width: 78%; background: color-mix(in srgb, var(--color-text) 26%, transparent)"></div><div style="height: 4px; width: 90%; background: color-mix(in srgb, var(--color-text) 26%, transparent)"></div><div style="height: 4px; width: 40%; background: color-mix(in srgb, var(--color-text) 26%, transparent)"></div></div>
+        <h3 style="margin: 0 0 8px; font-size: 16.5px; font-weight: 600; line-height: 1.4">데이터 거버넌스 체계서</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.65; color: color-mix(in srgb, var(--color-text) 70%, transparent)">정책·조직·표준을 하나의 체계로 만듭니다.</p>
+      </div>
+      <div class="blueprint" style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div aria-hidden="true" style="background: #ffffff; border: 1px solid var(--color-divider); padding: 18px 16px; height: 140px; display: flex; flex-direction: column; gap: 7px; margin-bottom: 22px"><div style="height: 8px; width: 52%; background: color-mix(in srgb, var(--color-text) 82%, transparent)"></div><div style="display: flex; gap: 7px; margin-top: 4px"><div style="width: 34px; height: 22px; border: 1px solid color-mix(in srgb, var(--color-text) 45%, transparent)"></div><div style="width: 34px; height: 22px; border: 1px solid color-mix(in srgb, var(--color-text) 45%, transparent)"></div><div style="width: 34px; height: 22px; border: 1px solid color-mix(in srgb, var(--color-text) 45%, transparent)"></div></div><div style="height: 4px; width: 82%; background: color-mix(in srgb, var(--color-text) 26%, transparent)"></div><div style="height: 4px; width: 66%; background: color-mix(in srgb, var(--color-text) 26%, transparent)"></div></div>
+        <h3 style="margin: 0 0 8px; font-size: 16.5px; font-weight: 600; line-height: 1.4">AI 아키텍처 설계서</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.65; color: color-mix(in srgb, var(--color-text) 70%, transparent)">모델·파이프라인·인프라 전체 청사진입니다.</p>
+      </div>
+      <div class="blueprint" style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div aria-hidden="true" style="background: #ffffff; border: 1px solid var(--color-divider); padding: 18px 16px; height: 140px; display: flex; flex-direction: column; gap: 7px; margin-bottom: 22px"><div style="height: 8px; width: 40%; background: color-mix(in srgb, var(--color-text) 82%, transparent)"></div><div style="height: 4px; width: 70%; background: color-mix(in srgb, var(--color-text) 26%, transparent)"></div><div style="height: 4px; width: 58%; background: color-mix(in srgb, var(--color-text) 26%, transparent); margin-left: 14px"></div><div style="height: 4px; width: 64%; background: color-mix(in srgb, var(--color-text) 26%, transparent); margin-left: 14px"></div><div style="height: 4px; width: 44%; background: color-mix(in srgb, var(--color-text) 26%, transparent); margin-left: 28px"></div><div style="height: 4px; width: 52%; background: color-mix(in srgb, var(--color-text) 26%, transparent)"></div></div>
+        <h3 style="margin: 0 0 8px; font-size: 16.5px; font-weight: 600; line-height: 1.4">프로덕션 배포 코드</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.65; color: color-mix(in srgb, var(--color-text) 70%, transparent)">문서가 아닌, 작동하는 시스템입니다.</p>
+      </div>
+      <div class="blueprint" style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div aria-hidden="true" style="background: #ffffff; border: 1px solid var(--color-divider); padding: 18px 16px; height: 140px; display: flex; flex-direction: column; gap: 7px; margin-bottom: 22px"><div style="height: 8px; width: 60%; background: color-mix(in srgb, var(--color-text) 82%, transparent)"></div><div style="height: 4px; width: 88%; background: color-mix(in srgb, var(--color-text) 26%, transparent)"></div><div style="height: 4px; width: 84%; background: color-mix(in srgb, var(--color-text) 26%, transparent)"></div><div style="display: flex; gap: 7px; align-items: flex-end; margin-top: 2px"><div style="width: 5px; height: 14px; background: color-mix(in srgb, var(--color-text) 40%, transparent)"></div><div style="width: 5px; height: 20px; background: color-mix(in srgb, var(--color-text) 40%, transparent)"></div><div style="width: 5px; height: 26px; background: color-mix(in srgb, var(--color-text) 40%, transparent)"></div></div></div>
+        <h3 style="margin: 0 0 8px; font-size: 16.5px; font-weight: 600; line-height: 1.4">역량 진단·재교육 커리큘럼</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.65; color: color-mix(in srgb, var(--color-text) 70%, transparent)">조직에 내재화되는 역량을 설계합니다.</p>
+      </div>
+      <div class="blueprint" style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div aria-hidden="true" style="background: #ffffff; border: 1px solid var(--color-divider); padding: 18px 16px; height: 140px; display: flex; flex-direction: column; gap: 7px; margin-bottom: 22px"><div style="height: 8px; width: 54%; background: color-mix(in srgb, var(--color-text) 82%, transparent)"></div><div style="display: flex; gap: 7px; align-items: flex-end; height: 44px; margin-top: 4px"><div style="width: 16px; height: 40%; background: color-mix(in srgb, var(--color-text) 35%, transparent)"></div><div style="width: 16px; height: 62%; background: color-mix(in srgb, var(--color-text) 35%, transparent)"></div><div style="width: 16px; height: 85%; background: color-mix(in srgb, var(--color-text) 55%, transparent)"></div><div style="width: 16px; height: 100%; background: color-mix(in srgb, var(--color-text) 75%, transparent)"></div></div><div style="height: 4px; width: 76%; background: color-mix(in srgb, var(--color-text) 26%, transparent)"></div></div>
+        <h3 style="margin: 0 0 8px; font-size: 16.5px; font-weight: 600; line-height: 1.4">ROI·가치 실현 분석</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.65; color: color-mix(in srgb, var(--color-text) 70%, transparent)">재무 언어로 성과를 증명합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ④-c Selected Work -->
+<section id="work" data-reveal="true" style="background: var(--color-neutral-100); padding: clamp(72px, 10vh, 120px) clamp(20px, 5vw, 72px)">
+  <div style="max-width: 1200px; margin: 0 auto">
+    <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin-bottom: 12px">05 · Selected Work — Automotive Parts · Manufacturing</span>
+    <hr style="height: 1px; border: 0; margin: 0 0 64px; background: var(--color-divider)">
+    <div style="max-width: 720px; margin: 0 auto">
+      <h2 style="margin: 0 0 20px; font-family: var(--font-heading); font-weight: 350; font-size: clamp(32px, 4.2vw, 56px); line-height: 1.25">이익이 나는 회사가<br>가장 위험하다</h2>
+      <p style="margin: 0 0 72px; font-size: 16px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 62%, transparent)">인천의 한 자동차 부품 제조사, AI가 아니라 순서를 처방한 이야기</p>
+      <div style="display: flex; align-items: baseline; gap: 20px; border-top: 1px solid var(--color-divider); padding-top: 20px; margin-bottom: 24px">
+        <span style="font-family: var(--font-heading); font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-accent-700)">1막</span>
+        <h3 style="margin: 0; font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.4">멈추지 않는 공장, 멈춰 있는 회사</h3>
+      </div>
+      <p style="margin: 0 0 24px; font-size: 16px; line-height: 1.9; color: color-mix(in srgb, var(--color-text) 80%, transparent)">인천의 한 자동차 부품 제조사. 라인은 돌아가고 있었고, 이익도 나고 있었다. 대표는 디지털 전환이 필요하다는 것을 알고 있었다. 회사 소개서에도, 대외 홍보에도 &lsquo;스마트&rsquo;라는 단어가 들어갔다. 그러나 정작 투자 앞에서는 늘 같은 질문이 돌아왔다.</p>
+      <blockquote style="margin: 0 0 24px; padding: 4px 0 4px 24px; border-left: 2px solid var(--color-accent-900); font-family: var(--font-heading); font-weight: 400; font-size: 22px; line-height: 1.5">&ldquo;정부 지원은 받을 수 있습니까?&rdquo;</blockquote>
+      <p style="margin: 0 0 64px; font-size: 16px; line-height: 1.9; color: color-mix(in srgb, var(--color-text) 80%, transparent)">자동화 설비조차 지원사업 없이는 도입한 적이 없는 회사였다. 실패의 부담은 컸고, 이익은 아직 나고 있었다. 서두를 이유가 없어 보였다.</p>
+      <div style="display: flex; align-items: baseline; gap: 20px; border-top: 1px solid var(--color-divider); padding-top: 20px; margin-bottom: 24px">
+        <span style="font-family: var(--font-heading); font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-accent-700)">2막</span>
+        <h3 style="margin: 0; font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.4">네 개의 증상, 하나의 병</h3>
+      </div>
+      <p style="margin: 0 0 24px; font-size: 16px; line-height: 1.9; color: color-mix(in srgb, var(--color-text) 80%, transparent)">현장에서 확인한 것은 AI 이전의 문제들이었다. 메일 서버는 수시로 다운되고 용량은 늘 부족했다. 협업 프로세스는 없었다 — 일은 전화와 구두, 개인 엑셀로 흘렀다. 부서 사이의 벽은 높았고, 정보는 흐르지 않았다. 그리고 프로세스 혁신이라는 말 자체가 조직에 낯설었다. 그래도 이익은 나고 있었기 때문이다.</p>
+      <p style="margin: 0 0 24px; font-size: 16px; line-height: 1.9; color: color-mix(in srgb, var(--color-text) 80%, transparent)">이 회사에 필요한 것은 AI가 아니었다. 진단 결과는 한 문장으로 보고되었다.</p>
+      <blockquote style="margin: 0 0 64px; padding: 4px 0 4px 24px; border-left: 2px solid var(--color-accent-900); font-family: var(--font-heading); font-weight: 400; font-size: 22px; line-height: 1.55">&ldquo;지금 AI를 도입하면 반드시 실패합니다. 그리고 그 실패는 &lsquo;역시 우리는 안 된다&rsquo;는 확신만 남길 것입니다. 순서가 있습니다.&rdquo;</blockquote>
+      <div style="display: flex; align-items: baseline; gap: 20px; border-top: 1px solid var(--color-divider); padding-top: 20px; margin-bottom: 32px">
+        <span style="font-family: var(--font-heading); font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-accent-700)">3막</span>
+        <h3 style="margin: 0; font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.4">가장 작은 것부터, 그러나 순서대로</h3>
+      </div>
+      <div style="margin: 0 0 64px; display: grid; gap: 0">
+        <div style="display: grid; grid-template-columns: 44px 1fr; gap: 20px; border-top: 1px solid var(--color-divider); padding: 20px 0">
+          <span style="font-family: var(--font-heading); font-size: 26px; font-weight: 350; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">1</span>
+          <div>
+            <h4 style="margin: 0 0 8px; font-size: 16px; font-weight: 600">일하는 기반부터 — 매일 쓰는 도구의 재구축</h4>
+            <p style="margin: 0; font-size: 14.5px; line-height: 1.75; color: color-mix(in srgb, var(--color-text) 68%, transparent)">세부 문안 확정 예정.</p>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 44px 1fr; gap: 20px; border-top: 1px solid var(--color-divider); padding: 20px 0">
+          <span style="font-family: var(--font-heading); font-size: 26px; font-weight: 350; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">2</span>
+          <div>
+            <h4 style="margin: 0 0 8px; font-size: 16px; font-weight: 600">프로세스의 가시화 — 업무 흐름을 처음으로 그리다</h4>
+            <p style="margin: 0; font-size: 14.5px; line-height: 1.75; color: color-mix(in srgb, var(--color-text) 68%, transparent)">세부 문안 확정 예정.</p>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 44px 1fr; gap: 20px; border-top: 1px solid var(--color-divider); padding: 20px 0">
+          <span style="font-family: var(--font-heading); font-size: 26px; font-weight: 350; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">3</span>
+          <div>
+            <h4 style="margin: 0 0 8px; font-size: 16px; font-weight: 600">작은 성공의 설계 — 낮은 리스크, 눈에 보이는 개선부터</h4>
+            <p style="margin: 0; font-size: 14.5px; line-height: 1.75; color: color-mix(in srgb, var(--color-text) 68%, transparent)">세부 문안 확정 예정.</p>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 44px 1fr; gap: 20px; border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); padding: 20px 0">
+          <span style="font-family: var(--font-heading); font-size: 26px; font-weight: 350; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">4</span>
+          <div>
+            <h4 style="margin: 0 0 8px; font-size: 16px; font-weight: 600">정부 자원의 번역 — 지원사업을 로드맵에 정렬하다</h4>
+            <p style="margin: 0; font-size: 14.5px; line-height: 1.75; color: color-mix(in srgb, var(--color-text) 68%, transparent)">세부 문안 확정 예정.</p>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 20px; border-top: 1px solid var(--color-divider); padding-top: 20px; margin-bottom: 24px">
+        <span style="font-family: var(--font-heading); font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-accent-700)">4막</span>
+        <h3 style="margin: 0; font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 1.4">무엇이 달라졌는가</h3>
+      </div>
+      <p style="margin: 0 0 24px; font-size: 16px; line-height: 1.9; color: color-mix(in srgb, var(--color-text) 80%, transparent)">대표의 질문이 바뀌었다.</p>
+      <blockquote style="margin: 0 0 64px; padding: 4px 0 4px 24px; border-left: 2px solid var(--color-accent-900); font-family: var(--font-heading); font-weight: 400; font-size: 22px; line-height: 1.55">&ldquo;정부 지원 받을 수 있나?&rdquo;에서 — &ldquo;다음 단계는 뭔가?&rdquo;로.</blockquote>
+    </div>
+    <div style="background: var(--color-accent-900); color: var(--color-neutral-100); padding: clamp(48px, 6vw, 72px)">
+      <div style="max-width: 720px; margin: 0 auto">
+        <span style="display: block; font-family: var(--font-heading); font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-300); margin-bottom: 20px">Epilogue</span>
+        <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.9; color: color-mix(in srgb, var(--color-neutral-100) 82%, transparent)">한국의 수많은 제조 중소·중견기업이 이 회사와 같다. 이익은 나고, 위기는 보이지 않고, AI는 어딘가 남의 이야기다. 그러나 전환의 실패는 대부분 기술에서 오지 않는다. 순서를 건너뛴 데서 온다.</p>
+        <p style="margin: 0 0 40px; font-family: var(--font-heading); font-weight: 350; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.5">메일도 멈추는 회사에 AI를 파는 것은 컨설팅이 아니다.<br><b>컨텀DX는 순서를 설계합니다.</b></p>
+        <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; border-top: 1px solid color-mix(in srgb, var(--color-neutral-100) 22%, transparent); padding-top: 28px">
+          <span style="font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: color-mix(in srgb, var(--color-neutral-100) 55%, transparent)">관련 원칙: <a href="#perspective" style="color: var(--color-accent-300)">01 · 02 · 06</a></span>
+          <a href="#contact" style="font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: var(--color-neutral-100); border-bottom: 1px solid var(--color-accent-300); padding-bottom: 4px">귀사의 순서를 진단받으세요 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑤ Offerings -->
+<section id="offerings" data-reveal="true" style="padding: clamp(72px, 10vh, 120px) clamp(20px, 5vw, 72px)">
+  <div style="max-width: 1200px; margin: 0 auto">
+    <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin-bottom: 12px">06 · Our Offerings — 서비스 영역</span>
+    <hr style="height: 1px; border: 0; margin: 0 0 56px; background: var(--color-divider)">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0; border-top: 1px solid var(--color-divider)">
+      <div style="border-bottom: 1px solid var(--color-divider); padding: 40px 32px 40px 0">
+        <h3 style="margin: 0 0 6px; font-family: var(--font-heading); font-size: 24px; font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase; line-height: 1.3">AI Transformation</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 74%, transparent)">전사 AI 전환 전략과 실행. 진단에서 로드맵, 실행 거버넌스까지.</p>
+      </div>
+      <div style="border-bottom: 1px solid var(--color-divider); padding: 40px 32px 40px 0">
+        <h3 style="margin: 0 0 6px; font-family: var(--font-heading); font-size: 24px; font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase; line-height: 1.3">Data Transformation</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 74%, transparent)">데이터 자산화, 거버넌스, 플랫폼 구축. AI가 설 수 있는 기반부터.</p>
+      </div>
+      <div style="border-bottom: 1px solid var(--color-divider); padding: 40px 32px 40px 0">
+        <h3 style="margin: 0 0 6px; font-family: var(--font-heading); font-size: 24px; font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase; line-height: 1.3">Custom AI Engineering</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 74%, transparent)">맞춤형 AI 모델·ML 파이프라인·에이전트 시스템 구축과 프로덕션 운영.</p>
+      </div>
+      <div style="border-bottom: 1px solid var(--color-divider); padding: 40px 32px 40px 0">
+        <h3 style="margin: 0 0 6px; font-family: var(--font-heading); font-size: 24px; font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase; line-height: 1.3">Capability Building</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 74%, transparent)">임직원 재교육과 AI 조직 설계. 역량이 남는 전환.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥-b Our Principles -->
+<section id="principles" data-reveal="true" style="padding: clamp(72px, 10vh, 120px) clamp(20px, 5vw, 72px)">
+  <div style="max-width: 1200px; margin: 0 auto">
+    <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin-bottom: 12px">07 · Our Principles — 운영 원칙</span>
+    <hr style="height: 1px; border: 0; margin: 0 0 56px; background: var(--color-divider)">
+    <div>
+      <div style="display: grid; grid-template-columns: minmax(72px, 120px) 1fr; gap: 24px; border-top: 1px solid var(--color-divider); padding: 32px 0; align-items: start">
+        <span style="font-family: var(--font-heading); font-size: clamp(32px, 3vw, 44px); font-weight: 350; line-height: 1; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">01</span>
+        <div>
+          <h3 style="margin: 0 0 10px; font-family: var(--font-heading); font-weight: 400; font-size: clamp(19px, 1.8vw, 24px); line-height: 1.35">고객과 함께 만든다</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.75; color: color-mix(in srgb, var(--color-text) 72%, transparent); max-width: 58ch">시스템을 납품하고 떠나는 것이 아니라, 조직에 내재화시켜 우리가 떠난 후에도 자생하게 합니다.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: minmax(72px, 120px) 1fr; gap: 24px; border-top: 1px solid var(--color-divider); padding: 32px 0; align-items: start">
+        <span style="font-family: var(--font-heading); font-size: clamp(32px, 3vw, 44px); font-weight: 350; line-height: 1; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">02</span>
+        <div>
+          <h3 style="margin: 0 0 10px; font-family: var(--font-heading); font-weight: 400; font-size: clamp(19px, 1.8vw, 24px); line-height: 1.35">지속되는 변화를 만든다</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.75; color: color-mix(in srgb, var(--color-text) 72%, transparent); max-width: 58ch">조직 설계, 역할 정의, 역량 구축까지 동행합니다.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: minmax(72px, 120px) 1fr; gap: 24px; border-top: 1px solid var(--color-divider); padding: 32px 0; align-items: start">
+        <span style="font-family: var(--font-heading); font-size: clamp(32px, 3vw, 44px); font-weight: 350; line-height: 1; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">03</span>
+        <div>
+          <h3 style="margin: 0 0 10px; font-family: var(--font-heading); font-weight: 400; font-size: clamp(19px, 1.8vw, 24px); line-height: 1.35">기술보다 문제가 먼저다</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.75; color: color-mix(in srgb, var(--color-text) 72%, transparent); max-width: 58ch">특정 벤더·솔루션에 중립적으로, 상황에 맞는 최적을 설계합니다.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: minmax(72px, 120px) 1fr; gap: 24px; border-top: 1px solid var(--color-divider); padding: 32px 0; align-items: start">
+        <span style="font-family: var(--font-heading); font-size: clamp(32px, 3vw, 44px); font-weight: 350; line-height: 1; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">04</span>
+        <div>
+          <h3 style="margin: 0 0 10px; font-family: var(--font-heading); font-weight: 400; font-size: clamp(19px, 1.8vw, 24px); line-height: 1.35">첫날부터 가치를 증명한다</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.75; color: color-mix(in srgb, var(--color-text) 72%, transparent); max-width: 58ch">PoC의 무덤이 아니라, 프로덕션의 성과로 말합니다.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: minmax(72px, 120px) 1fr; gap: 24px; border-top: 1px solid var(--color-divider); padding: 32px 0; align-items: start">
+        <span style="font-family: var(--font-heading); font-size: clamp(32px, 3vw, 44px); font-weight: 350; line-height: 1; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">05</span>
+        <div>
+          <h3 style="margin: 0 0 10px; font-family: var(--font-heading); font-weight: 400; font-size: clamp(19px, 1.8vw, 24px); line-height: 1.35">출처가 투명한 AI를 만든다</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.75; color: color-mix(in srgb, var(--color-text) 72%, transparent); max-width: 58ch">설명 가능하고 책임 있는 AI로 신뢰를 구축합니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑧ Leadership -->
+<section data-reveal="true" style="padding: clamp(72px, 10vh, 120px) clamp(20px, 5vw, 72px)">
+  <div style="max-width: 1200px; margin: 0 auto">
+    <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin-bottom: 12px">08 · Leadership</span>
+    <hr style="height: 1px; border: 0; margin: 0 0 48px; background: var(--color-divider)">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(40px, 5vw, 96px); align-items: start">
+      <div>
+        <h2 style="margin: 0 0 20px; font-family: var(--font-heading); font-weight: 350; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.4">전략과 시스템을 모두 아는 팀</h2>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.75; color: color-mix(in srgb, var(--color-text) 74%, transparent)">15년 이상의 엔터프라이즈 시스템(ERP·PLM·MES)과 AI 전환 실무 경험을 가진 리더십이 프로젝트를 직접 이끕니다. 전략 컨설턴트와 엔지니어가 분리되지 않은, 하나의 실행 조직입니다.</p>
+      </div>
+      <div style="display: grid; gap: 24px">
+        <div style="display: flex; gap: 20px; align-items: center; border-top: 1px solid var(--color-divider); padding-top: 24px">
+          <div style="width: 64px; height: 64px; flex-shrink: 0; border: 1px solid var(--color-divider); display: grid; place-items: center; font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.08em; color: color-mix(in srgb, var(--color-text) 45%, transparent)">CEO</div>
+          <div>
+            <h3 style="margin: 0 0 4px; font-size: 17px; font-weight: 600">대표 이름 (플레이스홀더)</h3>
+            <p style="margin: 0; font-size: 14px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 70%, transparent)">대표이사 · 산업 AX/DX 전략, 엔터프라이즈 시스템 15년+</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 20px; align-items: center; border-top: 1px solid var(--color-divider); padding-top: 24px">
+          <div style="width: 64px; height: 64px; flex-shrink: 0; border: 1px solid var(--color-divider); display: grid; place-items: center; font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.08em; color: color-mix(in srgb, var(--color-text) 45%, transparent)">CTO</div>
+          <div>
+            <h3 style="margin: 0 0 4px; font-size: 17px; font-weight: 600">핵심 인력 이름 (플레이스홀더)</h3>
+            <p style="margin: 0; font-size: 14px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 70%, transparent)">최고기술책임자 · ML 엔지니어링, 데이터 플랫폼 아키텍처</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑦-b Our Perspective -->
+<section id="perspective" style="border-top: 1px solid var(--color-divider)">
+  <!-- 正 -->
+  <div data-reveal="true" style="background: var(--color-neutral-100); padding: clamp(72px, 10vh, 120px) clamp(20px, 5vw, 72px)">
+    <div style="max-width: 1200px; margin: 0 auto">
+      <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin-bottom: 12px">09 · Our Perspective — 한국 AX에 대한 관점</span>
+      <hr style="height: 1px; border: 0; margin: 0 0 56px; background: var(--color-divider)">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(40px, 5vw, 96px); align-items: center">
+        <div>
+          <span style="display: block; font-family: var(--font-heading); font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 50%, transparent); margin-bottom: 16px">正 · Thesis</span>
+          <h2 style="margin: 0 0 20px; font-family: var(--font-heading); font-weight: 350; font-size: clamp(26px, 3vw, 40px); line-height: 1.35">국가는 확산을 만들고 있습니다</h2>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.8; color: color-mix(in srgb, var(--color-text) 74%, transparent); max-width: 54ch">역대 최대의 AX 예산, 세계에서 가장 이른 AI 기본법 전면 시행, 전국의 AI 혁신거점. 한국의 AI 전환은 국가 단위로 가속되고 있습니다.</p>
+          <div style="margin-top: 36px; display: grid; gap: 0">
+            <div style="display: grid; grid-template-columns: 130px 1fr; gap: 16px; border-top: 1px solid var(--color-divider); padding: 12px 0; font-size: 13.5px; line-height: 1.6">
+              <span style="font-weight: 600; color: var(--color-accent-700)">AX 예산</span>
+              <span style="color: color-mix(in srgb, var(--color-text) 72%, transparent)">2026년 2.4조원 — AX-Sprint 단일 사업 6,135억원</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 130px 1fr; gap: 16px; border-top: 1px solid var(--color-divider); padding: 12px 0; font-size: 13.5px; line-height: 1.6">
+              <span style="font-weight: 600; color: var(--color-accent-700)">AX-Sprint</span>
+              <span style="color: color-mix(in srgb, var(--color-text) 72%, transparent)">11개 부처 합동, 246개 AI 응용제품 1~2년 내 신속 상용화</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 130px 1fr; gap: 16px; border-top: 1px solid var(--color-divider); padding: 12px 0; font-size: 13.5px; line-height: 1.6">
+              <span style="font-weight: 600; color: var(--color-accent-700)">AI 혁신거점</span>
+              <span style="color: color-mix(in srgb, var(--color-text) 72%, transparent)">4개 권역 3조 1,000억원, 2027년 가동 목표 (예타면제)</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 130px 1fr; gap: 16px; border-top: 1px solid var(--color-divider); padding: 12px 0; font-size: 13.5px; line-height: 1.6">
+              <span style="font-weight: 600; color: var(--color-accent-700)">AI 기본법</span>
+              <span style="color: color-mix(in srgb, var(--color-text) 72%, transparent)">2026.1.22 전면 시행 — 위험 기반 접근, 세계 최초 수준의 전면 적용</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 130px 1fr; gap: 16px; border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); padding: 12px 0; font-size: 13.5px; line-height: 1.6">
+              <span style="font-weight: 600; color: var(--color-accent-700)">AX360° 포털</span>
+              <span style="color: color-mix(in srgb, var(--color-text) 72%, transparent)">2026.8 개시 — 정부 AX 사업·민관 AI 자원 통합 창구</span>
+            </div>
+          </div>
+        </div>
+        <figure class="blueprint" style="position: relative; margin: 0; border: 1px solid var(--color-divider)">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <svg viewBox="0 0 480 280" aria-hidden="true" style="display: block; width: 100%; height: auto">
+            <g stroke="var(--color-accent-300)" stroke-width="0.75">
+              <line x1="240" y1="140" x2="120" y2="70"></line><line x1="240" y1="140" x2="360" y2="66"></line>
+              <line x1="240" y1="140" x2="88" y2="196"></line><line x1="240" y1="140" x2="392" y2="204"></line>
+              <line x1="240" y1="140" x2="240" y2="40"></line><line x1="240" y1="140" x2="240" y2="240"></line>
+              <line x1="120" y1="70" x2="52" y2="42"></line><line x1="360" y1="66" x2="428" y2="38"></line>
+              <line x1="88" y1="196" x2="34" y2="244"></line><line x1="392" y1="204" x2="446" y2="248"></line>
+            </g>
+            <circle cx="240" cy="140" r="44" fill="none" stroke="var(--color-accent-200)" stroke-width="1"></circle>
+            <circle cx="240" cy="140" r="78" fill="none" stroke="color-mix(in srgb, var(--color-accent-200) 60%, transparent)" stroke-width="1"></circle>
+            <circle cx="240" cy="140" r="112" fill="none" stroke="color-mix(in srgb, var(--color-accent-200) 35%, transparent)" stroke-width="1"></circle>
+            <g fill="var(--color-accent-400)">
+              <circle cx="240" cy="140" r="5"></circle><circle cx="120" cy="70" r="3"></circle><circle cx="360" cy="66" r="3"></circle>
+              <circle cx="88" cy="196" r="3"></circle><circle cx="392" cy="204" r="3"></circle><circle cx="240" cy="40" r="3"></circle><circle cx="240" cy="240" r="3"></circle>
+            </g>
+            <g fill="var(--color-accent-300)">
+              <circle cx="52" cy="42" r="2"></circle><circle cx="428" cy="38" r="2"></circle><circle cx="34" cy="244" r="2"></circle><circle cx="446" cy="248" r="2"></circle>
+            </g>
+          </svg>
+          <figcaption style="border-top: 1px solid var(--color-divider); padding: 10px 16px; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent)">국가 단위 확산 — 예산 · 법제 · 거점</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <!-- 反 -->
+  <div data-reveal="true" style="background: var(--color-bg); padding: clamp(72px, 10vh, 120px) clamp(20px, 5vw, 72px)">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(40px, 5vw, 96px); align-items: center">
+      <figure class="blueprint" style="position: relative; margin: 0; border: 1px solid var(--color-divider); order: 0">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <svg viewBox="0 0 480 280" aria-hidden="true" style="display: block; width: 100%; height: auto">
+          <g stroke="var(--color-accent-300)" stroke-width="1">
+            <line x1="40" y1="200" x2="150" y2="150"></line>
+            <line x1="150" y1="150" x2="230" y2="120"></line>
+          </g>
+          <g stroke="var(--color-accent-200)" stroke-width="1" stroke-dasharray="4 6">
+            <line x1="258" y1="110" x2="340" y2="86"></line>
+            <line x1="368" y1="78" x2="440" y2="58"></line>
+          </g>
+          <g fill="var(--color-accent-400)">
+            <circle cx="40" cy="200" r="3.5"></circle><circle cx="150" cy="150" r="3.5"></circle><circle cx="230" cy="120" r="3.5"></circle>
+          </g>
+          <g fill="none" stroke="var(--color-accent-300)" stroke-width="1">
+            <circle cx="340" cy="86" r="3.5"></circle><circle cx="440" cy="58" r="3.5"></circle>
+          </g>
+          <line x1="244" y1="80" x2="244" y2="160" stroke="var(--color-accent-700)" stroke-width="1" stroke-dasharray="2 4"></line>
+          <g fill="none" stroke="var(--color-accent-200)" stroke-width="1">
+            <rect x="60" y="216" width="24" height="34"></rect><rect x="104" y="200" width="24" height="50"></rect><rect x="148" y="186" width="24" height="64"></rect>
+            <rect x="192" y="230" width="24" height="20" stroke-dasharray="3 4"></rect><rect x="236" y="236" width="24" height="14" stroke-dasharray="3 4"></rect>
+          </g>
+          <text x="252" y="70" font-family="Barlow Condensed, sans-serif" font-size="12" letter-spacing="1.5" fill="var(--color-accent-700)">PoC → PRODUCTION</text>
+        </svg>
+        <figcaption style="border-top: 1px solid var(--color-divider); padding: 10px 16px; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent)">현장의 단절 — 끊어진 연결, 미완의 전환</figcaption>
+      </figure>
+      <div style="order: 1">
+        <span style="display: block; font-family: var(--font-heading); font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 50%, transparent); margin-bottom: 16px">反 · Antithesis</span>
+        <h2 style="margin: 0 0 20px; font-family: var(--font-heading); font-weight: 350; font-size: clamp(26px, 3vw, 40px); line-height: 1.35">그러나 전환은 <span style="box-shadow: inset 0 -2px 0 var(--color-accent-700)">현장에서 멈춰</span> 있습니다</h2>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.8; color: color-mix(in srgb, var(--color-text) 74%, transparent); max-width: 54ch">데이터는 외부 서버에 묶여 있고, 과제는 종료와 함께 방치되며, PoC는 프로덕션에 도달하지 못합니다. 실패의 원인은 기술이 아니라 — 문제 정의의 부재, 데이터 주권의 부재, 조직 역량의 부재입니다.</p>
+        <div style="margin-top: 36px; display: grid; gap: 0">
+          <div style="display: grid; grid-template-columns: 36px 1fr; gap: 14px; border-top: 1px solid var(--color-divider); padding: 12px 0; font-size: 13.5px; line-height: 1.6; align-items: baseline">
+            <span style="font-family: var(--font-heading); font-size: 17px; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">01</span>
+            <span style="color: color-mix(in srgb, var(--color-text) 72%, transparent)"><b style="color: var(--color-text)">R&amp;D와 현장의 단절</b> — 안전기준·표준 등 제도 기반 미비, 핵심 센서의 해외 의존 지속</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 36px 1fr; gap: 14px; border-top: 1px solid var(--color-divider); padding: 12px 0; font-size: 13.5px; line-height: 1.6; align-items: baseline">
+            <span style="font-family: var(--font-heading); font-size: 17px; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">02</span>
+            <span style="color: color-mix(in srgb, var(--color-text) 72%, transparent)"><b style="color: var(--color-text)">데이터 주권의 부재</b> — 수년치 공정·에너지 데이터가 SI업체 서버에 종속되는 구조적 잠금</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 36px 1fr; gap: 14px; border-top: 1px solid var(--color-divider); padding: 12px 0; font-size: 13.5px; line-height: 1.6; align-items: baseline">
+            <span style="font-family: var(--font-heading); font-size: 17px; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">03</span>
+            <span style="color: color-mix(in srgb, var(--color-text) 72%, transparent)"><b style="color: var(--color-text)">과제형 지원의 수명 주기</b> — 과제 종료 후 사후관리 공백, 보급 건수(양)와 가치 실현(질)의 괴리</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 36px 1fr; gap: 14px; border-top: 1px solid var(--color-divider); padding: 12px 0; font-size: 13.5px; line-height: 1.6; align-items: baseline">
+            <span style="font-family: var(--font-heading); font-size: 17px; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">04</span>
+            <span style="color: color-mix(in srgb, var(--color-text) 72%, transparent)"><b style="color: var(--color-text)">PoC의 무덤 — 문제 정의의 실패</b> — 실패의 원인은 기술이 아니라 문제 정의·데이터 인프라·조직 리터러시</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 36px 1fr; gap: 14px; border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); padding: 12px 0; font-size: 13.5px; line-height: 1.6; align-items: baseline">
+            <span style="font-family: var(--font-heading); font-size: 17px; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">05</span>
+            <span style="color: color-mix(in srgb, var(--color-text) 72%, transparent)"><b style="color: var(--color-text)">선언과 실행의 간극</b> — AI 기본법의 상징성 대비 현장에서 활용할 세부 조항의 부족</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 合 -->
+  <div data-reveal="true" style="background: var(--color-accent-900); color: var(--color-neutral-100); padding: clamp(72px, 10vh, 120px) clamp(20px, 5vw, 72px)">
+    <div style="max-width: 1200px; margin: 0 auto">
+      <span style="display: block; font-family: var(--font-heading); font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-300); margin-bottom: 16px">合 · Synthesis</span>
+      <h2 style="margin: 0 0 24px; font-family: var(--font-heading); font-weight: 350; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.35; max-width: 24ch">우리는 그 간극에서 일합니다</h2>
+      <p style="margin: 0 0 64px; font-size: clamp(15px, 1.4vw, 17px); line-height: 1.85; color: color-mix(in srgb, var(--color-neutral-100) 82%, transparent); max-width: 58ch">컨텀DX는 국가가 만든 확산의 자원을, 기업 내부의 전환으로 번역합니다. 문제 정의에서 시작해 데이터 주권을 회복하고, 프로덕션에 배포하며, 조직에 내재화합니다. 확산은 밖에서 오지만, 전환은 안에서 완성됩니다.</p>
+      <p style="margin: -40px 0 64px; font-size: 14px; line-height: 1.7; color: var(--color-accent-300); max-width: 58ch">정부 주도 확산(正)도, 회의적 냉소(反)도 아닌 제3의 길 — 확산의 자원을 활용하되, 전환의 질은 기업 내부에서 완성합니다.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 0 clamp(40px, 5vw, 96px)">
+        <div style="display: flex; gap: 20px; align-items: baseline; border-top: 1px solid color-mix(in srgb, var(--color-neutral-100) 22%, transparent); padding: 18px 0">
+          <span style="font-family: var(--font-heading); font-size: 15px; color: var(--color-accent-300); font-feature-settings: 'tnum' 1">01</span>
+          <div>
+            <span style="display: block; font-size: 16px; font-weight: 500">도입이 아니라 내재화다</span>
+            <span style="display: block; margin-top: 6px; font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-neutral-100) 60%, transparent)">보급 건수 vs PoC 무덤 → 조직에 뿌리내리는 역량 · 역량 진단, 재교육, AI 조직 설계</span>
+          </div>
+        </div>
+        <div style="display: flex; gap: 20px; align-items: baseline; border-top: 1px solid color-mix(in srgb, var(--color-neutral-100) 22%, transparent); padding: 18px 0">
+          <span style="font-family: var(--font-heading); font-size: 15px; color: var(--color-accent-300); font-feature-settings: 'tnum' 1">02</span>
+          <div>
+            <span style="display: block; font-size: 16px; font-weight: 500">문제 정의가 기술보다 먼저다</span>
+            <span style="display: block; margin-top: 6px; font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-neutral-100) 60%, transparent)">기술 공급 vs 문제 정의 실패 → 비즈니스 문제에서 출발 · AX 진단·전환 전략, 유스케이스 우선순위화</span>
+          </div>
+        </div>
+        <div style="display: flex; gap: 20px; align-items: baseline; border-top: 1px solid color-mix(in srgb, var(--color-neutral-100) 22%, transparent); padding: 18px 0">
+          <span style="font-family: var(--font-heading); font-size: 15px; color: var(--color-accent-300); font-feature-settings: 'tnum' 1">03</span>
+          <div>
+            <span style="display: block; font-size: 16px; font-weight: 500">데이터 주권을 회복한다</span>
+            <span style="display: block; margin-top: 6px; font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-neutral-100) 60%, transparent)">데이터 축적 vs SI 종속 → 기업이 소유·통제하는 아키텍처 · 데이터 거버넌스, 플랫폼 설계, 레거시 탈종속</span>
+          </div>
+        </div>
+        <div style="display: flex; gap: 20px; align-items: baseline; border-top: 1px solid color-mix(in srgb, var(--color-neutral-100) 22%, transparent); padding: 18px 0">
+          <span style="font-family: var(--font-heading); font-size: 15px; color: var(--color-accent-300); font-feature-settings: 'tnum' 1">04</span>
+          <div>
+            <span style="display: block; font-size: 16px; font-weight: 500">과제 종료가 아니라 운영 이관으로 끝난다</span>
+            <span style="display: block; margin-top: 6px; font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-neutral-100) 60%, transparent)">과제형 지원 vs 사후관리 공백 → 운영 체계와 함께 이관 · 프로덕션 배포, MLOps, 운영 이관 체계</span>
+          </div>
+        </div>
+        <div style="display: flex; gap: 20px; align-items: baseline; border-top: 1px solid color-mix(in srgb, var(--color-neutral-100) 22%, transparent); padding: 18px 0">
+          <span style="font-family: var(--font-heading); font-size: 15px; color: var(--color-accent-300); font-feature-settings: 'tnum' 1">05</span>
+          <div>
+            <span style="display: block; font-size: 16px; font-weight: 500">규제를 신뢰 자산으로 전환한다</span>
+            <span style="display: block; margin-top: 6px; font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-neutral-100) 60%, transparent)">세계 최초 전면 규범 vs 실행성 부족 → AI 기본법 대응을 경쟁력으로 · 고영향 AI 체계, 투명성·안전성 의무, AI 영향평가</span>
+          </div>
+        </div>
+        <div style="display: flex; gap: 20px; align-items: baseline; border-top: 1px solid color-mix(in srgb, var(--color-neutral-100) 22%, transparent); padding: 18px 0">
+          <span style="font-family: var(--font-heading); font-size: 15px; color: var(--color-accent-300); font-feature-settings: 'tnum' 1">06</span>
+          <div>
+            <span style="display: block; font-size: 16px; font-weight: 500">정부 자원을 전략적으로 번역한다</span>
+            <span style="display: block; margin-top: 6px; font-size: 13px; line-height: 1.6; color: color-mix(in srgb, var(--color-neutral-100) 60%, transparent)">대규모 예산·거점 vs 기업별 활용 격차 → 지원사업을 전환 로드맵에 정렬 · AX 지원사업 연계 전략, 로드맵-예산 정렬</span>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 72px">
+        <span style="display: block; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-300); margin-bottom: 20px">산업 전반 컨설팅 영역 매트릭스</span>
+        <div style="display: grid; grid-template-columns: minmax(140px, 0.8fr) 1fr 1.2fr; gap: 0 24px; font-size: 13.5px; line-height: 1.6">
+          <span style="border-bottom: 1px solid color-mix(in srgb, var(--color-neutral-100) 30%, transparent); padding: 10px 0; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-neutral-100) 55%, transparent)">산업</span>
+          <span style="border-bottom: 1px solid color-mix(in srgb, var(--color-neutral-100) 30%, transparent); padding: 10px 0; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-neutral-100) 55%, transparent)">정부 드라이브 접점</span>
+          <span style="border-bottom: 1px solid color-mix(in srgb, var(--color-neutral-100) 30%, transparent); padding: 10px 0; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-neutral-100) 55%, transparent)">컨텀DX 개입 지점</span>
+          <span style="border-bottom: 1px solid color-mix(in srgb, var(--color-neutral-100) 18%, transparent); padding: 12px 0; font-weight: 600">제조 (조선·기계·철강)</span>
+          <span style="border-bottom: 1px solid color-mix(in srgb, var(--color-neutral-100) 18%, transparent); padding: 12px 0; color: color-mix(in srgb, var(--color-neutral-100) 70%, transparent)">M.AX, AX-Sprint 제조 분야, 스마트제조 혁신</span>
+          <span style="border-bottom: 1px solid color-mix(in srgb, var(--color-neutral-100) 18%, transparent); padding: 12px 0; color: color-mix(in srgb, var(--color-neutral-100) 70%, transparent)">공정 데이터 주권 회복, 현장 AI 프로덕션화, ETO 특화 전환</span>
+          <span style="border-bottom: 1px solid color-mix(in srgb, var(--color-neutral-100) 18%, transparent); padding: 12px 0; font-weight: 600">중소·중견 전반</span>
+          <span style="border-bottom: 1px solid color-mix(in srgb, var(--color-neutral-100) 18%, transparent); padding: 12px 0; color: color-mix(in srgb, var(--color-neutral-100) 70%, transparent)">중소기업 AI 확산 정책, 지역 AI혁신거점</span>
+          <span style="border-bottom: 1px solid color-mix(in srgb, var(--color-neutral-100) 18%, transparent); padding: 12px 0; color: color-mix(in srgb, var(--color-neutral-100) 70%, transparent)">지원사업-전환 로드맵 정렬, 과제 종료 후 운영 체계</span>
+          <span style="border-bottom: 1px solid color-mix(in srgb, var(--color-neutral-100) 18%, transparent); padding: 12px 0; font-weight: 600">규제 산업 (금융·의료·모빌리티)</span>
+          <span style="border-bottom: 1px solid color-mix(in srgb, var(--color-neutral-100) 18%, transparent); padding: 12px 0; color: color-mix(in srgb, var(--color-neutral-100) 70%, transparent)">AI 기본법 고영향 AI 규정</span>
+          <span style="border-bottom: 1px solid color-mix(in srgb, var(--color-neutral-100) 18%, transparent); padding: 12px 0; color: color-mix(in srgb, var(--color-neutral-100) 70%, transparent)">컴플라이언스 체계 + 거버넌스 동시 수립</span>
+          <span style="border-bottom: 1px solid color-mix(in srgb, var(--color-neutral-100) 18%, transparent); padding: 12px 0; font-weight: 600">공공·지역</span>
+          <span style="border-bottom: 1px solid color-mix(in srgb, var(--color-neutral-100) 18%, transparent); padding: 12px 0; color: color-mix(in srgb, var(--color-neutral-100) 70%, transparent)">AX360°, 5극3특 거점</span>
+          <span style="border-bottom: 1px solid color-mix(in srgb, var(--color-neutral-100) 18%, transparent); padding: 12px 0; color: color-mix(in srgb, var(--color-neutral-100) 70%, transparent)">공공 AX 전략, 지역 특화산업 연계 설계</span>
+        </div>
+      </div>
+      <p style="margin: 64px 0 0; font-family: var(--font-heading); font-weight: 350; font-size: clamp(22px, 2.4vw, 32px); line-height: 1.45; border-top: 1px solid color-mix(in srgb, var(--color-neutral-100) 22%, transparent); padding-top: 40px">확산은 정책이 하지만, <b>전환은 체질이 합니다.</b></p>
+    </div>
+  </div>
+</section>
+
+<!-- ⑦ Insights -->
+<section id="insights" data-reveal="true" style="padding: clamp(72px, 10vh, 120px) clamp(20px, 5vw, 72px)">
+  <div style="max-width: 1200px; margin: 0 auto">
+    <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin-bottom: 12px">10 · Insights</span>
+    <hr style="height: 1px; border: 0; margin: 0 0 24px; background: var(--color-divider)">
+    <p style="margin: 0 0 48px; font-size: 15px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 70%, transparent)">모든 인사이트는 경영진 보고 수준의 깊이로 작성됩니다.</p>
+    <div style="perspective: 1400px; margin-bottom: 64px">
+      <figure class="blueprint" onMouseMove="{{ tiltMove }}" onMouseLeave="{{ tiltLeave }}" style="position: relative; border: 1px solid var(--color-divider); margin: 0; transform-style: preserve-3d; transition: transform .25s ease, box-shadow .25s ease; will-change: transform; background: var(--color-bg)">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <img src="uploads/AI_전환_시대_일터_변화.png" alt="AI 전환 시대: 우리 일터는 어떻게 변하고 있는가 — 인포그래픽" style="display: block; width: 100%; height: auto">
+        <figcaption style="border-top: 1px solid var(--color-divider); padding: 12px 20px; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Featured Report · AI 전환 시대, 일터의 변화<a href="Report.dc.html" style="float: right">보고서 전문 보기 →</a></figcaption>
+      </figure>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(28px, 3vw, 44px)">
+      <article style="border-top: 1px solid var(--color-divider); padding-top: 24px">
+        <span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent)">Report</span>
+        <h3 style="margin: 14px 0 10px; font-size: 20px; font-weight: 600; line-height: 1.45">한국 AX의 변증법 — 확산과 전환 사이</h3>
+        <p style="margin: 0 0 16px; font-size: 14.5px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 70%, transparent)">국가는 확산을 만들고, 전환은 현장에서 멈춘다. 그 간극에 대한 컨텀DX의 관점.</p>
+        <a href="#perspective" style="font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600">관점 보기 →</a>
+      </article>
+      <article style="border-top: 1px solid var(--color-divider); padding-top: 24px">
+        <span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent)">Article</span>
+        <h3 style="margin: 14px 0 10px; font-size: 20px; font-weight: 600; line-height: 1.45">에이전틱 AI 시대의 조직 설계</h3>
+        <p style="margin: 0 0 16px; font-size: 14.5px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 70%, transparent)">AI 에이전트가 업무의 단위를 바꿀 때, 조직 구조는 어떻게 달라져야 하는가.</p>
+        <a href="#insights" style="font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600">Read →</a>
+      </article>
+      <article style="border-top: 1px solid var(--color-divider); padding-top: 24px">
+        <span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 55%, transparent)">Report</span>
+        <h3 style="margin: 14px 0 10px; font-size: 20px; font-weight: 600; line-height: 1.45">PoC의 무덤을 넘어</h3>
+        <p style="margin: 0 0 16px; font-size: 14.5px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 70%, transparent)">AI가 프로덕션에 도달하지 못하는 이유, 그리고 도달하게 만드는 조건.</p>
+        <a href="Report.dc.html" style="font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600">샘플 리포트 보기 →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ⑨ Contact -->
+<section id="contact" data-reveal="true" style="border-top: 1px solid var(--color-divider); padding: clamp(72px, 10vh, 120px) clamp(20px, 5vw, 72px)">
+  <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(40px, 5vw, 96px)">
+    <div>
+      <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin-bottom: 12px">11 · Contact</span>
+      <h2 style="margin: 0 0 16px; font-family: var(--font-heading); font-weight: 350; font-size: clamp(26px, 3vw, 40px); line-height: 1.35"><b>전환을 논의하겠습니다.</b></h2>
+      <p style="margin: 0; font-size: 15px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 70%, transparent)">영업일 기준 2일 이내에 회신합니다.</p>
+    </div>
+    <sc-if value="{{ formDone }}" hint-placeholder-val="{{ false }}">
+      <div class="blueprint" style="position: relative; border: 1px solid var(--color-divider); padding: 40px; align-self: start">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <h3 style="margin: 0 0 10px; font-size: 18px; font-weight: 600">문의가 접수되었습니다.</h3>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.7; color: color-mix(in srgb, var(--color-text) 70%, transparent)">담당 파트너가 곧 연락드리겠습니다.</p>
+      </div>
+    </sc-if>
+    <sc-if value="{{ formNotDone }}" hint-placeholder-val="{{ true }}">
+      <form onSubmit="{{ submitForm }}" style="display: grid; gap: 20px; align-self: start">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px">
+          <div class="field"><label>회사명</label><input class="input" type="text" name="company" required="required" placeholder="회사명"></div>
+          <div class="field"><label>직함</label><input class="input" type="text" name="title" placeholder="직함"></div>
+        </div>
+        <div class="field"><label>이메일</label><input class="input" type="email" name="email" required="required" placeholder="name@company.com"></div>
+        <div class="field"><label>논의 주제</label><textarea class="input" name="topic" rows="4" placeholder="추진 배경과 논의하고 싶은 주제를 간단히 적어주세요." style="resize: vertical; font-family: var(--font-body)"></textarea></div>
+        <div><button type="submit" class="btn btn-primary">문의 보내기</button></div>
+      </form>
+    </sc-if>
+  </div>
+</section>
+
+<footer style="border-top: 1px solid var(--color-divider); padding: 40px clamp(20px, 5vw, 72px)">
+  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 16px 40px; align-items: center; justify-content: space-between; font-size: 13px; color: color-mix(in srgb, var(--color-text) 60%, transparent)">
+    <span style="font-family: var(--font-heading); font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text)">{{ brandEn }}</span>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: center">
+      <span>부산시</span>
+      <span>je31061@gmail.com</span>
+      <a href="#contact" aria-label="LinkedIn" style="display: inline-flex; color: color-mix(in srgb, var(--color-text) 60%, transparent)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;brandEn&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;QUANTUM DX&quot;, &quot;CONTUM DX&quot;], &quot;default&quot;: &quot;QUANTUM DX&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;브랜드&quot;},
+  &quot;heroMotion&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;모션&quot;},
+  &quot;revealAnimations&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;모션&quot;},
+  &quot;tilt3d&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;모션&quot;}
+}">
+class Component extends DCLogic {
+  state = { done: false };
+  renderVals() {
+    return {
+      brandEn: this.props.brandEn ?? "QUANTUM DX",
+      heroMotion: this.props.heroMotion ?? true,
+      heroCanvasRef: (el) => this.mountHeroCanvas(el),
+      formDone: this.state.done,
+      formNotDone: !this.state.done,
+      goContact: () => this.scrollTo("contact"),
+      goApproach: () => this.scrollTo("approach"),
+      submitForm: (e) => { e.preventDefault(); this.setState({ done: true }); },
+      tiltMove: (e) => {
+        if (!(this.props.tilt3d ?? true)) return;
+        const el = e.currentTarget, r = el.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+        el.style.transform = "rotateX(" + (-y * 8).toFixed(2) + "deg) rotateY(" + (x * 8).toFixed(2) + "deg) scale(1.012)";
+        el.style.boxShadow = "var(--shadow-lg)";
+      },
+      tiltLeave: (e) => {
+        const el = e.currentTarget;
+        el.style.transform = "rotateX(0deg) rotateY(0deg) scale(1)";
+        el.style.boxShadow = "none";
+      },
+    };
+  }
+  mountHeroCanvas(el) {
+    if (!el) { cancelAnimationFrame(this._heroRaf); window.removeEventListener("resize", this._heroResize); this._heroCanvas = null; return; }
+    if (this._heroCanvas === el) return;
+    this._heroCanvas = el;
+    const ctx = el.getContext("2d");
+    const css = getComputedStyle(document.body);
+    const pick = (v, fb) => (css.getPropertyValue(v) || fb).trim();
+    const c300 = pick("--color-accent-300", "#a9bfd6"), c400 = pick("--color-accent-400", "#7f9dbd"), c200 = pick("--color-accent-200", "#c9d7e5");
+    let w = 0, h = 0, dpr = 1;
+    const resize = () => {
+      dpr = Math.min(2, window.devicePixelRatio || 1);
+      w = el.clientWidth; h = el.clientHeight;
+      el.width = w * dpr; el.height = h * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+    this._heroResize = resize;
+    resize();
+    window.addEventListener("resize", resize);
+    // pointer influence: waves swell toward the cursor
+    let mx = 0.5, my = 0.5, tmx = 0.5, tmy = 0.5;
+    const onMove = (e) => { const r = el.getBoundingClientRect(); tmx = (e.clientX - r.left) / r.width; tmy = (e.clientY - r.top) / r.height; };
+    el.parentElement.addEventListener("mousemove", onMove);
+    const waves = [
+      { yr: 0.72, amp: 46, len: 0.006, spd: 0.9,  ph: 0,   col: c300, a: 0.9,  lw: 1.25 },
+      { yr: 0.78, amp: 62, len: 0.0045, spd: -0.6, ph: 2.1, col: c200, a: 0.85, lw: 1 },
+      { yr: 0.66, amp: 34, len: 0.008, spd: 1.4,  ph: 4.2, col: c400, a: 0.55, lw: 1 },
+      { yr: 0.84, amp: 78, len: 0.0035, spd: 0.45, ph: 1.2, col: c200, a: 0.6,  lw: 1 },
+      { yr: 0.60, amp: 26, len: 0.010, spd: -1.8, ph: 5.4, col: c300, a: 0.4,  lw: 0.75 },
+    ];
+    const nodes = Array.from({ length: 14 }, (_, i) => ({
+      x: Math.random(), y: Math.random() * 0.55 + 0.05,
+      vx: (Math.random() - 0.5) * 0.00035, vy: (Math.random() - 0.5) * 0.00025,
+      r: Math.random() * 1.6 + 1, ph: Math.random() * 6.28,
+    }));
+    const draw = (t) => {
+      const s = t / 1000;
+      mx += (tmx - mx) * 0.04; my += (tmy - my) * 0.04;
+      ctx.clearRect(0, 0, w, h);
+      // waves
+      for (const wv of waves) {
+        ctx.beginPath();
+        const baseY = h * wv.yr;
+        for (let x = -20; x <= w + 20; x += 6) {
+          const nx = x / w;
+          const swell = 1 + 0.9 * Math.exp(-Math.pow((nx - mx) * 3.2, 2)); // local swell near cursor
+          const breathe = 1 + 0.35 * Math.sin(s * 0.5 + wv.ph);
+          const y = baseY
+            + Math.sin(x * wv.len + s * wv.spd + wv.ph) * wv.amp * 0.6 * swell * breathe
+            + Math.sin(x * wv.len * 2.3 + s * wv.spd * 1.7 + wv.ph * 2) * wv.amp * 0.3 * swell
+            + Math.sin(x * wv.len * 0.5 - s * wv.spd * 0.6) * wv.amp * 0.25;
+          if (x === -20) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+        }
+        ctx.strokeStyle = wv.col; ctx.globalAlpha = wv.a; ctx.lineWidth = wv.lw;
+        ctx.stroke();
+      }
+      // drifting constellation
+      ctx.globalAlpha = 1;
+      for (const n of nodes) {
+        n.x += n.vx + Math.sin(s * 0.4 + n.ph) * 0.00006;
+        n.y += n.vy + Math.cos(s * 0.3 + n.ph) * 0.00005;
+        if (n.x < -0.02) n.x = 1.02; if (n.x > 1.02) n.x = -0.02;
+        if (n.y < 0.02) n.vy = Math.abs(n.vy); if (n.y > 0.62) n.vy = -Math.abs(n.vy);
+      }
+      ctx.strokeStyle = c200; ctx.lineWidth = 0.75;
+      for (let i = 0; i < nodes.length; i++) for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i], b = nodes[j];
+        const dx = (a.x - b.x) * w, dy = (a.y - b.y) * h, d = Math.hypot(dx, dy);
+        if (d < 170) { ctx.globalAlpha = (1 - d / 170) * 0.6; ctx.beginPath(); ctx.moveTo(a.x * w, a.y * h); ctx.lineTo(b.x * w, b.y * h); ctx.stroke(); }
+      }
+      for (const n of nodes) {
+        const tw = 0.55 + 0.45 * Math.sin(s * 1.3 + n.ph);
+        ctx.globalAlpha = tw; ctx.fillStyle = c400;
+        ctx.beginPath(); ctx.arc(n.x * w, n.y * h, n.r, 0, 6.283); ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+      this._heroRaf = requestAnimationFrame(draw);
+    };
+    this._heroRaf = requestAnimationFrame(draw);
+  }
+  scrollTo(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 72, behavior: "smooth" });
+  }
+  componentDidMount() {
+    // Progressive enhancement: sections are visible by default; hide via JS only when the observer attaches.
+    const reveal = this.props.revealAnimations ?? true;
+    if (reveal && "IntersectionObserver" in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) { en.target.style.opacity = "1"; en.target.style.transform = "none"; io.unobserve(en.target); }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll("[data-reveal]").forEach((el) => {
+        const r = el.getBoundingClientRect();
+        if (r.top > window.innerHeight * 0.9) { // only hide sections below the fold
+          el.style.transition = "opacity .8s ease, transform .8s ease";
+          el.style.opacity = "0";
+          el.style.transform = "translateY(24px)";
+          io.observe(el);
+        }
+      });
+    }
+    // count-up for impact numbers
+    const fmt = (n) => n.toLocaleString("ko-KR");
+    const counters = document.querySelectorAll("[data-count]");
+    const cio = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (!en.isIntersecting) return;
+        cio.unobserve(en.target);
+        const target = parseInt(en.target.getAttribute("data-count"), 10);
+        const suffix = en.target.getAttribute("data-suffix") || "";
+        const t0 = performance.now(), dur = 1400;
+        const tick = (t) => {
+          const p = Math.min(1, (t - t0) / dur), ease = 1 - Math.pow(1 - p, 3);
+          en.target.textContent = fmt(Math.round(target * ease)) + suffix;
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: 0.4 });
+    counters.forEach((el) => cio.observe(el));
+  }
+}
+</script>
+</body>
+</html>
