@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap">
+<style>
+body{margin:0;background:#F2F2F2;color:#1F1F1F;font-family:Pretendard,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#1F1F1F;text-decoration:none}a:hover{color:#6B6B6B}
+td,th{text-align:left;vertical-align:top}
+</style>
+</helmet>
+<div style="position:relative;max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,60px) 80px;box-sizing:border-box;">
+<sc-if value="{{ showGrid }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;inset:0 clamp(20px,4vw,60px);display:grid;grid-template-columns:repeat(12,1fr);gap:24px;pointer-events:none;z-index:5;">
+<sc-for list="{{ cols }}" as="c" hint-placeholder-count="12"><div style="background:rgba(0,0,0,.04);border-left:1px solid #CFCFCF;border-right:1px solid #CFCFCF;"></div></sc-for>
+</div>
+</sc-if>
+
+<!-- top rail -->
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding:26px 0 18px;border-bottom:1px solid #CFCFCF;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.12em;color:#3A3A3A;">
+<span>04 · DELIVERABLES / 01 — AX 전환 전략 보고서</span>
+<a href="QuantumDX%20Homepage.dc.html#deliverables" style="color:#6B6B6B;letter-spacing:.08em;">← 산출물 갤러리</a>
+</div>
+
+<!-- cover -->
+<div style="display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between;align-items:flex-end;padding:72px 0 56px;">
+<div style="flex:1 1 520px;display:flex;flex-direction:column;gap:20px;">
+<div style="display:flex;gap:8px;flex-wrap:wrap;">
+<span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.16em;padding:5px 10px;border:1.5px solid #1F1F1F;">CONFIDENTIAL · 대외비</span>
+<span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:.16em;padding:5px 10px;border:1px solid #BDBDBD;color:#6B6B6B;">SAMPLE</span>
+</div>
+<h1 style="margin:0;font-weight:500;font-size:clamp(36px,5vw,60px);line-height:1.2;letter-spacing:-.02em;text-wrap:pretty;">AX 전환 전략 보고서</h1>
+<p style="margin:0;font-size:19px;line-height:1.6;color:#6B6B6B;">18개월 Stage-Gate 기반 AI 전환 로드맵 · 이사회 의결안</p>
+</div>
+<div style="flex:0 1 420px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #1F1F1F;">
+<div style="padding:12px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:4px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:12px;letter-spacing:.14em;color:#6B6B6B;">보고 대상</span><span aria-hidden="true" style="filter:blur(6px);user-select:none;font-size:15px;font-weight:600;">이사회</span></div>
+<div style="padding:12px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:4px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:12px;letter-spacing:.14em;color:#6B6B6B;">보고일</span><span aria-hidden="true" style="filter:blur(6px);user-select:none;font-family:'Barlow Semi Condensed',sans-serif;font-size:17px;font-weight:600;">2026.10.13</span></div>
+<div style="padding:12px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:4px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:12px;letter-spacing:.14em;color:#6B6B6B;">문서 번호</span><span aria-hidden="true" style="filter:blur(6px);user-select:none;font-family:'Barlow Semi Condensed',sans-serif;font-size:17px;font-weight:600;">AX-BRD-2026-014</span></div>
+<div style="padding:12px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:4px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:12px;letter-spacing:.14em;color:#6B6B6B;">대상 기업</span><span aria-hidden="true" style="filter:blur(6px);user-select:none;font-size:15px;font-weight:600;">제조 A사 (가상)</span></div>
+</div>
+</div>
+
+<!-- 01 summary -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">01 — SUMMARY</span><span style="font-size:22px;font-weight:600;">핵심 요약</span></div>
+<div style="flex:999 1 640px;position:relative;background:#FFFFFF;border:1px solid #CFCFCF;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:32px;">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="display:flex;flex-direction:column;">
+<div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:22px;color:#BDBDBD;width:28px;flex:none;">1</span><span style="font-size:19px;line-height:1.55;font-weight:600;text-wrap:pretty;">현재 AI 성숙도 평균 1.7 / 5 — 데이터·인재·거버넌스 영역이 전환의 병목</span></div>
+<div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:22px;color:#BDBDBD;width:28px;flex:none;">2</span><span style="font-size:19px;line-height:1.55;font-weight:600;text-wrap:pretty;">18개월 · 6개 게이트(G0~G5) 순차 통과 구조로 단계별 투자 리스크 통제</span></div>
+<div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:22px;color:#BDBDBD;width:28px;flex:none;">3</span><span style="font-size:19px;line-height:1.55;font-weight:600;text-wrap:pretty;">1웨이브 우선 과제 3건 기준 영업이익률 +2.0%p, 투자 회수 2.3년 예상</span></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px;">
+<span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:.14em;color:#6B6B6B;">의결 요청 사항 · 2건</span>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;">
+<div style="border:1.5px solid #1F1F1F;padding:20px;display:flex;flex-direction:column;gap:8px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.14em;">안건 1 · 투자 한도</span><span style="font-size:17px;font-weight:600;line-height:1.5;">18개월 AX 투자 한도 12억 원 승인</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">게이트 통과 시 단계별 집행, 미통과 시 잔여 한도 동결</span></div>
+<div style="border:1.5px solid #1F1F1F;padding:20px;display:flex;flex-direction:column;gap:8px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.14em;">안건 2 · 추진 조직</span><span style="font-size:17px;font-weight:600;line-height:1.5;">AX CoE 상설 조직 신설 (5명)</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">CEO 직속, 현업 AX 담당자 부서별 1인 겸직 지정</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 02 frameworks -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">02 — FRAMEWORK</span><span style="font-size:22px;font-weight:600;">적용 프레임워크</span></div>
+<div style="flex:999 1 640px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));border-top:1px solid #1F1F1F;">
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">Stage-Gate</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">단계와 승인 관문 분리 · 게이트별 Go / Pivot / Stop</span><span style="font-size:13px;color:#3A3A3A;">→ 로드맵 골격</span></div>
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">McKinsey Rewired</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">로드맵·인재·운영모델·기술·데이터·확산 6대 역량</span><span style="font-size:13px;color:#3A3A3A;">→ G1 진단 축</span></div>
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">BCG 10-20-70</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">알고리즘 10 · 기술·데이터 20 · 사람·프로세스 70</span><span style="font-size:13px;color:#3A3A3A;">→ G4 예산 배분</span></div>
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">MIT CISR AI Maturity</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">실험·준비 → 파일럿 → 업무방식 정착 → 미래 대응</span><span style="font-size:13px;color:#3A3A3A;">→ 목표 성숙도 정의</span></div>
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">Gartner AI Maturity</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">Awareness → Active → Operational → Systemic → Transformational</span><span style="font-size:13px;color:#3A3A3A;">→ 외부 비교 기준</span></div>
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">스마트공장 수준확인</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">기초 → 중간1 → 중간2 → 고도화</span><span style="font-size:13px;color:#3A3A3A;">→ 현장 수준 매핑 (현재 중간1)</span></div>
+</div>
+</div>
+
+<!-- 03 roadmap -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">03 — ROADMAP</span><span style="font-size:22px;font-weight:600;">18개월 전체 로드맵</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">◇ 게이트 통과 전 다음 단계 착수 불가</span></div>
+<div style="flex:999 1 640px;position:relative;background:#FFFFFF;border:1px solid #CFCFCF;padding:clamp(16px,3vw,32px);">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="overflow-x:auto;overflow-y:hidden;">
+<svg viewBox="0 0 1000 250" style="width:100%;min-width:640px;display:block;font-family:'Barlow Semi Condensed',sans-serif;">
+<g stroke="#E3E3E3" stroke-width="1"><line x1="40" y1="40" x2="40" y2="200"></line><line x1="193" y1="40" x2="193" y2="200"></line><line x1="347" y1="40" x2="347" y2="200"></line><line x1="500" y1="40" x2="500" y2="200"></line><line x1="653" y1="40" x2="653" y2="200"></line><line x1="807" y1="40" x2="807" y2="200"></line><line x1="960" y1="40" x2="960" y2="200"></line></g>
+<g font-size="15" fill="#6B6B6B" text-anchor="middle" letter-spacing="1.5"><text x="40" y="225">M0</text><text x="193" y="225">M3</text><text x="347" y="225">M6</text><text x="500" y="225">M9</text><text x="653" y="225">M12</text><text x="807" y="225">M15</text><text x="960" y="225">M18</text></g>
+<g font-family="Pretendard,sans-serif" font-size="14" fill="#3A3A3A" text-anchor="middle"><text x="91" y="160">현황 진단</text><text x="180" y="180">과제 발굴</text><text x="270" y="160">PoC·파일럿</text><text x="385" y="180">확산 준비</text><text x="628" y="160">전사 확산</text><text x="884" y="160">운영·내재화</text></g>
+<g><rect x="48" y="113" width="86" height="14" fill="#BDBDBD"></rect><rect x="150" y="113" width="61" height="14" fill="#A8A8A8"></rect><rect x="227" y="113" width="86" height="14" fill="#8F8F8F"></rect><rect x="329" y="113" width="112" height="14" fill="#757575"></rect><rect x="457" y="113" width="342" height="14" fill="#5A5A5A"></rect><rect x="815" y="113" width="145" height="14" fill="#3A3A3A"></rect></g>
+<line x1="40" y1="120" x2="960" y2="120" stroke="#1F1F1F" stroke-width="2"></line>
+<g fill="#FFFFFF" stroke="#1F1F1F" stroke-width="2.5"><polygon points="40,108 52,120 40,132 28,120"></polygon><polygon points="142,108 154,120 142,132 130,120"></polygon><polygon points="219,108 231,120 219,132 207,120"></polygon><polygon points="321,108 333,120 321,132 309,120"></polygon><polygon points="449,108 461,120 449,132 437,120"></polygon><polygon points="807,108 819,120 807,132 795,120"></polygon></g>
+<g font-size="26" font-weight="700" fill="#1F1F1F" text-anchor="middle"><text x="40" y="92">G0</text><text x="142" y="92">G1</text><text x="219" y="68">G2</text><text x="321" y="92">G3</text><text x="449" y="92">G4</text><text x="807" y="92">G5</text></g>
+<g font-size="13" fill="#6B6B6B" text-anchor="middle" letter-spacing="1"><text x="40" y="34">ALIGN</text><text x="142" y="34">ASSESS</text><text x="219" y="46" font-size="12">PRIORITIZE</text><text x="321" y="34">PROVE</text><text x="449" y="34">SCALE</text><text x="807" y="34">EMBED</text></g>
+<text x="960" y="92" font-size="16" font-weight="600" fill="#6B6B6B" text-anchor="end" letter-spacing="1">→ WAVE 2</text>
+</svg>
+</div></div>
+</div>
+
+<!-- 04 gates -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">04 — GATES</span><span style="font-size:22px;font-weight:600;">게이트별 상세</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">동일 서식 7개 항목 · 의사결정 질문 박스 고정</span></div>
+<div style="flex:999 1 640px;display:flex;flex-direction:column;gap:40px;">
+
+<!-- G0 -->
+<div style="position:relative;background:#FFFFFF;border:1px solid #CFCFCF;padding:clamp(20px,3vw,36px);display:flex;flex-direction:column;gap:24px;">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 20px;border-bottom:2px solid #1F1F1F;padding-bottom:14px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:44px;line-height:1;">G0</span><span style="font-size:22px;font-weight:600;">전략 정렬</span><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:15px;letter-spacing:.1em;color:#6B6B6B;margin-left:auto;">M0 · 2주</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:28px;">
+<div style="flex:1 1 300px;display:grid;grid-template-columns:88px minmax(0,1fr);gap:10px 16px;font-size:15px;line-height:1.6;">
+<span style="color:#6B6B6B;">목적</span><span>경영 목표와 AX 목표의 정렬</span>
+<span style="color:#6B6B6B;">입력 자료</span><span>중기 경영계획, 전년도 실적, 경영진 인터뷰 8건</span>
+<span style="color:#6B6B6B;">핵심 분석</span><span>경영 목표 → AX 목표 KPI 트리 분해</span>
+<span style="color:#6B6B6B;">산출물</span><span>KPI 트리, AX 추진 헌장</span>
+<span style="color:#6B6B6B;">승인 주체</span><span style="font-weight:600;">이사회</span>
+<span style="color:#6B6B6B;">통과 기준</span><span>KPI 3단계 이상 분해 · 경영진 스폰서 1인 지정</span>
+</div>
+<div style="flex:1 1 300px;display:flex;flex-direction:column;gap:8px;font-size:13px;">
+<div style="border:1.5px solid #1F1F1F;padding:10px 12px;font-weight:600;">영업이익률 +2.0%p</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding-left:16px;border-left:1px solid #BDBDBD;margin-left:12px;">
+<div style="border:1px solid #6B6B6B;padding:8px;">원가 절감</div><div style="border:1px solid #6B6B6B;padding:8px;">품질 개선</div><div style="border:1px solid #6B6B6B;padding:8px;">납기 단축</div>
+<div style="border:1px solid #CFCFCF;padding:8px;color:#3A3A3A;line-height:1.5;">설비 가동률<br><b style="font-family:'Barlow Semi Condensed';font-size:15px;">78 → 86%</b></div><div style="border:1px solid #CFCFCF;padding:8px;color:#3A3A3A;line-height:1.5;">불량률<br><b style="font-family:'Barlow Semi Condensed';font-size:15px;">2.1 → 1.2%</b></div><div style="border:1px solid #CFCFCF;padding:8px;color:#3A3A3A;line-height:1.5;">납기 준수율<br><b style="font-family:'Barlow Semi Condensed';font-size:15px;">91 → 97%</b></div>
+</div>
+</div>
+</div>
+<div style="border:1.5px solid #1F1F1F;padding:16px 20px;display:flex;flex-wrap:wrap;gap:6px 20px;align-items:baseline;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.16em;">의사결정 질문</span><span style="font-size:17px;font-weight:600;line-height:1.5;">AX를 경영 과제로 추진하는가 · 책임 스폰서는 누구인가</span></div>
+</div>
+
+<!-- G1 -->
+<div style="position:relative;background:#FFFFFF;border:1px solid #CFCFCF;padding:clamp(20px,3vw,36px);display:flex;flex-direction:column;gap:24px;">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 20px;border-bottom:2px solid #1F1F1F;padding-bottom:14px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:44px;line-height:1;">G1</span><span style="font-size:22px;font-weight:600;">현황 진단</span><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:15px;letter-spacing:.1em;color:#6B6B6B;margin-left:auto;">M0–M2 · 6주</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:28px;">
+<div style="flex:1 1 300px;display:grid;grid-template-columns:88px minmax(0,1fr);gap:10px 16px;font-size:15px;line-height:1.6;align-content:start;">
+<span style="color:#6B6B6B;">목적</span><span>6개 영역 AI 성숙도 현재 수준 측정</span>
+<span style="color:#6B6B6B;">입력 자료</span><span>임직원 설문 132명, 시스템 현황(MES·ERP), 데이터 샘플</span>
+<span style="color:#6B6B6B;">핵심 분석</span><span>영역별 5점 척도 진단 · 목표 대비 격차</span>
+<span style="color:#6B6B6B;">산출물</span><span>성숙도 진단 보고서, 격차 분석표</span>
+<span style="color:#6B6B6B;">승인 주체</span><span style="font-weight:600;">경영진 스폰서 · AX 추진위원회</span>
+<span style="color:#6B6B6B;">통과 기준</span><span>6개 영역 진단 완료 · 평균 1.7 → 목표 3.6 합의</span>
+</div>
+<div style="flex:1 1 300px;display:flex;flex-direction:column;align-items:center;gap:10px;">
+<svg viewBox="-40 0 280 200" style="width:100%;max-width:340px;font-family:Pretendard,sans-serif;">
+<polygon points="100,20 169.3,60 169.3,140 100,180 30.7,140 30.7,60" fill="none" stroke="#CFCFCF"></polygon>
+<polygon points="100,60 134.6,80 134.6,120 100,140 65.4,120 65.4,80" fill="none" stroke="#E3E3E3"></polygon>
+<g stroke="#E3E3E3"><line x1="100" y1="100" x2="100" y2="20"></line><line x1="100" y1="100" x2="169.3" y2="60"></line><line x1="100" y1="100" x2="169.3" y2="140"></line><line x1="100" y1="100" x2="100" y2="180"></line><line x1="100" y1="100" x2="30.7" y2="140"></line><line x1="100" y1="100" x2="30.7" y2="60"></line></g>
+<polygon points="100,36 148.5,72 148.5,128 100,148 44.6,132 51.5,72" fill="none" stroke="#6B6B6B" stroke-width="1.5" stroke-dasharray="4 3"></polygon>
+<polygon points="100,68 120.8,88 127.7,116 100,116 65.4,120 86.1,92" fill="rgba(31,31,31,.12)" stroke="#1F1F1F" stroke-width="2"></polygon>
+<g font-size="11" fill="#3A3A3A"><text x="100" y="12" text-anchor="middle">전략</text><text x="175" y="56">데이터</text><text x="175" y="150">기술</text><text x="100" y="196" text-anchor="middle">인재</text><text x="25" y="150" text-anchor="end">프로세스</text><text x="25" y="56" text-anchor="end">거버넌스</text></g>
+</svg>
+<div style="display:flex;gap:20px;font-size:13px;color:#3A3A3A;"><span style="display:flex;align-items:center;gap:6px;"><span style="width:22px;border-top:2px solid #1F1F1F;"></span>현재 1.7</span><span style="display:flex;align-items:center;gap:6px;"><span style="width:22px;border-top:1.5px dashed #6B6B6B;"></span>목표 3.6</span></div>
+</div>
+</div>
+<div style="border:1.5px solid #1F1F1F;padding:16px 20px;display:flex;flex-wrap:wrap;gap:6px 20px;align-items:baseline;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.16em;">의사결정 질문</span><span style="font-size:17px;font-weight:600;line-height:1.5;">18개월 후 목표 성숙도 수준 — MIT CISR 3단계(AI 업무방식 정착) 채택 여부</span></div>
+</div>
+
+<!-- G2 -->
+<div style="position:relative;background:#FFFFFF;border:1px solid #CFCFCF;padding:clamp(20px,3vw,36px);display:flex;flex-direction:column;gap:24px;">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 20px;border-bottom:2px solid #1F1F1F;padding-bottom:14px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:44px;line-height:1;">G2</span><span style="font-size:22px;font-weight:600;">과제 발굴·우선순위</span><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:15px;letter-spacing:.1em;color:#6B6B6B;margin-left:auto;">M2–M3.5 · 6주</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:28px;">
+<div style="flex:1 1 300px;display:grid;grid-template-columns:88px minmax(0,1fr);gap:10px 16px;font-size:15px;line-height:1.6;align-content:start;">
+<span style="color:#6B6B6B;">목적</span><span>후보 과제 중 1웨이브 우선 과제 선정</span>
+<span style="color:#6B6B6B;">입력 자료</span><span>현업 워크숍 4회, 후보 과제 12건, 데이터 준비도 점검표</span>
+<span style="color:#6B6B6B;">핵심 분석</span><span>가치 × 실행 가능성 2×2 매트릭스 · 데이터 준비도 가중</span>
+<span style="color:#6B6B6B;">산출물</span><span>과제 정의서 12건, 우선순위 매트릭스</span>
+<span style="color:#6B6B6B;">승인 주체</span><span style="font-weight:600;">AX 추진위원회</span>
+<span style="color:#6B6B6B;">통과 기준</span><span>가치·실행 가능성 3.5 / 5 이상 · 데이터 준비도 60% 이상</span>
+</div>
+<div style="flex:1 1 300px;display:flex;flex-direction:column;gap:8px;">
+<svg viewBox="0 0 260 230" style="width:100%;max-width:360px;font-family:Pretendard,sans-serif;">
+<rect x="30" y="10" width="220" height="190" fill="none" stroke="#CFCFCF"></rect>
+<rect x="140" y="10" width="110" height="95" fill="#EDEDED"></rect>
+<line x1="140" y1="10" x2="140" y2="200" stroke="#BDBDBD" stroke-dasharray="3 3"></line><line x1="30" y1="105" x2="250" y2="105" stroke="#BDBDBD" stroke-dasharray="3 3"></line>
+<g fill="#BDBDBD"><circle cx="60" cy="40" r="5"></circle><circle cx="85" cy="70" r="7"></circle><circle cx="110" cy="130" r="4"></circle><circle cx="70" cy="165" r="6"></circle><circle cx="120" cy="180" r="5"></circle><circle cx="170" cy="150" r="6"></circle><circle cx="215" cy="175" r="4"></circle><circle cx="195" cy="125" r="5"></circle><circle cx="160" cy="88" r="6"></circle></g>
+<g fill="#1F1F1F"><circle cx="210" cy="35" r="10"></circle><circle cx="180" cy="55" r="8"></circle><circle cx="228" cy="78" r="9"></circle></g>
+<g font-family="'Barlow Semi Condensed',sans-serif" font-size="12" font-weight="700" fill="#1F1F1F"><text x="196" y="22">P1</text><text x="160" y="46">P2</text><text x="215" y="102">P3</text></g>
+<text x="140" y="222" font-size="11" fill="#6B6B6B" text-anchor="middle">실행 가능성 →</text>
+<text x="14" y="105" font-size="11" fill="#6B6B6B" text-anchor="middle" transform="rotate(-90 14 105)">가치 →</text>
+</svg>
+<div style="display:flex;flex-direction:column;gap:4px;font-size:13px;color:#3A3A3A;line-height:1.5;"><span><b>P1</b> 비전 기반 외관 검사 자동화</span><span><b>P2</b> 수요예측 기반 생산계획</span><span><b>P3</b> 설비 이상 징후 예측</span><span style="color:#6B6B6B;">점 크기 = 데이터 준비도</span></div>
+</div>
+</div>
+<div style="border:1.5px solid #1F1F1F;padding:16px 20px;display:flex;flex-wrap:wrap;gap:6px 20px;align-items:baseline;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.16em;">의사결정 질문</span><span style="font-size:17px;font-weight:600;line-height:1.5;">어떤 3개 과제에 먼저 자원을 투입하는가</span></div>
+</div>
+
+<!-- G3 -->
+<div style="position:relative;background:#FFFFFF;border:1px solid #CFCFCF;padding:clamp(20px,3vw,36px);display:flex;flex-direction:column;gap:24px;">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 20px;border-bottom:2px solid #1F1F1F;padding-bottom:14px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:44px;line-height:1;">G3</span><span style="font-size:22px;font-weight:600;">PoC·파일럿</span><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:15px;letter-spacing:.1em;color:#6B6B6B;margin-left:auto;">M3.5–M5.5 · 6~8주</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px 28px;font-size:15px;line-height:1.6;">
+<div style="display:grid;grid-template-columns:88px minmax(0,1fr);gap:10px 16px;"><span style="color:#6B6B6B;">목적</span><span>우선 과제 3건 현장 성과 검증</span><span style="color:#6B6B6B;">입력 자료</span><span>사전 정의 성공 기준, 공장 1개소 실데이터</span><span style="color:#6B6B6B;">핵심 분석</span><span>기준값 대비 목표값 달성 여부</span></div>
+<div style="display:grid;grid-template-columns:88px minmax(0,1fr);gap:10px 16px;"><span style="color:#6B6B6B;">산출물</span><span>PoC 결과 보고서, 확산 계획 초안</span><span style="color:#6B6B6B;">승인 주체</span><span style="font-weight:600;">경영진 스폰서</span><span style="color:#6B6B6B;">통과 기준</span><span>4개 지표 중 3개 이상 목표 달성</span></div>
+</div>
+<div style="overflow-x:auto;">
+<table style="width:100%;min-width:560px;border-collapse:collapse;font-size:14px;">
+<thead><tr style="border-top:1.5px solid #1F1F1F;border-bottom:1px solid #1F1F1F;"><th style="padding:10px 8px 10px 0;font-weight:600;">지표</th><th style="padding:10px 8px;font-weight:600;text-align:right;">기준값</th><th style="padding:10px 8px;font-weight:600;text-align:right;">목표값</th><th style="padding:10px 0 10px 16px;font-weight:600;">측정 방법</th></tr></thead>
+<tbody>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:10px 8px 10px 0;">외관 불량 검출률</td><td style="padding:10px 8px;text-align:right;font-family:'Barlow Semi Condensed';font-size:16px;color:#6B6B6B;">82%</td><td style="padding:10px 8px;text-align:right;font-family:'Barlow Semi Condensed';font-size:16px;font-weight:700;">95%</td><td style="padding:10px 0 10px 16px;color:#3A3A3A;">샘플 3,000건 블라인드 테스트</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:10px 8px 10px 0;">검사 공수</td><td style="padding:10px 8px;text-align:right;font-family:'Barlow Semi Condensed';font-size:16px;color:#6B6B6B;">4.2h/일</td><td style="padding:10px 8px;text-align:right;font-family:'Barlow Semi Condensed';font-size:16px;font-weight:700;">2.5h/일</td><td style="padding:10px 0 10px 16px;color:#3A3A3A;">MES 작업 실적 4주 평균</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:10px 8px 10px 0;">수요예측 오차 (MAPE)</td><td style="padding:10px 8px;text-align:right;font-family:'Barlow Semi Condensed';font-size:16px;color:#6B6B6B;">24%</td><td style="padding:10px 8px;text-align:right;font-family:'Barlow Semi Condensed';font-size:16px;font-weight:700;">15%</td><td style="padding:10px 0 10px 16px;color:#3A3A3A;">ERP 수주 실적 12주 백테스트</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:10px 8px 10px 0;">현업 사용률</td><td style="padding:10px 8px;text-align:right;font-family:'Barlow Semi Condensed';font-size:16px;color:#6B6B6B;">—</td><td style="padding:10px 8px;text-align:right;font-family:'Barlow Semi Condensed';font-size:16px;font-weight:700;">주 3회+</td><td style="padding:10px 0 10px 16px;color:#3A3A3A;">시스템 접속 로그</td></tr>
+</tbody></table>
+</div>
+<div style="border:1.5px solid #1F1F1F;padding:16px 20px;display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.16em;">의사결정 질문</span><span style="font-size:17px;font-weight:600;line-height:1.5;flex:1 1 260px;">사전 정의한 성공 기준 충족 여부</span><span style="display:flex;gap:6px;font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:14px;letter-spacing:.1em;"><span style="padding:4px 12px;background:#1F1F1F;color:#FFFFFF;">GO</span><span style="padding:4px 12px;border:1px solid #6B6B6B;">PIVOT</span><span style="padding:4px 12px;border:1px dashed #6B6B6B;color:#6B6B6B;">STOP</span></span></div>
+</div>
+
+<!-- G4 -->
+<div style="position:relative;background:#FFFFFF;border:1px solid #CFCFCF;padding:clamp(20px,3vw,36px);display:flex;flex-direction:column;gap:24px;">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 20px;border-bottom:2px solid #1F1F1F;padding-bottom:14px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:44px;line-height:1;">G4</span><span style="font-size:22px;font-weight:600;">확산</span><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:15px;letter-spacing:.1em;color:#6B6B6B;margin-left:auto;">M5.5–M8 · 10주</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:28px;">
+<div style="flex:1 1 300px;display:grid;grid-template-columns:88px minmax(0,1fr);gap:10px 16px;font-size:15px;line-height:1.6;align-content:start;">
+<span style="color:#6B6B6B;">목적</span><span>검증 과제의 공장 2개소 전사 확산</span>
+<span style="color:#6B6B6B;">입력 자료</span><span>PoC 결과, 확산 대상 라인 목록, 인력 현황</span>
+<span style="color:#6B6B6B;">핵심 분석</span><span>운영모델 설계 · 10-20-70 예산 배분</span>
+<span style="color:#6B6B6B;">산출물</span><span>확산 실행계획, 운영모델 정의서</span>
+<span style="color:#6B6B6B;">승인 주체</span><span style="font-weight:600;">이사회</span>
+<span style="color:#6B6B6B;">통과 기준</span><span>사람·프로세스 예산 비중 60% 이상 확보</span>
+</div>
+<div style="flex:1 1 300px;display:flex;flex-direction:column;gap:20px;">
+<div style="display:flex;flex-direction:column;gap:8px;">
+<span style="font-size:13px;color:#6B6B6B;">운영모델 — Hub &amp; Spoke</span>
+<div style="display:flex;align-items:center;gap:10px;font-size:13px;flex-wrap:wrap;"><span style="border:1.5px solid #1F1F1F;padding:8px 12px;font-weight:600;">AX CoE 5명</span><span style="color:#6B6B6B;">—</span><span style="border:1px dashed #6B6B6B;padding:8px 12px;">현업 AX 담당자 × 7개 부서</span></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;">
+<span style="font-size:13px;color:#6B6B6B;">확산 예산 배분 · 총 12억 원</span>
+<div style="display:flex;height:34px;font-family:'Barlow Semi Condensed',sans-serif;font-size:13px;font-weight:700;">
+<div style="flex:10;background:#BDBDBD;"></div>
+<div style="flex:20;background:#8F8F8F;"></div>
+<div style="flex:70;background:#3A3A3A;color:#FFFFFF;display:flex;align-items:center;padding-left:10px;">70%</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;font-size:12px;color:#3A3A3A;line-height:1.5;"><span>알고리즘 10%<br><b>1.2억</b></span><span>기술·데이터 20%<br><b>2.4억</b></span><span>사람·프로세스 70%<br><b>8.4억</b></span></div>
+</div>
+</div>
+</div>
+<div style="border:1.5px solid #1F1F1F;padding:16px 20px;display:flex;flex-wrap:wrap;gap:6px 20px;align-items:baseline;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.16em;">의사결정 질문</span><span style="font-size:17px;font-weight:600;line-height:1.5;">확산 투자 12억 원 승인 여부</span></div>
+</div>
+
+<!-- G5 -->
+<div style="position:relative;background:#FFFFFF;border:1px solid #CFCFCF;padding:clamp(20px,3vw,36px);display:flex;flex-direction:column;gap:24px;">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 20px;border-bottom:2px solid #1F1F1F;padding-bottom:14px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:44px;line-height:1;">G5</span><span style="font-size:22px;font-weight:600;">운영·내재화</span><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:15px;letter-spacing:.1em;color:#6B6B6B;margin-left:auto;">M15–M18 · 상시</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:28px;">
+<div style="flex:1 1 300px;display:grid;grid-template-columns:88px minmax(0,1fr);gap:10px 16px;font-size:15px;line-height:1.6;align-content:start;">
+<span style="color:#6B6B6B;">목적</span><span>성과 지속 관리 및 자체 운영 역량 확보</span>
+<span style="color:#6B6B6B;">입력 자료</span><span>KPI 실적, 성숙도 재진단 결과</span>
+<span style="color:#6B6B6B;">핵심 분석</span><span>목표 대비 실현율 · 성숙도 변화</span>
+<span style="color:#6B6B6B;">산출물</span><span>운영 성과 보고서, 2웨이브 과제 후보</span>
+<span style="color:#6B6B6B;">승인 주체</span><span style="font-weight:600;">이사회</span>
+<span style="color:#6B6B6B;">통과 기준</span><span>KPI 실현율 80% 이상 · 성숙도 3.0 이상</span>
+</div>
+<div style="flex:1 1 300px;">
+<table style="width:100%;border-collapse:collapse;font-size:14px;">
+<thead><tr style="border-top:1.5px solid #1F1F1F;border-bottom:1px solid #1F1F1F;"><th style="padding:10px 8px 10px 0;font-weight:600;">주기</th><th style="padding:10px 8px;font-weight:600;">회의체</th><th style="padding:10px 0 10px 8px;font-weight:600;">안건</th></tr></thead>
+<tbody>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:10px 8px 10px 0;font-family:'Barlow Semi Condensed';font-weight:700;">월간</td><td style="padding:10px 8px;">AX 추진위원회</td><td style="padding:10px 0 10px 8px;color:#3A3A3A;">운영 KPI 리뷰</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:10px 8px 10px 0;font-family:'Barlow Semi Condensed';font-weight:700;">분기</td><td style="padding:10px 8px;">이사회 보고</td><td style="padding:10px 0 10px 8px;color:#3A3A3A;">재무 효과 실현율</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:10px 8px 10px 0;font-family:'Barlow Semi Condensed';font-weight:700;">반기</td><td style="padding:10px 8px;">CoE 주관</td><td style="padding:10px 0 10px 8px;color:#3A3A3A;">성숙도 재진단</td></tr>
+</tbody></table>
+</div>
+</div>
+<div style="border:1.5px solid #1F1F1F;padding:16px 20px;display:flex;flex-wrap:wrap;gap:6px 20px;align-items:baseline;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.16em;">의사결정 질문</span><span style="font-size:17px;font-weight:600;line-height:1.5;">2웨이브 착수 여부 · 대상 과제 범위</span></div>
+</div>
+
+</div>
+</div>
+
+<!-- 05 risk -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">05 — RISK</span><span style="font-size:22px;font-weight:600;">리스크·대응</span></div>
+<div style="flex:999 1 640px;position:relative;background:#FFFFFF;border:1px solid #CFCFCF;padding:clamp(20px,3vw,36px);display:flex;flex-wrap:wrap;gap:32px;">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="flex:0 1 280px;display:grid;grid-template-columns:24px repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,72px) 28px;gap:4px;font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:15px;">
+<span style="grid-row:1/4;font-family:Pretendard;font-weight:400;font-size:12px;line-height:1.3;color:#6B6B6B;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;"><span>↑</span><span>영</span><span>향</span><span>도</span></span>
+<div style="background:#BDBDBD;padding:8px;">R5</div><div style="background:#6B6B6B;color:#FFFFFF;padding:8px;">R3</div><div style="background:#1F1F1F;color:#FFFFFF;padding:8px;">R1</div>
+<div style="background:#E3E3E3;padding:8px;">R6</div><div style="background:#BDBDBD;padding:8px;">R4</div><div style="background:#6B6B6B;color:#FFFFFF;padding:8px;">R2</div>
+<div style="background:#F2F2F2;"></div><div style="background:#E3E3E3;"></div><div style="background:#BDBDBD;"></div>
+<span></span><span style="grid-column:2/5;font-family:Pretendard;font-weight:400;font-size:12px;color:#6B6B6B;text-align:center;align-self:center;">발생 가능성 →</span>
+</div>
+<div style="flex:1 1 340px;overflow-x:auto;">
+<table style="width:100%;min-width:380px;border-collapse:collapse;font-size:14px;line-height:1.5;">
+<thead><tr style="border-top:1.5px solid #1F1F1F;border-bottom:1px solid #1F1F1F;"><th style="padding:9px 8px 9px 0;font-weight:600;">리스크</th><th style="padding:9px 8px;font-weight:600;">대응 방안</th><th style="padding:9px 0 9px 8px;font-weight:600;">담당</th></tr></thead>
+<tbody>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:9px 8px 9px 0;"><b style="font-family:'Barlow Semi Condensed'">R1</b> 데이터 품질 미흡</td><td style="padding:9px 8px;color:#3A3A3A;">G1 단계 기준정보 정비 선행</td><td style="padding:9px 0 9px 8px;color:#6B6B6B;">IT팀</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:9px 8px 9px 0;"><b style="font-family:'Barlow Semi Condensed'">R2</b> 현업 사용률 저조</td><td style="padding:9px 8px;color:#3A3A3A;">부서별 AX 담당자 KPI 반영</td><td style="padding:9px 0 9px 8px;color:#6B6B6B;">인사팀</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:9px 8px 9px 0;"><b style="font-family:'Barlow Semi Condensed'">R3</b> 핵심 인력 이탈</td><td style="padding:9px 8px;color:#3A3A3A;">CoE 2인 이상 복수 담당 체계</td><td style="padding:9px 0 9px 8px;color:#6B6B6B;">CoE</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:9px 8px 9px 0;"><b style="font-family:'Barlow Semi Condensed'">R4</b> PoC 성과 과대 추정</td><td style="padding:9px 8px;color:#3A3A3A;">성공 기준 사전 확정 · 블라인드 측정</td><td style="padding:9px 0 9px 8px;color:#6B6B6B;">CoE</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:9px 8px 9px 0;"><b style="font-family:'Barlow Semi Condensed'">R5</b> 외부 LLM 정보 유출</td><td style="padding:9px 8px;color:#3A3A3A;">사내 게이트웨이 경유 · 민감정보 마스킹</td><td style="padding:9px 0 9px 8px;color:#6B6B6B;">보안팀</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:9px 8px 9px 0;"><b style="font-family:'Barlow Semi Condensed'">R6</b> 벤더 종속</td><td style="padding:9px 8px;color:#3A3A3A;">표준 API · 모델 교체 가능 구조</td><td style="padding:9px 0 9px 8px;color:#6B6B6B;">IT팀</td></tr>
+</tbody></table>
+</div>
+</div>
+</div>
+
+<!-- 06 decisions -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">06 — RESOLUTION</span><span style="font-size:22px;font-weight:600;">의결 요청 사항</span></div>
+<div style="flex:999 1 640px;overflow-x:auto;">
+<table style="width:100%;min-width:680px;border-collapse:collapse;font-size:15px;line-height:1.6;">
+<thead><tr style="border-top:2px solid #1F1F1F;border-bottom:1px solid #1F1F1F;"><th style="padding:12px 10px 12px 0;font-weight:600;">안건</th><th style="padding:12px 10px;font-weight:600;">선택지</th><th style="padding:12px 10px;font-weight:600;">권고안</th><th style="padding:12px 10px;font-weight:600;text-align:right;">소요 예산 (백만 원)</th><th style="padding:12px 0 12px 10px;font-weight:600;">결정 시한</th></tr></thead>
+<tbody>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:14px 10px 14px 0;font-weight:600;">1. AX 투자 한도</td><td style="padding:14px 10px;color:#3A3A3A;">A 800 (1웨이브)<br>B 1,200 (1웨이브 + 확산)<br>C 2,000 (전 과제 동시)</td><td style="padding:14px 10px;font-weight:700;">B안</td><td style="padding:14px 10px;text-align:right;font-family:'Barlow Semi Condensed';font-size:18px;font-weight:700;">1,200</td><td style="padding:14px 0 14px 10px;font-family:'Barlow Semi Condensed';font-size:16px;">2026.11 정기 이사회</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:14px 10px 14px 0;font-weight:600;">2. 추진 조직 신설</td><td style="padding:14px 10px;color:#3A3A3A;">A 한시 TF<br>B AX CoE 상설 조직<br>C 외부 위탁 운영</td><td style="padding:14px 10px;font-weight:700;">B안</td><td style="padding:14px 10px;text-align:right;font-family:'Barlow Semi Condensed';font-size:18px;font-weight:700;">480 / 년</td><td style="padding:14px 0 14px 10px;font-family:'Barlow Semi Condensed';font-size:16px;">2026.12 조직 개편</td></tr>
+</tbody></table>
+</div>
+</div>
+
+<!-- 07 reference -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">07 — REFERENCE</span><span style="font-size:22px;font-weight:600;">출처</span></div>
+<ol style="flex:999 1 640px;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;font-size:14px;line-height:1.6;color:#3A3A3A;border-top:1px solid #1F1F1F;">
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">1</span><span>Cooper, R. G. (1990). Stage-Gate Systems: A New Tool for Managing New Products. <i>Business Horizons</i>, 33(3).</span></li>
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">2</span><span>Lamarre, E., Smaje, K., &amp; Zemmel, R. (2023). <i>Rewired: The McKinsey Guide to Outcompeting in the Age of Digital and AI</i>. Wiley.</span></li>
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">3</span><span>Boston Consulting Group. 10-20-70 원칙 — AI 가치 실현 관련 발간물.</span></li>
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">4</span><span>MIT Center for Information Systems Research. Enterprise AI Maturity Model. Research Briefing.</span></li>
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">5</span><span>Gartner. AI Maturity Model.</span></li>
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">6</span><span>중소벤처기업부 · 스마트제조혁신추진단. 스마트공장 수준확인 제도.</span></li>
+</ol>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:40px;margin-top:24px;border-top:1px solid #CFCFCF;font-size:13px;color:#6B6B6B;">
+<span>본 페이지의 수치와 사례는 설명을 위한 가상 예시임</span>
+<span style="font-family:'Barlow Semi Condensed',sans-serif;letter-spacing:.12em;">AX-BRD-2026-014 · 01 / 06</span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showGrid&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showGrid: this.props.showGrid ?? false, cols: Array.from({ length: 12 }, (_, i) => i) };
+  }
+}
+</script>
+</body>
+</html>

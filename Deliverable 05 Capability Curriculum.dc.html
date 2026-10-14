@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap">
+<style>
+body{margin:0;background:#F2F2F2;color:#1F1F1F;font-family:Pretendard,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#1F1F1F;text-decoration:none}a:hover{color:#6B6B6B}
+td,th{text-align:left;vertical-align:top}
+</style>
+</helmet>
+<div style="position:relative;max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,60px) 80px;box-sizing:border-box;">
+<sc-if value="{{ showGrid }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;inset:0 clamp(20px,4vw,60px);display:grid;grid-template-columns:repeat(12,1fr);gap:24px;pointer-events:none;z-index:5;">
+<sc-for list="{{ cols }}" as="c" hint-placeholder-count="12"><div style="background:rgba(0,0,0,.04);border-left:1px solid #CFCFCF;border-right:1px solid #CFCFCF;"></div></sc-for>
+</div>
+</sc-if>
+
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding:26px 0 18px;border-bottom:1px solid #CFCFCF;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.12em;color:#3A3A3A;">
+<span>04 · DELIVERABLES / 05 — 역량 진단·재교육 커리큘럼</span>
+<a href="QuantumDX%20Homepage.dc.html#deliverables" style="color:#6B6B6B;letter-spacing:.08em;">← 산출물 갤러리</a>
+</div>
+
+<!-- cover -->
+<div style="display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between;align-items:flex-end;padding:72px 0 56px;">
+<div style="flex:1 1 520px;display:flex;flex-direction:column;gap:20px;">
+<div style="display:flex;gap:8px;flex-wrap:wrap;">
+<span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.16em;padding:5px 10px;border:1.5px solid #1F1F1F;">INTERNAL · 사내 한정</span>
+<span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:.16em;padding:5px 10px;border:1px solid #BDBDBD;color:#6B6B6B;">SAMPLE</span>
+</div>
+<h1 style="margin:0;font-weight:500;font-size:clamp(36px,5vw,60px);line-height:1.2;letter-spacing:-.02em;text-wrap:pretty;">역량 진단·재교육 커리큘럼</h1>
+<p style="margin:0;font-size:19px;line-height:1.6;color:#6B6B6B;">현재 수준 → 목표 수준 → 격차 → 업무 과제 기반 과정 → 효과 측정</p>
+</div>
+<div style="flex:0 1 420px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #1F1F1F;">
+<div style="padding:12px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:4px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:12px;letter-spacing:.14em;color:#6B6B6B;">대상 인원</span><span aria-hidden="true" style="filter:blur(6px);user-select:none;font-size:15px;font-weight:600;">150명 · 5개 역할</span></div>
+<div style="padding:12px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:4px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:12px;letter-spacing:.14em;color:#6B6B6B;">기간</span><span aria-hidden="true" style="filter:blur(6px);user-select:none;font-family:'Barlow Semi Condensed',sans-serif;font-size:17px;font-weight:600;">12주 · 2026.11–2027.01</span></div>
+<div style="padding:12px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:4px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:12px;letter-spacing:.14em;color:#6B6B6B;">진단 시점</span><span aria-hidden="true" style="filter:blur(6px);user-select:none;font-family:'Barlow Semi Condensed',sans-serif;font-size:17px;font-weight:600;">2026.09</span></div>
+<div style="padding:12px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:4px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:12px;letter-spacing:.14em;color:#6B6B6B;">대상 기업</span><span aria-hidden="true" style="filter:blur(6px);user-select:none;font-size:15px;font-weight:600;">제조 A사 (가상)</span></div>
+</div>
+</div>
+
+<!-- 01 summary -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">01 — SUMMARY</span><span style="font-size:22px;font-weight:600;">핵심 요약</span></div>
+<div style="flex:999 1 640px;position:relative;background:#FFFFFF;border:1px solid #CFCFCF;padding:clamp(24px,3vw,40px);">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:14px;letter-spacing:.12em;color:#6B6B6B;width:72px;flex:none;padding-top:4px;">최대 격차</span><span style="font-size:19px;line-height:1.55;font-weight:600;text-wrap:pretty;">업무 재설계 역량 — 전 역할 평균 격차 1.8단계, 5개 역량 중 최대</span></div>
+<div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:14px;letter-spacing:.12em;color:#6B6B6B;width:72px;flex:none;padding-top:4px;">우선 대상</span><span style="font-size:19px;line-height:1.55;font-weight:600;text-wrap:pretty;">관리자 22명 · 현업 핵심 사용자 12명 — 격차 합계 상위 2개 역할</span></div>
+<div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:14px;letter-spacing:.12em;color:#6B6B6B;width:72px;flex:none;padding-top:4px;">기대 효과</span><span style="font-size:19px;line-height:1.55;font-weight:600;text-wrap:pretty;">AI 활용 업무 비중 8% → 25% · 현업 과제 12건 실제 업무 적용</span></div>
+</div>
+</div>
+
+<!-- 02 framework -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">02 — FRAMEWORK</span><span style="font-size:22px;font-weight:600;">적용 프레임워크</span></div>
+<div style="flex:999 1 640px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));border-top:1px solid #1F1F1F;">
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">Kirkpatrick 4단계</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">반응 → 학습 → 행동 → 결과</span><span style="font-size:13px;color:#3A3A3A;">→ 10 효과 측정 L1–L4</span></div>
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">Phillips ROI</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">4단계 + 투자수익(5단계)</span><span style="font-size:13px;color:#3A3A3A;">→ 10 효과 측정 L5</span></div>
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">Bloom’s Taxonomy 개정판</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">기억 → 이해 → 적용 → 분석 → 평가 → 창조</span><span style="font-size:13px;color:#3A3A3A;">→ 모듈별 학습 목표 수준</span></div>
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">70-20-10</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">업무 경험 70 · 관계·코칭 20 · 공식 교육 10</span><span style="font-size:13px;color:#3A3A3A;">→ 08 학습 방식 배분</span></div>
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">EU AI Act 제4조</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">AI 운영 기업 임직원 AI 리터러시 확보 의무</span><span style="font-size:13px;color:#3A3A3A;">→ 윤리·보안 역량 전원 필수</span></div>
+</div>
+</div>
+
+<!-- 03 roles -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">03 — ROLES</span><span style="font-size:22px;font-weight:600;">역할 정의</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">5개 역할 · 150명</span></div>
+<div style="flex:999 1 640px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;">
+<div style="position:relative;background:#FFFFFF;border:1px solid #CFCFCF;padding:20px;display:flex;flex-direction:column;gap:10px;"><span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:13px;letter-spacing:.14em;color:#8F8F8F;">R1</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:36px;line-height:1;">8<span style="font-size:16px;color:#6B6B6B;"> 명</span></span><span style="font-size:17px;font-weight:600;">경영진</span><span style="font-size:13px;color:#3A3A3A;line-height:1.6;">AI 투자 의사결정 · 성과 책임</span><span style="font-size:12px;color:#6B6B6B;margin-top:auto;padding-top:8px;border-top:1px solid #CFCFCF;">목표 L3 · 리더십 트랙</span></div>
+<div style="position:relative;background:#FFFFFF;border:1.5px solid #1F1F1F;padding:20px;display:flex;flex-direction:column;gap:10px;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:13px;letter-spacing:.14em;color:#8F8F8F;">R2 · 우선</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:36px;line-height:1;">22<span style="font-size:16px;color:#6B6B6B;"> 명</span></span><span style="font-size:17px;font-weight:600;">관리자</span><span style="font-size:13px;color:#3A3A3A;line-height:1.6;">팀 업무 재설계 · 과제 선정</span><span style="font-size:12px;color:#6B6B6B;margin-top:auto;padding-top:8px;border-top:1px solid #CFCFCF;">목표 L3 · 리더십 트랙</span></div>
+<div style="position:relative;background:#FFFFFF;border:1px solid #CFCFCF;padding:20px;display:flex;flex-direction:column;gap:10px;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:13px;letter-spacing:.14em;color:#8F8F8F;">R3</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:36px;line-height:1;">96<span style="font-size:16px;color:#6B6B6B;"> 명</span></span><span style="font-size:17px;font-weight:600;">현업 실무자</span><span style="font-size:13px;color:#3A3A3A;line-height:1.6;">일상 업무 AI 도구 활용</span><span style="font-size:12px;color:#6B6B6B;margin-top:auto;padding-top:8px;border-top:1px solid #CFCFCF;">목표 L2 · 실무 활용 트랙</span></div>
+<div style="position:relative;background:#FFFFFF;border:1.5px solid #1F1F1F;padding:20px;display:flex;flex-direction:column;gap:10px;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:13px;letter-spacing:.14em;color:#8F8F8F;">R4 · 우선</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:36px;line-height:1;">12<span style="font-size:16px;color:#6B6B6B;"> 명</span></span><span style="font-size:17px;font-weight:600;">현업 핵심 사용자</span><span style="font-size:13px;color:#3A3A3A;line-height:1.6;">시민 개발자 · 노코드 자동화 · 현업 과제 리드</span><span style="font-size:12px;color:#6B6B6B;margin-top:auto;padding-top:8px;border-top:1px solid #CFCFCF;">목표 L3 · 실무 + 기술 트랙</span></div>
+<div style="position:relative;background:#FFFFFF;border:1px solid #CFCFCF;padding:20px;display:flex;flex-direction:column;gap:10px;"><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:13px;letter-spacing:.14em;color:#8F8F8F;">R5</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:36px;line-height:1;">12<span style="font-size:16px;color:#6B6B6B;"> 명</span></span><span style="font-size:17px;font-weight:600;">IT 담당</span><span style="font-size:13px;color:#3A3A3A;line-height:1.6;">데이터 · 플랫폼 운영 · 모델 배포</span><span style="font-size:12px;color:#6B6B6B;margin-top:auto;padding-top:8px;border-top:1px solid #CFCFCF;">목표 L4 · 기술 심화 트랙</span></div>
+</div>
+</div>
+
+<!-- 04 competency -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">04 — COMPETENCY</span><span style="font-size:22px;font-weight:600;">역량 모델</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">5개 역량 × 4단계 수준</span></div>
+<div style="flex:999 1 640px;overflow-x:auto;">
+<table style="width:100%;min-width:720px;border-collapse:collapse;font-size:14px;line-height:1.55;">
+<thead><tr style="border-top:2px solid #1F1F1F;border-bottom:1px solid #1F1F1F;"><th style="padding:12px 10px 12px 0;font-weight:600;">역량</th><th style="padding:12px 10px;font-weight:600;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;">L1</span> 인지</th><th style="padding:12px 10px;font-weight:600;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;">L2</span> 활용</th><th style="padding:12px 10px;font-weight:600;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;">L3</span> 적용</th><th style="padding:12px 0 12px 10px;font-weight:600;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;">L4</span> 선도</th></tr></thead>
+<tbody>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-weight:600;">AI 이해</td><td style="padding:12px 10px;color:#3A3A3A;">용어 · 가능성 이해</td><td style="padding:12px 10px;color:#3A3A3A;">업무 적용 사례 설명</td><td style="padding:12px 10px;color:#3A3A3A;">과제 적합성 판단</td><td style="padding:12px 0 12px 10px;color:#3A3A3A;">AI 전략 수립</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-weight:600;">데이터 리터러시</td><td style="padding:12px 10px;color:#3A3A3A;">표 · 차트 해석</td><td style="padding:12px 10px;color:#3A3A3A;">데이터 정제 · 집계</td><td style="padding:12px 10px;color:#3A3A3A;">지표 설계 · 분석</td><td style="padding:12px 0 12px 10px;color:#3A3A3A;">데이터 기반 의사결정 체계화</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-weight:600;">도구 활용</td><td style="padding:12px 10px;color:#3A3A3A;">생성형 AI 기본 사용</td><td style="padding:12px 10px;color:#3A3A3A;">프롬프트 템플릿 활용</td><td style="padding:12px 10px;color:#3A3A3A;">노코드 자동화 구축</td><td style="padding:12px 0 12px 10px;color:#3A3A3A;">사내 도구 개발 · 배포</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-weight:600;">업무 재설계</td><td style="padding:12px 10px;color:#3A3A3A;">반복 업무 식별</td><td style="padding:12px 10px;color:#3A3A3A;">개선안 제안</td><td style="padding:12px 10px;color:#3A3A3A;">프로세스 재설계 실행</td><td style="padding:12px 0 12px 10px;color:#3A3A3A;">조직 단위 확산</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-weight:600;">윤리 · 보안</td><td style="padding:12px 10px;color:#3A3A3A;">사내 AI 사용 지침 숙지</td><td style="padding:12px 10px;color:#3A3A3A;">민감정보 판별</td><td style="padding:12px 10px;color:#3A3A3A;">위험 평가 수행</td><td style="padding:12px 0 12px 10px;color:#3A3A3A;">거버넌스 운영</td></tr>
+</tbody></table>
+</div>
+</div>
+
+<!-- 05 diagnosis -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">05 — DIAGNOSIS</span><span style="font-size:22px;font-weight:600;">진단 방법</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">응답 141명 · 응답률 94%</span></div>
+<div style="flex:999 1 640px;display:flex;flex-direction:column;gap:16px;">
+<div style="display:flex;height:40px;font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;">
+<div style="flex:30;background:#BDBDBD;display:flex;align-items:center;padding-left:12px;">30%</div>
+<div style="flex:50;background:#3A3A3A;color:#FFFFFF;display:flex;align-items:center;padding-left:12px;">50%</div>
+<div style="flex:20;background:repeating-linear-gradient(45deg,#FFFFFF 0 3px,#8F8F8F 3px 4px);border:1px solid #6B6B6B;box-sizing:border-box;display:flex;align-items:center;padding-left:12px;"><span style="background:#FFFFFF;padding:0 4px;">20%</span></div>
+</div>
+<div style="display:grid;grid-template-columns:30fr 50fr 20fr;gap:16px;font-size:14px;line-height:1.6;">
+<div style="display:flex;flex-direction:column;gap:4px;"><span style="font-weight:600;">자가 설문</span><span style="color:#6B6B6B;">25문항 · 5점 척도</span></div>
+<div style="display:flex;flex-direction:column;gap:4px;"><span style="font-weight:600;">실기 과제</span><span style="color:#6B6B6B;">본인 업무 데이터 · 60분 과제 · 채점 기준표 적용</span></div>
+<div style="display:flex;flex-direction:column;gap:4px;"><span style="font-weight:600;">관리자 평가</span><span style="color:#6B6B6B;">행동 관찰 체크리스트</span></div>
+</div>
+<span style="font-size:13px;color:#6B6B6B;">자가 평가 과대 경향 보정 — 실기 과제 가중치 최대 배정</span>
+</div>
+</div>
+
+<!-- 06 gap heatmap — full width -->
+<div style="display:flex;flex-direction:column;gap:24px;padding:56px 0;">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 40px;">
+<div style="display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">06 — GAP</span><span style="font-size:clamp(26px,3vw,36px);font-weight:600;letter-spacing:-.01em;">역할 × 역량 격차 히트맵</span><span style="font-size:14px;color:#6B6B6B;">셀 수치 = 목표 수준 − 현재 수준 (단계)</span></div>
+<div style="display:flex;align-items:center;gap:4px;font-family:'Barlow Semi Condensed',sans-serif;font-size:13px;font-weight:600;color:#3A3A3A;"><span style="margin-right:6px;">0</span><span style="width:36px;height:16px;background:#EDEDED;"></span><span style="width:36px;height:16px;background:#CFCFCF;"></span><span style="width:36px;height:16px;background:#9E9E9E;"></span><span style="width:36px;height:16px;background:#5A5A5A;"></span><span style="width:36px;height:16px;background:#1F1F1F;"></span><span style="margin-left:6px;">2.5</span></div>
+</div>
+<div style="position:relative;background:#FFFFFF;border:1px solid #CFCFCF;">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="overflow-x:auto;overflow-y:hidden;padding:clamp(20px,3vw,40px);">
+<div style="min-width:760px;display:grid;grid-template-columns:170px repeat(5,minmax(0,1fr)) 90px;gap:4px;font-family:'Barlow Semi Condensed',sans-serif;">
+<span></span>
+<span style="font-family:Pretendard;font-size:14px;font-weight:600;padding:0 0 10px 4px;border-bottom:1.5px solid #1F1F1F;">AI 이해</span><span style="font-family:Pretendard;font-size:14px;font-weight:600;padding:0 0 10px 4px;border-bottom:1.5px solid #1F1F1F;">데이터 리터러시</span><span style="font-family:Pretendard;font-size:14px;font-weight:600;padding:0 0 10px 4px;border-bottom:1.5px solid #1F1F1F;">도구 활용</span><span style="font-family:Pretendard;font-size:14px;font-weight:700;padding:0 0 10px 4px;border-bottom:3px solid #1F1F1F;">업무 재설계</span><span style="font-family:Pretendard;font-size:14px;font-weight:600;padding:0 0 10px 4px;border-bottom:1.5px solid #1F1F1F;">윤리 · 보안</span><span style="font-family:Pretendard;font-size:13px;color:#6B6B6B;padding:0 0 10px 0;border-bottom:1.5px solid #1F1F1F;text-align:right;">격차 합계</span>
+
+<span style="font-family:Pretendard;font-size:15px;font-weight:600;display:flex;flex-direction:column;justify-content:center;">경영진<span style="font-weight:400;font-size:12px;color:#6B6B6B;">8명</span></span>
+<div style="background:#CFCFCF;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">0.8</div><div style="background:#CFCFCF;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">1.2</div><div style="background:#EDEDED;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">0.6</div><div style="background:#5A5A5A;color:#FFFFFF;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">1.9</div><div style="background:#CFCFCF;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">0.9</div>
+<span style="font-size:22px;font-weight:700;color:#6B6B6B;display:flex;align-items:center;justify-content:flex-end;">5.4</span>
+
+<span style="font-family:Pretendard;font-size:15px;font-weight:700;display:flex;flex-direction:column;justify-content:center;">관리자 ◀<span style="font-weight:400;font-size:12px;color:#6B6B6B;">22명 · 우선</span></span>
+<div style="background:#CFCFCF;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">1.2</div><div style="background:#9E9E9E;color:#FFFFFF;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">1.6</div><div style="background:#9E9E9E;color:#FFFFFF;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">1.4</div><div style="background:#1F1F1F;color:#FFFFFF;height:84px;display:flex;flex-direction:column;justify-content:space-between;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;outline:2px solid #1F1F1F;outline-offset:3px;"><span style="font-family:Pretendard;font-size:11px;font-weight:600;letter-spacing:.06em;">최대</span>2.3</div><div style="background:#CFCFCF;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">1.1</div>
+<span style="font-size:22px;font-weight:700;display:flex;align-items:center;justify-content:flex-end;">7.6</span>
+
+<span style="font-family:Pretendard;font-size:15px;font-weight:600;display:flex;flex-direction:column;justify-content:center;">현업 실무자<span style="font-weight:400;font-size:12px;color:#6B6B6B;">96명</span></span>
+<div style="background:#CFCFCF;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">1.0</div><div style="background:#9E9E9E;color:#FFFFFF;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">1.3</div><div style="background:#9E9E9E;color:#FFFFFF;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">1.5</div><div style="background:#9E9E9E;color:#FFFFFF;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">1.6</div><div style="background:#EDEDED;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">0.7</div>
+<span style="font-size:22px;font-weight:700;color:#6B6B6B;display:flex;align-items:center;justify-content:flex-end;">6.1</span>
+
+<span style="font-family:Pretendard;font-size:15px;font-weight:700;display:flex;flex-direction:column;justify-content:center;">핵심 사용자 ◀<span style="font-weight:400;font-size:12px;color:#6B6B6B;">12명 · 우선</span></span>
+<div style="background:#CFCFCF;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">0.9</div><div style="background:#9E9E9E;color:#FFFFFF;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">1.4</div><div style="background:#5A5A5A;color:#FFFFFF;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">1.8</div><div style="background:#5A5A5A;color:#FFFFFF;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">2.1</div><div style="background:#CFCFCF;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">1.2</div>
+<span style="font-size:22px;font-weight:700;display:flex;align-items:center;justify-content:flex-end;">7.4</span>
+
+<span style="font-family:Pretendard;font-size:15px;font-weight:600;display:flex;flex-direction:column;justify-content:center;">IT 담당<span style="font-weight:400;font-size:12px;color:#6B6B6B;">12명</span></span>
+<div style="background:#EDEDED;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">0.4</div><div style="background:#EDEDED;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">0.6</div><div style="background:#CFCFCF;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">0.8</div><div style="background:#CFCFCF;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">1.2</div><div style="background:#9E9E9E;color:#FFFFFF;height:84px;display:flex;align-items:flex-end;padding:10px 12px;box-sizing:border-box;font-size:28px;font-weight:700;">1.5</div>
+<span style="font-size:22px;font-weight:700;color:#6B6B6B;display:flex;align-items:center;justify-content:flex-end;">4.5</span>
+
+<span style="font-family:Pretendard;font-size:13px;color:#6B6B6B;padding-top:12px;border-top:1.5px solid #1F1F1F;">역량 평균</span>
+<span style="font-size:20px;font-weight:700;color:#6B6B6B;padding:12px 0 0 12px;border-top:1.5px solid #1F1F1F;">0.86</span><span style="font-size:20px;font-weight:700;color:#6B6B6B;padding:12px 0 0 12px;border-top:1.5px solid #1F1F1F;">1.22</span><span style="font-size:20px;font-weight:700;color:#6B6B6B;padding:12px 0 0 12px;border-top:1.5px solid #1F1F1F;">1.22</span><span style="font-size:20px;font-weight:700;padding:12px 0 0 12px;border-top:3px solid #1F1F1F;">1.82</span><span style="font-size:20px;font-weight:700;color:#6B6B6B;padding:12px 0 0 12px;border-top:1.5px solid #1F1F1F;">1.08</span><span style="border-top:1.5px solid #1F1F1F;"></span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 07 curriculum -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">07 — CURRICULUM</span><span style="font-size:22px;font-weight:600;">커리큘럼 매트릭스</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">모듈마다 본인 업무 과제 1건 완수 · 과제 산출물 = 수료 기준</span></div>
+<div style="flex:999 1 640px;position:relative;background:#FFFFFF;border:1px solid #CFCFCF;">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="overflow-x:auto;overflow-y:hidden;padding:clamp(16px,2.5vw,28px);">
+<div style="min-width:700px;display:grid;grid-template-columns:120px repeat(3,minmax(0,1fr));gap:6px;font-size:13px;line-height:1.5;">
+<span></span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:14px;letter-spacing:.12em;padding-bottom:8px;border-bottom:1.5px solid #1F1F1F;">기초</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:14px;letter-spacing:.12em;padding-bottom:8px;border-bottom:1.5px solid #1F1F1F;">활용</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:14px;letter-spacing:.12em;padding-bottom:8px;border-bottom:1.5px solid #1F1F1F;">심화</span>
+
+<div style="display:flex;flex-direction:column;justify-content:center;gap:2px;"><span style="font-size:15px;font-weight:700;">리더십</span><span style="color:#6B6B6B;font-size:12px;">경영진 · 관리자</span></div>
+<div style="border:1px solid #CFCFCF;padding:12px;display:flex;flex-direction:column;gap:6px;"><span style="font-size:14px;font-weight:600;">AI 전략 브리핑</span><span style="font-family:'Barlow Semi Condensed';font-size:13px;color:#6B6B6B;letter-spacing:.06em;">4h · BLOOM 이해</span><span style="border-top:1px dashed #BDBDBD;padding-top:6px;color:#1F1F1F;"><b>과제</b> 부서 AI 기회 3건 도출</span></div>
+<div style="border:1px solid #CFCFCF;padding:12px;display:flex;flex-direction:column;gap:6px;"><span style="font-size:14px;font-weight:600;">과제 선정 · 투자 판단</span><span style="font-family:'Barlow Semi Condensed';font-size:13px;color:#6B6B6B;letter-spacing:.06em;">6h · BLOOM 평가</span><span style="border-top:1px dashed #BDBDBD;padding-top:6px;"><b>과제</b> 팀 과제 우선순위 매트릭스</span></div>
+<div style="border:1.5px solid #1F1F1F;padding:12px;display:flex;flex-direction:column;gap:6px;"><span style="font-size:14px;font-weight:600;">팀 업무 재설계</span><span style="font-family:'Barlow Semi Condensed';font-size:13px;color:#6B6B6B;letter-spacing:.06em;">6h · BLOOM 창조</span><span style="border-top:1px dashed #BDBDBD;padding-top:6px;"><b>과제</b> 팀 프로세스 재설계안 실행</span></div>
+
+<div style="display:flex;flex-direction:column;justify-content:center;gap:2px;"><span style="font-size:15px;font-weight:700;">실무 활용</span><span style="color:#6B6B6B;font-size:12px;">실무자 · 핵심 사용자</span></div>
+<div style="border:1px solid #CFCFCF;padding:12px;display:flex;flex-direction:column;gap:6px;"><span style="font-size:14px;font-weight:600;">생성형 AI 업무 활용</span><span style="font-family:'Barlow Semi Condensed';font-size:13px;color:#6B6B6B;letter-spacing:.06em;">8h · BLOOM 적용</span><span style="border-top:1px dashed #BDBDBD;padding-top:6px;"><b>과제</b> 본인 업무 프롬프트 템플릿 5종</span></div>
+<div style="border:1px solid #CFCFCF;padding:12px;display:flex;flex-direction:column;gap:6px;"><span style="font-size:14px;font-weight:600;">데이터 정리 · 분석</span><span style="font-family:'Barlow Semi Condensed';font-size:13px;color:#6B6B6B;letter-spacing:.06em;">12h · BLOOM 분석</span><span style="border-top:1px dashed #BDBDBD;padding-top:6px;"><b>과제</b> 부서 KPI 주간 리포트 자동화</span></div>
+<div style="border:1.5px solid #1F1F1F;padding:12px;display:flex;flex-direction:column;gap:6px;"><span style="font-size:14px;font-weight:600;">노코드 업무 자동화</span><span style="font-family:'Barlow Semi Condensed';font-size:13px;color:#6B6B6B;letter-spacing:.06em;">16h · BLOOM 창조</span><span style="border-top:1px dashed #BDBDBD;padding-top:6px;"><b>과제</b> 반복 업무 1건 자동화 · 운영</span></div>
+
+<div style="display:flex;flex-direction:column;justify-content:center;gap:2px;"><span style="font-size:15px;font-weight:700;">기술 심화</span><span style="color:#6B6B6B;font-size:12px;">IT · 핵심 사용자</span></div>
+<div style="border:1px solid #CFCFCF;padding:12px;display:flex;flex-direction:column;gap:6px;"><span style="font-size:14px;font-weight:600;">ML · LLM 원리</span><span style="font-family:'Barlow Semi Condensed';font-size:13px;color:#6B6B6B;letter-spacing:.06em;">8h · BLOOM 이해</span><span style="border-top:1px dashed #BDBDBD;padding-top:6px;"><b>과제</b> 사내 데이터 학습 적합성 점검</span></div>
+<div style="border:1px solid #CFCFCF;padding:12px;display:flex;flex-direction:column;gap:6px;"><span style="font-size:14px;font-weight:600;">RAG · 모델 서빙</span><span style="font-family:'Barlow Semi Condensed';font-size:13px;color:#6B6B6B;letter-spacing:.06em;">16h · BLOOM 적용</span><span style="border-top:1px dashed #BDBDBD;padding-top:6px;"><b>과제</b> 사내 문서 검색 PoC</span></div>
+<div style="border:1.5px solid #1F1F1F;padding:12px;display:flex;flex-direction:column;gap:6px;"><span style="font-size:14px;font-weight:600;">MLOps 운영</span><span style="font-family:'Barlow Semi Condensed';font-size:13px;color:#6B6B6B;letter-spacing:.06em;">20h · BLOOM 평가</span><span style="border-top:1px dashed #BDBDBD;padding-top:6px;"><b>과제</b> 모델 모니터링 대시보드 구축</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 08 learning mix -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">08 — LEARNING MIX</span><span style="font-size:22px;font-weight:600;">학습 방식 배분</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">1인 평균 60시간 기준</span></div>
+<div style="flex:999 1 640px;display:flex;flex-direction:column;gap:16px;">
+<div style="display:flex;height:56px;font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;">
+<div style="flex:70;background:#1F1F1F;color:#FFFFFF;display:flex;align-items:center;justify-content:space-between;padding:0 16px;"><span style="font-size:28px;">70%</span><span style="font-size:15px;">42h</span></div>
+<div style="flex:20;background:#8F8F8F;color:#FFFFFF;display:flex;align-items:center;padding:0 12px;font-size:20px;">20%</div>
+<div style="flex:10;background:#FFFFFF;border:1px solid #6B6B6B;box-sizing:border-box;display:flex;align-items:center;padding:0 8px;font-size:16px;">10%</div>
+</div>
+<div style="display:grid;grid-template-columns:70fr 20fr 10fr;gap:12px;font-size:14px;line-height:1.6;">
+<div style="display:flex;flex-direction:column;gap:4px;"><span style="font-weight:700;">현업 과제</span><span style="color:#3A3A3A;">본인 업무에 직접 적용 · 주 3.5시간 업무 시간 내 수행 · 과제 산출물 제출</span></div>
+<div style="display:flex;flex-direction:column;gap:4px;"><span style="font-weight:600;">코칭 · 스터디</span><span style="color:#6B6B6B;">사내 코치 1:15 · 격주 리뷰</span></div>
+<div style="display:flex;flex-direction:column;gap:4px;"><span style="font-weight:600;">강의</span><span style="color:#6B6B6B;">6h</span></div>
+</div>
+</div>
+</div>
+
+<!-- 09 schedule -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">09 — SCHEDULE</span><span style="font-size:22px;font-weight:600;">12주 운영 일정</span></div>
+<div style="flex:999 1 640px;position:relative;background:#FFFFFF;border:1px solid #CFCFCF;">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="overflow-x:auto;overflow-y:hidden;padding:clamp(16px,2.5vw,28px);">
+<div style="min-width:700px;display:grid;grid-template-columns:100px repeat(12,minmax(0,1fr));grid-template-rows:auto repeat(4,40px);gap:6px 3px;font-size:12px;">
+<span style="grid-row:1;grid-column:1;"></span>
+<span style="grid-row:1;grid-column:2;font-family:'Barlow Semi Condensed';font-weight:600;color:#6B6B6B;border-bottom:1px solid #1F1F1F;padding-bottom:6px;">W1</span><span style="grid-row:1;grid-column:3;font-family:'Barlow Semi Condensed';font-weight:600;color:#6B6B6B;border-bottom:1px solid #1F1F1F;padding-bottom:6px;">W2</span><span style="grid-row:1;grid-column:4;font-family:'Barlow Semi Condensed';font-weight:600;color:#6B6B6B;border-bottom:1px solid #1F1F1F;padding-bottom:6px;">W3</span><span style="grid-row:1;grid-column:5;font-family:'Barlow Semi Condensed';font-weight:600;color:#6B6B6B;border-bottom:1px solid #1F1F1F;padding-bottom:6px;">W4</span><span style="grid-row:1;grid-column:6;font-family:'Barlow Semi Condensed';font-weight:600;color:#6B6B6B;border-bottom:1px solid #1F1F1F;padding-bottom:6px;">W5</span><span style="grid-row:1;grid-column:7;font-family:'Barlow Semi Condensed';font-weight:600;color:#6B6B6B;border-bottom:1px solid #1F1F1F;padding-bottom:6px;">W6</span><span style="grid-row:1;grid-column:8;font-family:'Barlow Semi Condensed';font-weight:600;color:#6B6B6B;border-bottom:1px solid #1F1F1F;padding-bottom:6px;">W7</span><span style="grid-row:1;grid-column:9;font-family:'Barlow Semi Condensed';font-weight:600;color:#6B6B6B;border-bottom:1px solid #1F1F1F;padding-bottom:6px;">W8</span><span style="grid-row:1;grid-column:10;font-family:'Barlow Semi Condensed';font-weight:600;color:#6B6B6B;border-bottom:1px solid #1F1F1F;padding-bottom:6px;">W9</span><span style="grid-row:1;grid-column:11;font-family:'Barlow Semi Condensed';font-weight:600;color:#6B6B6B;border-bottom:1px solid #1F1F1F;padding-bottom:6px;">W10</span><span style="grid-row:1;grid-column:12;font-family:'Barlow Semi Condensed';font-weight:600;color:#6B6B6B;border-bottom:1px solid #1F1F1F;padding-bottom:6px;">W11</span><span style="grid-row:1;grid-column:13;font-family:'Barlow Semi Condensed';font-weight:600;color:#6B6B6B;border-bottom:1px solid #1F1F1F;padding-bottom:6px;">W12</span>
+
+<span style="grid-row:2;grid-column:1;font-size:14px;font-weight:600;align-self:center;">리더십</span>
+<div style="grid-row:2;grid-column:2/4;background:#BDBDBD;padding:0 8px;display:flex;align-items:center;">전략 브리핑</div>
+<div style="grid-row:2;grid-column:6/8;background:#8F8F8F;color:#FFFFFF;padding:0 8px;display:flex;align-items:center;">과제 선정</div>
+<div style="grid-row:2;grid-column:10/12;background:#3A3A3A;color:#FFFFFF;padding:0 8px;display:flex;align-items:center;">업무 재설계</div>
+
+<span style="grid-row:3;grid-column:1;font-size:14px;font-weight:600;align-self:center;">실무 활용</span>
+<div style="grid-row:3;grid-column:2/5;background:#BDBDBD;padding:0 8px;display:flex;align-items:center;">생성형 AI 활용</div>
+<div style="grid-row:3;grid-column:5/9;background:#8F8F8F;color:#FFFFFF;padding:0 8px;display:flex;align-items:center;">데이터 정리 · 분석</div>
+<div style="grid-row:3;grid-column:9/13;background:#3A3A3A;color:#FFFFFF;padding:0 8px;display:flex;align-items:center;">노코드 자동화</div>
+
+<span style="grid-row:4;grid-column:1;font-size:14px;font-weight:600;align-self:center;">기술 심화</span>
+<div style="grid-row:4;grid-column:2/4;background:#BDBDBD;padding:0 8px;display:flex;align-items:center;">ML · LLM 원리</div>
+<div style="grid-row:4;grid-column:4/9;background:#8F8F8F;color:#FFFFFF;padding:0 8px;display:flex;align-items:center;">RAG · 모델 서빙</div>
+<div style="grid-row:4;grid-column:9/13;background:#3A3A3A;color:#FFFFFF;padding:0 8px;display:flex;align-items:center;">MLOps 운영</div>
+
+<span style="grid-row:5;grid-column:1;font-size:14px;font-weight:600;align-self:center;">공통</span>
+<div style="grid-row:5;grid-column:2/4;border:1.5px solid #1F1F1F;padding:0 6px;white-space:nowrap;display:flex;align-items:center;font-weight:600;">윤리·보안</div>
+<div style="grid-row:5;grid-column:5/7;border:1.5px dashed #6B6B6B;padding:0 6px;white-space:nowrap;display:flex;align-items:center;">중간 점검</div>
+<div style="grid-row:5;grid-column:9/11;border:1.5px dashed #6B6B6B;padding:0 6px;white-space:nowrap;display:flex;align-items:center;">코칭 리뷰</div>
+<div style="grid-row:5;grid-column:12/14;background:#1F1F1F;color:#FFFFFF;padding:0 6px;white-space:nowrap;display:flex;align-items:center;font-weight:600;">과제 발표</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 10 evaluation -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">10 — EVALUATION</span><span style="font-size:22px;font-weight:600;">효과 측정 설계</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">Kirkpatrick 4단계 + Phillips ROI</span></div>
+<div style="flex:999 1 640px;position:relative;background:#FFFFFF;border:1px solid #CFCFCF;">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="overflow-x:auto;overflow-y:hidden;padding:clamp(16px,2.5vw,28px);">
+<div style="min-width:700px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;align-items:end;">
+<div style="height:150px;background:#EDEDED;padding:14px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:13px;letter-spacing:.14em;color:#6B6B6B;">L1</span><span style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:16px;font-weight:700;">반응</span><span style="font-family:'Barlow Semi Condensed';font-size:22px;font-weight:700;">4.2 / 5</span></span></div>
+<div style="height:200px;background:#CFCFCF;padding:14px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:13px;letter-spacing:.14em;color:#3A3A3A;">L2</span><span style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:16px;font-weight:700;">학습</span><span style="font-family:'Barlow Semi Condensed';font-size:22px;font-weight:700;">+30점</span></span></div>
+<div style="height:250px;background:#9E9E9E;color:#FFFFFF;padding:14px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:13px;letter-spacing:.14em;">L3</span><span style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:16px;font-weight:700;">행동</span><span style="font-family:'Barlow Semi Condensed';font-size:22px;font-weight:700;">활용 25%</span></span></div>
+<div style="height:300px;background:#5A5A5A;color:#FFFFFF;padding:14px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:13px;letter-spacing:.14em;">L4</span><span style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:16px;font-weight:700;">결과</span><span style="font-family:'Barlow Semi Condensed';font-size:22px;font-weight:700;">4,800h / 년</span></span></div>
+<div style="height:350px;background:#1F1F1F;color:#FFFFFF;padding:14px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:13px;letter-spacing:.14em;">L5 · PHILLIPS</span><span style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:16px;font-weight:700;">ROI</span><span style="font-family:'Barlow Semi Condensed';font-size:22px;font-weight:700;">180%</span></span></div>
+<div style="border-top:1.5px solid #1F1F1F;padding-top:10px;font-size:12px;line-height:1.6;color:#3A3A3A;display:flex;flex-direction:column;gap:2px;"><b style="color:#1F1F1F;">만족도 · 적용 의향</b><span>모듈 직후</span><span style="color:#6B6B6B;">온라인 설문</span></div>
+<div style="border-top:1.5px solid #1F1F1F;padding-top:10px;font-size:12px;line-height:1.6;color:#3A3A3A;display:flex;flex-direction:column;gap:2px;"><b style="color:#1F1F1F;">사전·사후 실기 점수</b><span>과정 종료</span><span style="color:#6B6B6B;">진단 실기 과제 재수행</span></div>
+<div style="border-top:1.5px solid #1F1F1F;padding-top:10px;font-size:12px;line-height:1.6;color:#3A3A3A;display:flex;flex-direction:column;gap:2px;"><b style="color:#1F1F1F;">AI 활용 업무 비중</b><span>종료 후 3개월</span><span style="color:#6B6B6B;">관리자 관찰 · 사용 로그</span></div>
+<div style="border-top:1.5px solid #1F1F1F;padding-top:10px;font-size:12px;line-height:1.6;color:#3A3A3A;display:flex;flex-direction:column;gap:2px;"><b style="color:#1F1F1F;">업무 시간 절감 · 과제 성과</b><span>종료 후 6개월</span><span style="color:#6B6B6B;">부서 KPI · 과제 결과서</span></div>
+<div style="border-top:1.5px solid #1F1F1F;padding-top:10px;font-size:12px;line-height:1.6;color:#3A3A3A;display:flex;flex-direction:column;gap:2px;"><b style="color:#1F1F1F;">순편익 ÷ 교육비</b><span>종료 후 12개월</span><span style="color:#6B6B6B;">효과 귀속 분리 · 보수 추정</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 11 action -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">11 — ACTION</span><span style="font-size:22px;font-weight:600;">조치사항</span></div>
+<div style="flex:999 1 640px;overflow-x:auto;">
+<table style="width:100%;min-width:640px;border-collapse:collapse;font-size:15px;line-height:1.6;">
+<thead><tr style="border-top:2px solid #1F1F1F;border-bottom:1px solid #1F1F1F;"><th style="padding:12px 10px 12px 0;font-weight:600;">항목</th><th style="padding:12px 10px;font-weight:600;">담당</th><th style="padding:12px 10px;font-weight:600;">기한</th><th style="padding:12px 0 12px 10px;font-weight:600;">완료 기준</th></tr></thead>
+<tbody>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-weight:600;">진단 결과 개인 피드백</td><td style="padding:12px 10px;color:#3A3A3A;">인사팀</td><td style="padding:12px 10px;font-family:'Barlow Semi Condensed';font-size:16px;">2026.10.31</td><td style="padding:12px 0 12px 10px;color:#3A3A3A;">개인 리포트 141건 배포</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-weight:600;">학습 시간 업무 인정</td><td style="padding:12px 10px;color:#3A3A3A;">인사팀</td><td style="padding:12px 10px;font-family:'Barlow Semi Condensed';font-size:16px;">2026.11.01</td><td style="padding:12px 0 12px 10px;color:#3A3A3A;">주 4시간 근무 인정 규정 시행</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-weight:600;">현업 과제 확정</td><td style="padding:12px 10px;color:#3A3A3A;">각 팀장</td><td style="padding:12px 10px;font-family:'Barlow Semi Condensed';font-size:16px;">2026.11.07</td><td style="padding:12px 0 12px 10px;color:#3A3A3A;">학습자별 과제 정의서 승인</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-weight:600;">사내 코치 지정</td><td style="padding:12px 10px;color:#3A3A3A;">AX CoE</td><td style="padding:12px 10px;font-family:'Barlow Semi Condensed';font-size:16px;">2026.11.07</td><td style="padding:12px 0 12px 10px;color:#3A3A3A;">코치 10명 · 1인당 학습자 15명</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-weight:600;">AI 리터러시 필수 교육</td><td style="padding:12px 10px;color:#3A3A3A;">법무 · 보안팀</td><td style="padding:12px 10px;font-family:'Barlow Semi Condensed';font-size:16px;">2026.11.30</td><td style="padding:12px 0 12px 10px;color:#3A3A3A;">전 임직원 이수율 100%</td></tr>
+</tbody></table>
+</div>
+</div>
+
+<!-- 12 reference -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">12 — REFERENCE</span><span style="font-size:22px;font-weight:600;">출처</span></div>
+<ol style="flex:999 1 640px;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;font-size:14px;line-height:1.6;color:#3A3A3A;border-top:1px solid #1F1F1F;">
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">1</span><span>Kirkpatrick, D. L., &amp; Kirkpatrick, J. D. (2006). <i>Evaluating Training Programs: The Four Levels</i> (3rd ed.). Berrett-Koehler.</span></li>
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">2</span><span>Phillips, J. J. (2003). <i>Return on Investment in Training and Performance Improvement Programs</i> (2nd ed.). Butterworth-Heinemann.</span></li>
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">3</span><span>Anderson, L. W., &amp; Krathwohl, D. R. (Eds.). (2001). <i>A Taxonomy for Learning, Teaching, and Assessing</i>. Longman.</span></li>
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">4</span><span>Lombardo, M. M., &amp; Eichinger, R. W. (1996). <i>The Career Architect Development Planner</i>. Lominger.</span></li>
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">5</span><span>Regulation (EU) 2024/1689 (Artificial Intelligence Act), Article 4 — AI literacy.</span></li>
+</ol>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:40px;margin-top:24px;border-top:1px solid #CFCFCF;font-size:13px;color:#6B6B6B;">
+<span>본 페이지의 수치와 사례는 설명을 위한 가상 예시임</span>
+<span style="font-family:'Barlow Semi Condensed',sans-serif;letter-spacing:.12em;">HR-CUR-2026-011 · 05 / 06</span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showGrid&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showGrid: this.props.showGrid ?? false, cols: Array.from({ length: 12 }, (_, i) => i) };
+  }
+}
+</script>
+</body>
+</html>

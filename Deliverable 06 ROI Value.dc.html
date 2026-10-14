@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap">
+<style>
+body{margin:0;background:#F2F2F2;color:#1F1F1F;font-family:Pretendard,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#1F1F1F;text-decoration:none}a:hover{color:#6B6B6B}
+td,th{text-align:left;vertical-align:top}
+</style>
+</helmet>
+<div style="position:relative;max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,60px) 80px;box-sizing:border-box;">
+<sc-if value="{{ showGrid }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;inset:0 clamp(20px,4vw,60px);display:grid;grid-template-columns:repeat(12,1fr);gap:24px;pointer-events:none;z-index:5;">
+<sc-for list="{{ cols }}" as="c" hint-placeholder-count="12"><div style="background:rgba(0,0,0,.04);border-left:1px solid #CFCFCF;border-right:1px solid #CFCFCF;"></div></sc-for>
+</div>
+</sc-if>
+
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding:26px 0 18px;border-bottom:1px solid #CFCFCF;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.12em;color:#3A3A3A;">
+<span>04 · DELIVERABLES / 06 — ROI·가치 실현 분석</span>
+<a href="QuantumDX%20Homepage.dc.html#deliverables" style="color:#6B6B6B;letter-spacing:.08em;">← 산출물 갤러리</a>
+</div>
+
+<!-- cover -->
+<div style="display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between;align-items:flex-end;padding:72px 0 56px;">
+<div style="flex:1 1 520px;display:flex;flex-direction:column;gap:20px;">
+<div style="display:flex;gap:8px;flex-wrap:wrap;">
+<span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.16em;padding:5px 10px;border:1.5px solid #1F1F1F;">CONFIDENTIAL · 대외비</span>
+<span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:.16em;padding:5px 10px;border:1px solid #BDBDBD;color:#6B6B6B;">SAMPLE</span>
+</div>
+<h1 style="margin:0;font-weight:500;font-size:clamp(36px,5vw,60px);line-height:1.2;letter-spacing:-.02em;text-wrap:pretty;">ROI·가치 실현 분석</h1>
+<p style="margin:0;font-size:19px;line-height:1.6;color:#6B6B6B;">가치 동인 → 운영 KPI → 재무 효과 → 투자 지표 → 실현 추적</p>
+</div>
+<div style="flex:0 1 420px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #1F1F1F;">
+<div style="padding:12px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:4px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:12px;letter-spacing:.14em;color:#6B6B6B;">분석 대상 과제</span><span aria-hidden="true" style="filter:blur(6px);user-select:none;font-size:15px;font-weight:600;">1웨이브 3개 과제</span></div>
+<div style="padding:12px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:4px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:12px;letter-spacing:.14em;color:#6B6B6B;">분석 기간</span><span aria-hidden="true" style="filter:blur(6px);user-select:none;font-family:'Barlow Semi Condensed',sans-serif;font-size:17px;font-weight:600;">3년 · 2027–2029</span></div>
+<div style="padding:12px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:4px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:12px;letter-spacing:.14em;color:#6B6B6B;">할인율 가정</span><span aria-hidden="true" style="filter:blur(6px);user-select:none;font-family:'Barlow Semi Condensed',sans-serif;font-size:17px;font-weight:600;">10% · WACC</span></div>
+<div style="padding:12px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:4px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:12px;letter-spacing:.14em;color:#6B6B6B;">문서 번호</span><span aria-hidden="true" style="filter:blur(6px);user-select:none;font-family:'Barlow Semi Condensed',sans-serif;font-size:17px;font-weight:600;">FIN-ROI-2026-021</span></div>
+</div>
+</div>
+
+<!-- 01 summary -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">01 — SUMMARY</span><span style="font-size:22px;font-weight:600;">핵심 요약</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">기준 시나리오 · 단위 백만 원</span></div>
+<div style="flex:999 1 640px;display:flex;flex-direction:column;gap:24px;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
+<div style="position:relative;background:#FFFFFF;border:1.5px solid #1F1F1F;padding:22px;display:flex;flex-direction:column;gap:10px;"><span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:14px;letter-spacing:.14em;">NPV</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:52px;line-height:1;text-align:right;">110</span><span style="font-size:13px;color:#6B6B6B;text-align:right;">백만 원 · 할인율 10% · 3년</span></div>
+<div style="position:relative;background:#FFFFFF;border:1.5px solid #1F1F1F;padding:22px;display:flex;flex-direction:column;gap:10px;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:14px;letter-spacing:.14em;">IRR</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:52px;line-height:1;text-align:right;">18.2<span style="font-size:24px;">%</span></span><span style="font-size:13px;color:#6B6B6B;text-align:right;">자본비용 10% 대비 +8.2%p</span></div>
+<div style="position:relative;background:#FFFFFF;border:1.5px solid #1F1F1F;padding:22px;display:flex;flex-direction:column;gap:10px;"><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:14px;letter-spacing:.14em;">PAYBACK</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:52px;line-height:1;text-align:right;">2.3<span style="font-size:24px;"> 년</span></span><span style="font-size:13px;color:#6B6B6B;text-align:right;">비할인 누적 현금흐름 기준</span></div>
+</div>
+<div style="display:flex;flex-direction:column;">
+<div style="display:flex;gap:20px;padding:14px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:22px;color:#BDBDBD;width:28px;flex:none;">1</span><span style="font-size:18px;line-height:1.55;font-weight:600;text-wrap:pretty;">연간 효과 550 중 원가 절감(불량·검사) 326, 59% — 측정 가능 항목 중심 구성</span></div>
+<div style="display:flex;gap:20px;padding:14px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:22px;color:#BDBDBD;width:28px;flex:none;">2</span><span style="font-size:18px;line-height:1.55;font-weight:600;text-wrap:pretty;">기준 시나리오 NPV 110 · IRR 18.2% — 투자 타당성 확보</span></div>
+<div style="display:flex;gap:20px;padding:14px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:22px;color:#BDBDBD;width:28px;flex:none;">3</span><span style="font-size:18px;line-height:1.55;font-weight:600;text-wrap:pretty;">효과 실현율 90% 미만 시 NPV 음수 전환 — 분기별 실현 추적 필수</span></div>
+</div>
+</div>
+</div>
+
+<!-- 02 framework -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">02 — FRAMEWORK</span><span style="font-size:22px;font-weight:600;">적용 프레임워크</span></div>
+<div style="flex:999 1 640px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));border-top:1px solid #1F1F1F;">
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">Value Driver Tree</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">재무 목표 → 운영 지표 분해</span><span style="font-size:13px;color:#3A3A3A;">→ 03 가치 동인 트리</span></div>
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">NPV · IRR · Payback</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">순현재가치 · 내부수익률 · 회수 기간</span><span style="font-size:13px;color:#3A3A3A;">→ 07 현금흐름</span></div>
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">TCO</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">초기 투자 + 운영·유지 비용 전체</span><span style="font-size:13px;color:#3A3A3A;">→ 06 비용 구조</span></div>
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">Phillips ROI 방법론</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">효과 귀속 분리 · 보수적 추정</span><span style="font-size:13px;color:#3A3A3A;">→ 04 귀속 비율 · 12 원칙</span></div>
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">Benefits Realization Mgmt.</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">정의 → 기준선 → 측정 → 실현 확인 → 책임자</span><span style="font-size:13px;color:#3A3A3A;">→ 11 실현 추적</span></div>
+</div>
+</div>
+
+<!-- 03 value driver tree -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">03 — VALUE DRIVER</span><span style="font-size:22px;font-weight:600;">가치 동인 트리</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">연간 효과 · 백만 원</span></div>
+<div style="flex:999 1 640px;position:relative;background:#FFFFFF;border:1px solid #CFCFCF;">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="overflow-x:auto;overflow-y:hidden;padding:clamp(16px,3vw,32px);">
+<svg viewBox="0 0 900 380" style="width:100%;min-width:640px;display:block;font-family:Pretendard,sans-serif;">
+<g fill="none" stroke="#6B6B6B" stroke-width="1.2">
+<path d="M190 190 H235"></path><path d="M235 40 V310"></path><path d="M235 40 H280 M235 130 H280 M235 220 H280 M235 310 H280"></path>
+<path d="M450 40 H560"></path>
+<path d="M450 130 H505 M505 100 V160 M505 100 H560 M505 160 H560"></path>
+<path d="M450 220 H560"></path>
+<path d="M450 310 H505 M505 280 V340 M505 280 H560 M505 340 H560"></path>
+</g>
+<rect x="20" y="155" width="170" height="70" fill="#1F1F1F"></rect>
+<text x="36" y="183" font-size="15" font-weight="700" fill="#FFFFFF">영업이익</text>
+<text x="174" y="211" font-family="'Barlow Semi Condensed',sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="end">+550</text>
+<g fill="#FFFFFF" stroke="#1F1F1F" stroke-width="1.5"><rect x="280" y="16" width="170" height="48"></rect><rect x="280" y="106" width="170" height="48"></rect><rect x="280" y="196" width="170" height="48"></rect><rect x="280" y="286" width="170" height="48"></rect></g>
+<g font-size="14" font-weight="600"><text x="294" y="45">매출 증대</text><text x="294" y="135">원가 절감</text><text x="294" y="225">리스크 감소</text><text x="294" y="315">자산 효율</text></g>
+<g font-family="'Barlow Semi Condensed',sans-serif" font-size="18" font-weight="700" text-anchor="end"><text x="438" y="46">68</text><text x="438" y="136">326</text><text x="438" y="226">33</text><text x="438" y="316">123</text></g>
+<g fill="#F2F2F2" stroke="#CFCFCF"><rect x="560" y="18" width="320" height="44"></rect><rect x="560" y="78" width="320" height="44"></rect><rect x="560" y="138" width="320" height="44"></rect><rect x="560" y="198" width="320" height="44"></rect><rect x="560" y="258" width="320" height="44"></rect><rect x="560" y="318" width="320" height="44"></rect></g>
+<g font-size="13" font-weight="600"><text x="574" y="45">납기 준수율</text><text x="574" y="105">불량률</text><text x="574" y="165">검사 공수</text><text x="574" y="225">납기 지연 건수</text><text x="574" y="285">설비 가동률</text><text x="574" y="345">재고 일수</text></g>
+<g font-family="'Barlow Semi Condensed',sans-serif" font-size="14" fill="#6B6B6B"><text x="680" y="45">91 → 97%</text><text x="680" y="105">2.1 → 1.2%</text><text x="680" y="165">4.2 → 2.5h/일</text><text x="680" y="225">34 → 12건</text><text x="680" y="285">78 → 86%</text><text x="680" y="345">32 → 26일</text></g>
+<g font-family="'Barlow Semi Condensed',sans-serif" font-size="17" font-weight="700" text-anchor="end"><text x="866" y="46">68</text><text x="866" y="106">207</text><text x="866" y="166">119</text><text x="866" y="226">33</text><text x="866" y="286">101</text><text x="866" y="346">22</text></g>
+</svg>
+</div>
+</div>
+</div>
+
+<!-- 04 baseline -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">04 — BASELINE</span><span style="font-size:22px;font-weight:600;">기준선 대비 개선</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">정상 운영 연도 기준 · 산정식 전체 공개</span></div>
+<div style="flex:999 1 640px;overflow-x:auto;">
+<table style="width:100%;min-width:820px;border-collapse:collapse;font-size:14px;line-height:1.55;">
+<thead><tr style="border-top:2px solid #1F1F1F;border-bottom:1px solid #1F1F1F;"><th style="padding:12px 10px 12px 0;font-weight:600;">KPI</th><th style="padding:12px 10px;font-weight:600;text-align:right;">기준선</th><th style="padding:12px 10px;font-weight:600;text-align:right;">도입 후</th><th style="padding:12px 10px;font-weight:600;text-align:right;">개선폭</th><th style="padding:12px 10px;font-weight:700;background:#EDEDED;">재무 환산식</th><th style="padding:12px 0 12px 10px;font-weight:600;text-align:right;white-space:nowrap;">연간 효과<br><span style="font-weight:400;font-size:12px;color:#6B6B6B;">백만 원</span></th></tr></thead>
+<tbody style="font-family:'Barlow Semi Condensed',sans-serif;font-size:15px;">
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-family:Pretendard;font-size:14px;font-weight:600;">불량률</td><td style="padding:12px 10px;text-align:right;color:#6B6B6B;">2.1%</td><td style="padding:12px 10px;text-align:right;">1.2%</td><td style="padding:12px 10px;text-align:right;font-weight:700;">−0.9%p</td><td style="padding:12px 10px;background:#F7F7F7;font-family:Pretendard;font-size:13px;color:#1F1F1F;">생산액 48,000 × 0.9%p × 원가율 60% × 귀속 80%</td><td style="padding:12px 0 12px 10px;text-align:right;font-size:18px;font-weight:700;">207</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-family:Pretendard;font-size:14px;font-weight:600;">검사 공수</td><td style="padding:12px 10px;text-align:right;color:#6B6B6B;">4.2h/일</td><td style="padding:12px 10px;text-align:right;">2.5h/일</td><td style="padding:12px 10px;text-align:right;font-weight:700;">−1.7h</td><td style="padding:12px 10px;background:#F7F7F7;font-family:Pretendard;font-size:13px;color:#1F1F1F;">1.7h × 4라인 × 2교대 × 250일 × 시급 0.035 × 귀속 100%</td><td style="padding:12px 0 12px 10px;text-align:right;font-size:18px;font-weight:700;">119</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-family:Pretendard;font-size:14px;font-weight:600;">설비 가동률</td><td style="padding:12px 10px;text-align:right;color:#6B6B6B;">78%</td><td style="padding:12px 10px;text-align:right;">86%</td><td style="padding:12px 10px;text-align:right;font-weight:700;">+8%p</td><td style="padding:12px 10px;background:#F7F7F7;font-family:Pretendard;font-size:13px;color:#1F1F1F;">8%p × 1%p당 공헌이익 18 × 귀속 70%</td><td style="padding:12px 0 12px 10px;text-align:right;font-size:18px;font-weight:700;">101</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-family:Pretendard;font-size:14px;font-weight:600;">납기 준수율</td><td style="padding:12px 10px;text-align:right;color:#6B6B6B;">91%</td><td style="padding:12px 10px;text-align:right;">97%</td><td style="padding:12px 10px;text-align:right;font-weight:700;">+6%p</td><td style="padding:12px 10px;background:#F7F7F7;font-family:Pretendard;font-size:13px;color:#1F1F1F;">추가 수주 900 × 공헌이익률 15% × 귀속 50%</td><td style="padding:12px 0 12px 10px;text-align:right;font-size:18px;font-weight:700;">68</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-family:Pretendard;font-size:14px;font-weight:600;">납기 지연</td><td style="padding:12px 10px;text-align:right;color:#6B6B6B;">34건/년</td><td style="padding:12px 10px;text-align:right;">12건/년</td><td style="padding:12px 10px;text-align:right;font-weight:700;">−22건</td><td style="padding:12px 10px;background:#F7F7F7;font-family:Pretendard;font-size:13px;color:#1F1F1F;">22건 × 건당 손실 2.5 × 귀속 60%</td><td style="padding:12px 0 12px 10px;text-align:right;font-size:18px;font-weight:700;">33</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-family:Pretendard;font-size:14px;font-weight:600;">재고 일수</td><td style="padding:12px 10px;text-align:right;color:#6B6B6B;">32일</td><td style="padding:12px 10px;text-align:right;">26일</td><td style="padding:12px 10px;text-align:right;font-weight:700;">−6일</td><td style="padding:12px 10px;background:#F7F7F7;font-family:Pretendard;font-size:13px;color:#1F1F1F;">6일 × 일평균 재고 18 × 보유비율 20%</td><td style="padding:12px 0 12px 10px;text-align:right;font-size:18px;font-weight:700;">22</td></tr>
+<tr style="border-top:1.5px solid #1F1F1F;border-bottom:1.5px solid #1F1F1F;"><td colspan="5" style="padding:12px 10px 12px 0;font-family:Pretendard;font-size:14px;font-weight:700;">합계 · 효과 실현율 100% 기준</td><td style="padding:12px 0 12px 10px;text-align:right;font-size:22px;font-weight:700;">550</td></tr>
+</tbody></table>
+</div>
+</div>
+
+<!-- 05 waterfall -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">05 — BRIDGE</span><span style="font-size:22px;font-weight:600;">효과 구성 워터폴</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">연간 영업이익 · 백만 원 · 세로축 2,300 이하 생략</span></div>
+<div style="flex:999 1 640px;position:relative;background:#FFFFFF;border:1px solid #CFCFCF;">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="overflow-x:auto;overflow-y:hidden;padding:clamp(16px,3vw,32px);">
+<svg viewBox="0 0 900 360" style="width:100%;min-width:640px;display:block;font-family:'Barlow Semi Condensed',sans-serif;">
+<defs><pattern id="wf06hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#FFFFFF"></rect><line x1="0" y1="0" x2="0" y2="6" stroke="#6B6B6B" stroke-width="1.5"></line></pattern></defs>
+<g stroke="#EDEDED"><line x1="50" y1="220" x2="880" y2="220"></line><line x1="50" y1="140" x2="880" y2="140"></line><line x1="50" y1="60" x2="880" y2="60"></line></g>
+<line x1="50" y1="300" x2="880" y2="300" stroke="#1F1F1F" stroke-width="1.5"></line>
+<g font-size="12" fill="#8F8F8F" text-anchor="end"><text x="42" y="304">2,300</text><text x="42" y="224">2,500</text><text x="42" y="144">2,700</text><text x="42" y="64">2,900</text></g>
+<g stroke="#8F8F8F" stroke-dasharray="3 3"><line x1="134" y1="260" x2="162" y2="260"></line><line x1="226" y1="232.8" x2="254" y2="232.8"></line><line x1="318" y1="150" x2="346" y2="150"></line><line x1="410" y1="102.4" x2="438" y2="102.4"></line><line x1="502" y1="62" x2="530" y2="62"></line><line x1="594" y1="48.8" x2="622" y2="48.8"></line><line x1="686" y1="40" x2="714" y2="40"></line><line x1="778" y1="96" x2="806" y2="96"></line></g>
+<rect x="70" y="260" width="64" height="40" fill="#3A3A3A"></rect>
+<rect x="162" y="232.8" width="64" height="27.2" fill="#BDBDBD"></rect>
+<rect x="254" y="150" width="64" height="82.8" fill="#8F8F8F"></rect>
+<rect x="346" y="102.4" width="64" height="47.6" fill="#8F8F8F"></rect>
+<rect x="438" y="62" width="64" height="40.4" fill="#A8A8A8"></rect>
+<rect x="530" y="48.8" width="64" height="13.2" fill="#BDBDBD"></rect>
+<rect x="622" y="40" width="64" height="8.8" fill="#A8A8A8"></rect>
+<rect x="714" y="40" width="64" height="56" fill="url(#wf06hatch)" stroke="#6B6B6B"></rect>
+<rect x="806" y="96" width="64" height="204" fill="#1F1F1F"></rect>
+<g stroke="#FFFFFF" stroke-width="3"><path d="M66 286 L138 278"></path><path d="M802 286 L874 278"></path></g>
+<g font-size="16" font-weight="700" text-anchor="middle" fill="#1F1F1F"><text x="102" y="252">2,400</text><text x="194" y="226">+68</text><text x="286" y="144">+207</text><text x="378" y="96">+119</text><text x="470" y="56">+101</text><text x="562" y="42">+33</text><text x="654" y="34">+22</text><text x="746" y="114">−140</text><text x="838" y="88">2,810</text></g>
+<g font-family="Pretendard,sans-serif" font-size="12" fill="#3A3A3A" text-anchor="middle"><text x="102" y="322">기준</text><text x="102" y="338">영업이익</text><text x="194" y="322">매출 증대</text><text x="286" y="322">불량 손실</text><text x="378" y="322">검사 공수</text><text x="470" y="322">가동률</text><text x="562" y="322">납기 지연</text><text x="654" y="322">재고</text><text x="746" y="322">운영비</text><text x="746" y="338">(TCO)</text><text x="838" y="322" font-weight="700">개선 후</text><text x="838" y="338" font-weight="700">영업이익</text></g>
+</svg>
+</div>
+</div>
+</div>
+
+<!-- 06 TCO -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">06 — TCO</span><span style="font-size:22px;font-weight:600;">총소유비용 구조</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">3년 누적 1,060 · 백만 원</span></div>
+<div style="flex:999 1 640px;position:relative;background:#FFFFFF;border:1px solid #CFCFCF;padding:clamp(20px,3vw,32px);display:flex;flex-wrap:wrap;gap:32px;align-items:flex-end;">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="flex:1 1 300px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:end;">
+<div style="display:flex;flex-direction:column;align-items:stretch;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:17px;text-align:center;padding-bottom:6px;">640</span><div style="height:14.5px;background:#D6D6D6;"></div><div style="height:33.2px;background:#A8A8A8;"></div><div style="height:60.2px;background:#6B6B6B;"></div><div style="height:24.9px;background:#3A3A3A;"></div><span style="border-top:1.5px solid #1F1F1F;padding-top:8px;font-family:'Barlow Semi Condensed';font-size:13px;color:#6B6B6B;text-align:center;">0년차</span></div>
+<div style="display:flex;flex-direction:column;align-items:stretch;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:17px;text-align:center;padding-bottom:6px;">780</span><div style="height:29.1px;background:repeating-linear-gradient(45deg,#FFFFFF 0 3px,#8F8F8F 3px 4px);border:1px solid #6B6B6B;box-sizing:border-box;"></div><div style="height:14.5px;background:#D6D6D6;"></div><div style="height:33.2px;background:#A8A8A8;"></div><div style="height:60.2px;background:#6B6B6B;"></div><div style="height:24.9px;background:#3A3A3A;"></div><span style="border-top:1.5px solid #1F1F1F;padding-top:8px;font-family:'Barlow Semi Condensed';font-size:13px;color:#6B6B6B;text-align:center;">1년차</span></div>
+<div style="display:flex;flex-direction:column;align-items:stretch;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:17px;text-align:center;padding-bottom:6px;">920</span><div style="height:58.1px;background:repeating-linear-gradient(45deg,#FFFFFF 0 3px,#8F8F8F 3px 4px);border:1px solid #6B6B6B;box-sizing:border-box;"></div><div style="height:14.5px;background:#D6D6D6;"></div><div style="height:33.2px;background:#A8A8A8;"></div><div style="height:60.2px;background:#6B6B6B;"></div><div style="height:24.9px;background:#3A3A3A;"></div><span style="border-top:1.5px solid #1F1F1F;padding-top:8px;font-family:'Barlow Semi Condensed';font-size:13px;color:#6B6B6B;text-align:center;">2년차</span></div>
+<div style="display:flex;flex-direction:column;align-items:stretch;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:20px;text-align:center;padding-bottom:6px;">1,060</span><div style="height:87.2px;background:repeating-linear-gradient(45deg,#FFFFFF 0 3px,#8F8F8F 3px 4px);border:1px solid #6B6B6B;box-sizing:border-box;"></div><div style="height:14.5px;background:#D6D6D6;"></div><div style="height:33.2px;background:#A8A8A8;"></div><div style="height:60.2px;background:#6B6B6B;"></div><div style="height:24.9px;background:#3A3A3A;"></div><span style="border-top:1.5px solid #1F1F1F;padding-top:8px;font-family:'Barlow Semi Condensed';font-size:13px;color:#6B6B6B;text-align:center;">3년차</span></div>
+</div>
+<div style="flex:1 1 260px;display:flex;flex-direction:column;font-size:14px;">
+<div style="display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:10px;padding:8px 0;border-bottom:1px solid #1F1F1F;font-weight:600;"><span></span><span>초기 비용 · 0년차</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:16px;text-align:right;">640</span></div>
+<div style="display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:10px;padding:7px 0;border-bottom:1px solid #CFCFCF;align-items:center;"><span style="width:14px;height:14px;background:#3A3A3A;"></span><span>라이선스</span><span style="font-family:'Barlow Semi Condensed';font-size:16px;text-align:right;">120</span></div>
+<div style="display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:10px;padding:7px 0;border-bottom:1px solid #CFCFCF;align-items:center;"><span style="width:14px;height:14px;background:#6B6B6B;"></span><span>구축 · 연계</span><span style="font-family:'Barlow Semi Condensed';font-size:16px;text-align:right;">290</span></div>
+<div style="display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:10px;padding:7px 0;border-bottom:1px solid #CFCFCF;align-items:center;"><span style="width:14px;height:14px;background:#A8A8A8;"></span><span>하드웨어 · 엣지 서버</span><span style="font-family:'Barlow Semi Condensed';font-size:16px;text-align:right;">160</span></div>
+<div style="display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:10px;padding:7px 0;border-bottom:1px solid #CFCFCF;align-items:center;"><span style="width:14px;height:14px;background:#D6D6D6;"></span><span>교육</span><span style="font-family:'Barlow Semi Condensed';font-size:16px;text-align:right;">70</span></div>
+<div style="display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:10px;padding:8px 0;border-bottom:1px solid #CFCFCF;margin-top:10px;align-items:center;font-weight:600;"><span style="width:14px;height:14px;box-sizing:border-box;border:1px solid #6B6B6B;background:repeating-linear-gradient(45deg,#FFFFFF 0 3px,#8F8F8F 3px 4px);"></span><span>연간 운영비 · 1~3년차</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:16px;text-align:right;">140 / 년</span></div>
+<span style="font-size:12px;color:#6B6B6B;line-height:1.6;padding-top:8px;">라이선스 갱신 45 · 클라우드·LLM API 30 · 유지보수 40 · 운영 인력 0.5 FTE 25</span>
+</div>
+</div>
+</div>
+
+<!-- 07 cash flow -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">07 — CASH FLOW</span><span style="font-size:22px;font-weight:600;">현금흐름</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">단위 백만 원 · ( ) 음수</span></div>
+<div style="flex:999 1 640px;overflow-x:auto;">
+<table style="width:100%;min-width:680px;border-collapse:collapse;font-size:14px;line-height:1.55;">
+<thead><tr style="border-top:2px solid #1F1F1F;border-bottom:1px solid #1F1F1F;"><th style="padding:12px 10px 12px 0;font-weight:600;">구분</th><th style="padding:12px 10px;font-weight:600;text-align:right;">0년차</th><th style="padding:12px 10px;font-weight:600;text-align:right;">1년차</th><th style="padding:12px 10px;font-weight:600;text-align:right;">2년차</th><th style="padding:12px 10px;font-weight:600;text-align:right;">3년차</th><th style="padding:12px 0 12px 10px;font-weight:600;text-align:right;">합계</th></tr></thead>
+<tbody style="font-family:'Barlow Semi Condensed',sans-serif;font-size:16px;">
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:11px 10px 11px 0;font-family:Pretendard;font-size:14px;color:#6B6B6B;">효과 실현율</td><td style="padding:11px 10px;text-align:right;color:#6B6B6B;">—</td><td style="padding:11px 10px;text-align:right;color:#6B6B6B;">55%</td><td style="padding:11px 10px;text-align:right;color:#6B6B6B;">90%</td><td style="padding:11px 10px;text-align:right;color:#6B6B6B;">100%</td><td style="padding:11px 0 11px 10px;"></td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:11px 10px 11px 0;font-family:Pretendard;font-size:14px;font-weight:600;">효과</td><td style="padding:11px 10px;text-align:right;">0</td><td style="padding:11px 10px;text-align:right;">303</td><td style="padding:11px 10px;text-align:right;">495</td><td style="padding:11px 10px;text-align:right;">550</td><td style="padding:11px 0 11px 10px;text-align:right;font-weight:700;">1,348</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:11px 10px 11px 0;font-family:Pretendard;font-size:14px;font-weight:600;">비용</td><td style="padding:11px 10px;text-align:right;">(640)</td><td style="padding:11px 10px;text-align:right;">(140)</td><td style="padding:11px 10px;text-align:right;">(140)</td><td style="padding:11px 10px;text-align:right;">(140)</td><td style="padding:11px 0 11px 10px;text-align:right;font-weight:700;">(1,060)</td></tr>
+<tr style="border-bottom:1px solid #1F1F1F;"><td style="padding:11px 10px 11px 0;font-family:Pretendard;font-size:14px;font-weight:700;">순현금흐름</td><td style="padding:11px 10px;text-align:right;font-weight:700;">(640)</td><td style="padding:11px 10px;text-align:right;font-weight:700;">163</td><td style="padding:11px 10px;text-align:right;font-weight:700;">355</td><td style="padding:11px 10px;text-align:right;font-weight:700;">410</td><td style="padding:11px 0 11px 10px;text-align:right;font-weight:700;">288</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:11px 10px 11px 0;font-family:Pretendard;font-size:14px;font-weight:600;">누적 현금흐름</td><td style="padding:11px 10px;text-align:right;color:#6B6B6B;">(640)</td><td style="padding:11px 10px;text-align:right;color:#6B6B6B;">(477)</td><td style="padding:11px 10px;text-align:right;color:#6B6B6B;border-right:2px solid #1F1F1F;">(122)</td><td style="padding:11px 10px;text-align:right;font-weight:700;background:#EDEDED;">288</td><td style="padding:11px 0 11px 10px;text-align:right;font-family:Pretendard;font-size:13px;font-weight:700;">회수 2.3년 ◀</td></tr>
+<tr style="border-bottom:1.5px solid #1F1F1F;"><td style="padding:11px 10px 11px 0;font-family:Pretendard;font-size:14px;font-weight:600;">현재가치 <span style="font-weight:400;color:#6B6B6B;">(10%)</span></td><td style="padding:11px 10px;text-align:right;">(640.0)</td><td style="padding:11px 10px;text-align:right;">148.2</td><td style="padding:11px 10px;text-align:right;">293.4</td><td style="padding:11px 10px;text-align:right;">308.0</td><td style="padding:11px 0 11px 10px;text-align:right;font-weight:700;font-size:18px;">NPV 109.6</td></tr>
+</tbody></table>
+<p style="margin:12px 0 0;font-size:13px;color:#6B6B6B;line-height:1.6;">회수 기간 = 2년 + 122 ÷ 410 = 2.30년 · 현재가치 = 순현금흐름 ÷ 1.1ⁿ</p>
+</div>
+</div>
+
+<!-- 08 sensitivity -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">08 — SENSITIVITY</span><span style="font-size:22px;font-weight:600;">민감도 분석</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">NPV 변동 폭 · 기준 110</span></div>
+<div style="flex:999 1 640px;position:relative;background:#FFFFFF;border:1px solid #CFCFCF;">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="overflow-x:auto;overflow-y:hidden;padding:clamp(20px,3vw,32px);">
+<div style="min-width:620px;display:grid;grid-template-columns:170px minmax(0,1fr);gap:14px 16px;align-items:center;font-size:14px;">
+<span></span>
+<div style="position:relative;height:18px;font-family:'Barlow Semi Condensed';font-size:12px;color:#8F8F8F;"><span style="position:absolute;left:10%;transform:translateX(-50%);">−100</span><span style="position:absolute;left:30%;transform:translateX(-50%);color:#1F1F1F;font-weight:700;">0</span><span style="position:absolute;left:52%;transform:translateX(-50%);color:#1F1F1F;font-weight:700;">110</span><span style="position:absolute;left:70%;transform:translateX(-50%);">200</span><span style="position:absolute;left:90%;transform:translateX(-50%);">300</span></div>
+
+<span style="display:flex;flex-direction:column;"><b>효과 실현율</b><span style="font-size:12px;color:#6B6B6B;">80% ~ 120%</span></span>
+<div style="position:relative;height:30px;"><div style="position:absolute;left:30%;top:-8px;bottom:-8px;border-left:1px dashed #6B6B6B;"></div><div style="position:absolute;left:52%;top:-8px;bottom:-8px;border-left:1.5px solid #1F1F1F;"></div><div style="position:absolute;left:8%;width:44%;top:0;bottom:0;background:#3A3A3A;"></div><div style="position:absolute;left:52%;width:44%;top:0;bottom:0;background:#BDBDBD;"></div><span style="position:absolute;left:8%;top:6px;padding-left:6px;color:#FFFFFF;font-family:'Barlow Semi Condensed';font-weight:700;">(110)</span><span style="position:absolute;right:4%;top:6px;padding-right:6px;font-family:'Barlow Semi Condensed';font-weight:700;">330</span></div>
+
+<span style="display:flex;flex-direction:column;"><b>운영비</b><span style="font-size:12px;color:#6B6B6B;">+20% ~ −20%</span></span>
+<div style="position:relative;height:30px;"><div style="position:absolute;left:30%;top:-8px;bottom:-8px;border-left:1px dashed #6B6B6B;"></div><div style="position:absolute;left:52%;top:-8px;bottom:-8px;border-left:1.5px solid #1F1F1F;"></div><div style="position:absolute;left:38%;width:14%;top:0;bottom:0;background:#3A3A3A;"></div><div style="position:absolute;left:52%;width:14%;top:0;bottom:0;background:#BDBDBD;"></div><span style="position:absolute;right:62%;top:6px;padding-right:6px;font-family:'Barlow Semi Condensed';font-weight:700;">40</span><span style="position:absolute;left:66%;top:6px;padding-left:6px;font-family:'Barlow Semi Condensed';font-weight:700;">180</span></div>
+
+<span style="display:flex;flex-direction:column;"><b>도입 지연</b><span style="font-size:12px;color:#6B6B6B;">6개월 ~ 0개월</span></span>
+<div style="position:relative;height:30px;"><div style="position:absolute;left:30%;top:-8px;bottom:-8px;border-left:1px dashed #6B6B6B;"></div><div style="position:absolute;left:52%;top:-8px;bottom:-8px;border-left:1.5px solid #1F1F1F;"></div><div style="position:absolute;left:34%;width:18%;top:0;bottom:0;background:#3A3A3A;"></div><span style="position:absolute;right:66%;top:6px;padding-right:6px;font-family:'Barlow Semi Condensed';font-weight:700;">20</span></div>
+
+<span style="display:flex;flex-direction:column;"><b>할인율</b><span style="font-size:12px;color:#6B6B6B;">12% ~ 8%</span></span>
+<div style="position:relative;height:30px;"><div style="position:absolute;left:30%;top:-8px;bottom:-8px;border-left:1px dashed #6B6B6B;"></div><div style="position:absolute;left:52%;top:-8px;bottom:-8px;border-left:1.5px solid #1F1F1F;"></div><div style="position:absolute;left:46%;width:6%;top:0;bottom:0;background:#3A3A3A;"></div><div style="position:absolute;left:52%;width:6.2%;top:0;bottom:0;background:#BDBDBD;"></div><span style="position:absolute;right:54%;top:6px;padding-right:6px;font-family:'Barlow Semi Condensed';font-weight:700;">80</span><span style="position:absolute;left:58.2%;top:6px;padding-left:6px;font-family:'Barlow Semi Condensed';font-weight:700;">141</span></div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:20px;font-size:12px;color:#3A3A3A;"><span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:10px;background:#3A3A3A;"></span>불리한 가정</span><span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:10px;background:#BDBDBD;"></span>유리한 가정</span><span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;border-top:1px dashed #6B6B6B;"></span>NPV 0 · 손익분기 실현율 90%</span></div>
+</div>
+</div>
+</div>
+
+<!-- 09 scenario -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">09 — SCENARIO</span><span style="font-size:22px;font-weight:600;">시나리오 비교</span></div>
+<div style="flex:999 1 640px;overflow-x:auto;">
+<table style="width:100%;min-width:600px;border-collapse:collapse;font-size:15px;line-height:1.6;">
+<thead><tr style="border-top:2px solid #1F1F1F;border-bottom:1px solid #1F1F1F;"><th style="padding:12px 10px 12px 0;font-weight:600;">시나리오</th><th style="padding:12px 10px;font-weight:600;">핵심 가정</th><th style="padding:12px 10px;font-weight:600;text-align:right;">NPV <span style="font-weight:400;font-size:12px;color:#6B6B6B;">백만 원</span></th><th style="padding:12px 10px;font-weight:600;text-align:right;">IRR</th><th style="padding:12px 0 12px 10px;font-weight:600;text-align:right;">회수 기간</th></tr></thead>
+<tbody style="font-family:'Barlow Semi Condensed',sans-serif;font-size:18px;">
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-family:Pretendard;font-size:15px;font-weight:600;">보수</td><td style="padding:12px 10px;font-family:Pretendard;font-size:14px;color:#3A3A3A;">효과 실현율 85%</td><td style="padding:12px 10px;text-align:right;font-weight:700;">(55)</td><td style="padding:12px 10px;text-align:right;">5.7%</td><td style="padding:12px 0 12px 10px;text-align:right;">2.7년</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;background:#EDEDED;"><td style="padding:12px 10px 12px 0;font-family:Pretendard;font-size:15px;font-weight:700;">기준</td><td style="padding:12px 10px;font-family:Pretendard;font-size:14px;color:#1F1F1F;">효과 실현율 100%</td><td style="padding:12px 10px;text-align:right;font-weight:700;">110</td><td style="padding:12px 10px;text-align:right;font-weight:700;">18.2%</td><td style="padding:12px 0 12px 10px;text-align:right;font-weight:700;">2.3년</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-family:Pretendard;font-size:15px;font-weight:600;">낙관</td><td style="padding:12px 10px;font-family:Pretendard;font-size:14px;color:#3A3A3A;">효과 실현율 115%</td><td style="padding:12px 10px;text-align:right;font-weight:700;">274</td><td style="padding:12px 10px;text-align:right;">29.9%</td><td style="padding:12px 0 12px 10px;text-align:right;">2.0년</td></tr>
+</tbody></table>
+<p style="margin:12px 0 0;font-size:13px;color:#6B6B6B;line-height:1.6;">공통 가정: 할인율 10% · 운영비 연 140 · 1년차 실현율은 시나리오 비율 동일 적용</p>
+</div>
+</div>
+
+<!-- 10 qualitative -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">10 — QUALITATIVE</span><span style="font-size:22px;font-weight:600;">정성 효과</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">재무 환산 제외 · NPV 미반영</span></div>
+<div style="flex:999 1 640px;border:1.5px dashed #8F8F8F;padding:clamp(20px,3vw,28px);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;">
+<div style="display:flex;flex-direction:column;gap:8px;"><span style="font-size:17px;font-weight:600;">안전</span><span style="font-size:14px;color:#3A3A3A;line-height:1.6;">협착 위험 공정 육안 검사 인력 노출 감소</span><span style="font-size:12px;color:#6B6B6B;padding-top:8px;border-top:1px solid #CFCFCF;">관찰 지표 · 아차사고 건수</span></div>
+<div style="display:flex;flex-direction:column;gap:8px;"><span style="font-size:17px;font-weight:600;">직원 만족</span><span style="font-size:14px;color:#3A3A3A;line-height:1.6;">반복 검사 업무 감소 · 숙련 업무 재배치</span><span style="font-size:12px;color:#6B6B6B;padding-top:8px;border-top:1px solid #CFCFCF;">관찰 지표 · eNPS · 이직률</span></div>
+<div style="display:flex;flex-direction:column;gap:8px;"><span style="font-size:17px;font-weight:600;">고객 신뢰</span><span style="font-size:14px;color:#3A3A3A;line-height:1.6;">불량 유출 클레임 감소 · 품질 감사 대응력</span><span style="font-size:12px;color:#6B6B6B;padding-top:8px;border-top:1px solid #CFCFCF;">관찰 지표 · 고객 클레임 건수</span></div>
+</div>
+</div>
+
+<!-- 11 tracking -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">11 — TRACKING</span><span style="font-size:22px;font-weight:600;">가치 실현 추적 계획</span></div>
+<div style="flex:999 1 640px;display:flex;flex-direction:column;gap:20px;">
+<div style="overflow-x:auto;">
+<table style="width:100%;min-width:660px;border-collapse:collapse;font-size:14px;line-height:1.55;">
+<thead><tr style="border-top:2px solid #1F1F1F;border-bottom:1px solid #1F1F1F;"><th style="padding:12px 10px 12px 0;font-weight:600;">효과 항목</th><th style="padding:12px 10px;font-weight:600;text-align:right;">연간 목표</th><th style="padding:12px 10px;font-weight:600;">측정 KPI · 데이터 원천</th><th style="padding:12px 10px;font-weight:600;">책임자</th><th style="padding:12px 0 12px 10px;font-weight:600;">주기</th></tr></thead>
+<tbody>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:11px 10px 11px 0;font-weight:600;">불량 손실 절감</td><td style="padding:11px 10px;text-align:right;font-family:'Barlow Semi Condensed';font-size:16px;font-weight:700;">207</td><td style="padding:11px 10px;color:#3A3A3A;">불량률 · MES 검사 실적</td><td style="padding:11px 10px;">품질팀장</td><td style="padding:11px 0 11px 10px;color:#6B6B6B;">월</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:11px 10px 11px 0;font-weight:600;">검사 공수 절감</td><td style="padding:11px 10px;text-align:right;font-family:'Barlow Semi Condensed';font-size:16px;font-weight:700;">119</td><td style="padding:11px 10px;color:#3A3A3A;">검사 투입 시간 · MES 작업 실적</td><td style="padding:11px 10px;">생산팀장</td><td style="padding:11px 0 11px 10px;color:#6B6B6B;">월</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:11px 10px 11px 0;font-weight:600;">가동률 공헌이익</td><td style="padding:11px 10px;text-align:right;font-family:'Barlow Semi Condensed';font-size:16px;font-weight:700;">101</td><td style="padding:11px 10px;color:#3A3A3A;">설비 가동률 · 설비 로그</td><td style="padding:11px 10px;">설비보전팀장</td><td style="padding:11px 0 11px 10px;color:#6B6B6B;">월</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:11px 10px 11px 0;font-weight:600;">추가 수주 공헌이익</td><td style="padding:11px 10px;text-align:right;font-family:'Barlow Semi Condensed';font-size:16px;font-weight:700;">68</td><td style="padding:11px 10px;color:#3A3A3A;">납기 준수율 · ERP 수주</td><td style="padding:11px 10px;">영업팀장</td><td style="padding:11px 0 11px 10px;color:#6B6B6B;">분기</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:11px 10px 11px 0;font-weight:600;">납기 지연 손실 감소</td><td style="padding:11px 10px;text-align:right;font-family:'Barlow Semi Condensed';font-size:16px;font-weight:700;">33</td><td style="padding:11px 10px;color:#3A3A3A;">지연 건수 · ERP 출하</td><td style="padding:11px 10px;">물류팀장</td><td style="padding:11px 0 11px 10px;color:#6B6B6B;">분기</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:11px 10px 11px 0;font-weight:600;">재고 보유비 절감</td><td style="padding:11px 10px;text-align:right;font-family:'Barlow Semi Condensed';font-size:16px;font-weight:700;">22</td><td style="padding:11px 10px;color:#3A3A3A;">재고 일수 · ERP 재고</td><td style="padding:11px 10px;">구매팀장</td><td style="padding:11px 0 11px 10px;color:#6B6B6B;">분기</td></tr>
+</tbody></table>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;font-family:'Barlow Semi Condensed',sans-serif;">
+<div style="background:#FFFFFF;border-top:3px solid #BDBDBD;padding:12px;display:flex;flex-direction:column;gap:4px;"><span style="font-size:13px;color:#6B6B6B;letter-spacing:.1em;">1년차 Q1</span><span style="font-size:22px;font-weight:700;">30%</span></div>
+<div style="background:#FFFFFF;border-top:3px solid #8F8F8F;padding:12px;display:flex;flex-direction:column;gap:4px;"><span style="font-size:13px;color:#6B6B6B;letter-spacing:.1em;">Q2</span><span style="font-size:22px;font-weight:700;">45%</span></div>
+<div style="background:#FFFFFF;border-top:3px solid #5A5A5A;padding:12px;display:flex;flex-direction:column;gap:4px;"><span style="font-size:13px;color:#6B6B6B;letter-spacing:.1em;">Q3</span><span style="font-size:22px;font-weight:700;">60%</span></div>
+<div style="background:#FFFFFF;border-top:3px solid #1F1F1F;padding:12px;display:flex;flex-direction:column;gap:4px;"><span style="font-size:13px;color:#6B6B6B;letter-spacing:.1em;">Q4</span><span style="font-size:22px;font-weight:700;">85%</span></div>
+</div>
+<div style="border:1.5px solid #1F1F1F;padding:16px 20px;display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;font-size:15px;line-height:1.6;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.16em;">판단 기준</span><span>분기 목표 대비 80% 미만 → 원인 분석 · 30일 내 개선안 보고</span><span style="color:#6B6B6B;">2분기 연속 미달 → AX 추진위원회 안건 상정</span></div>
+</div>
+</div>
+
+<!-- 12 principles -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">12 — PRINCIPLES</span><span style="font-size:22px;font-weight:600;">분석 원칙</span></div>
+<div style="flex:999 1 640px;position:relative;background:#FFFFFF;border:2px solid #1F1F1F;padding:clamp(20px,3vw,32px);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;">
+<span style="position:absolute;left:-8px;top:-8px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-8px;bottom:-8px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="display:flex;flex-direction:column;gap:8px;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:28px;line-height:1;color:#BDBDBD;">01</span><span style="font-size:17px;font-weight:700;">이중 계산 배제</span><span style="font-size:14px;color:#3A3A3A;line-height:1.6;">불량 재작업 시간 · 검사 공수 별도 원천 분리 · 동일 공정 시간 중복 제외</span></div>
+<div style="display:flex;flex-direction:column;gap:8px;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:28px;line-height:1;color:#BDBDBD;">02</span><span style="font-size:17px;font-weight:700;">귀속 비율 적용</span><span style="font-size:14px;color:#3A3A3A;line-height:1.6;">타 개선 활동 영향 분리 · 항목별 50~100% · 현업 책임자 합의</span></div>
+<div style="display:flex;flex-direction:column;gap:8px;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:28px;line-height:1;color:#BDBDBD;">03</span><span style="font-size:17px;font-weight:700;">보수적 가정 우선</span><span style="font-size:14px;color:#3A3A3A;line-height:1.6;">1년차 실현율 55% · 인건비 절감은 재배치 기준 · 인원 감축 미가정</span></div>
+</div>
+</div>
+
+<!-- 13 reference -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">13 — REFERENCE</span><span style="font-size:22px;font-weight:600;">출처</span></div>
+<ol style="flex:999 1 640px;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;font-size:14px;line-height:1.6;color:#3A3A3A;border-top:1px solid #1F1F1F;">
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">1</span><span>Rappaport, A. (1998). <i>Creating Shareholder Value</i> (2nd ed.). Free Press.</span></li>
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">2</span><span>Brealey, R. A., Myers, S. C., &amp; Allen, F. <i>Principles of Corporate Finance</i>. McGraw-Hill.</span></li>
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">3</span><span>Ellram, L. M. (1995). Total Cost of Ownership. <i>International Journal of Physical Distribution &amp; Logistics Management</i>, 25(8).</span></li>
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">4</span><span>Phillips, J. J., &amp; Phillips, P. P. ROI Methodology. ROI Institute.</span></li>
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">5</span><span>Bradley, G. (2010). <i>Benefit Realisation Management</i> (2nd ed.). Gower.</span></li>
+</ol>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:40px;margin-top:24px;border-top:1px solid #CFCFCF;font-size:13px;color:#6B6B6B;">
+<span>본 페이지의 수치와 사례는 설명을 위한 가상 예시임</span>
+<span style="font-family:'Barlow Semi Condensed',sans-serif;letter-spacing:.12em;">FIN-ROI-2026-021 · 06 / 06</span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showGrid&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showGrid: this.props.showGrid ?? false, cols: Array.from({ length: 12 }, (_, i) => i) };
+  }
+}
+</script>
+</body>
+</html>

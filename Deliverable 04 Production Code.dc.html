@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+body{margin:0;background:#F2F2F2;color:#1F1F1F;font-family:Pretendard,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#1F1F1F;text-decoration:none}a:hover{color:#6B6B6B}
+td,th{text-align:left;vertical-align:top}
+</style>
+</helmet>
+<div style="position:relative;max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,60px) 80px;box-sizing:border-box;">
+<sc-if value="{{ showGrid }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;inset:0 clamp(20px,4vw,60px);display:grid;grid-template-columns:repeat(12,1fr);gap:24px;pointer-events:none;z-index:5;">
+<sc-for list="{{ cols }}" as="c" hint-placeholder-count="12"><div style="background:rgba(0,0,0,.04);border-left:1px solid #CFCFCF;border-right:1px solid #CFCFCF;"></div></sc-for>
+</div>
+</sc-if>
+
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding:26px 0 18px;border-bottom:1px solid #CFCFCF;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.12em;color:#3A3A3A;">
+<span>04 · DELIVERABLES / 04 — 프로덕션 배포 코드</span>
+<a href="QuantumDX%20Homepage.dc.html#deliverables" style="color:#6B6B6B;letter-spacing:.08em;">← 산출물 갤러리</a>
+</div>
+
+<!-- cover -->
+<div style="display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between;align-items:flex-end;padding:72px 0 56px;">
+<div style="flex:1 1 520px;display:flex;flex-direction:column;gap:20px;">
+<div style="display:flex;gap:8px;flex-wrap:wrap;">
+<span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.16em;padding:5px 10px;background:#1F1F1F;color:#FFFFFF;display:flex;align-items:center;gap:8px;"><span style="width:7px;height:7px;border-radius:50%;background:#FFFFFF;"></span>PRODUCTION</span>
+<span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:.16em;padding:5px 10px;border:1px solid #BDBDBD;color:#6B6B6B;">SAMPLE</span>
+</div>
+<h1 style="margin:0;font-weight:500;font-size:clamp(36px,5vw,60px);line-height:1.2;letter-spacing:-.02em;text-wrap:pretty;">프로덕션 배포 코드</h1>
+<p style="margin:0;font-size:19px;line-height:1.6;color:#6B6B6B;">문서가 아닌 작동하는 시스템 · 비전 검사 판정 서비스 운영 현황</p>
+</div>
+<div style="flex:0 1 420px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #1F1F1F;">
+<div style="padding:12px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:4px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:12px;letter-spacing:.14em;color:#6B6B6B;">시스템명</span><span aria-hidden="true" style="filter:blur(6px);user-select:none;font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:600;">vision-inspect</span></div>
+<div style="padding:12px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:4px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:12px;letter-spacing:.14em;color:#6B6B6B;">릴리스 버전</span><span aria-hidden="true" style="filter:blur(6px);user-select:none;font-family:'Barlow Semi Condensed',sans-serif;font-size:17px;font-weight:600;">v1.4.2</span></div>
+<div style="padding:12px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:4px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:12px;letter-spacing:.14em;color:#6B6B6B;">배포일</span><span aria-hidden="true" style="filter:blur(6px);user-select:none;font-family:'Barlow Semi Condensed',sans-serif;font-size:17px;font-weight:600;">2026.10.08</span></div>
+<div style="padding:12px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:4px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-size:12px;letter-spacing:.14em;color:#6B6B6B;">대상 기업</span><span aria-hidden="true" style="filter:blur(6px);user-select:none;font-size:15px;font-weight:600;">제조 A사 (가상)</span></div>
+</div>
+</div>
+
+<!-- 01 summary -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">01 — SUMMARY</span><span style="font-size:22px;font-weight:600;">핵심 요약</span></div>
+<div style="flex:999 1 640px;position:relative;background:#FFFFFF;border:1px solid #CFCFCF;padding:clamp(24px,3vw,40px);">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:14px;letter-spacing:.12em;color:#6B6B6B;width:72px;flex:none;padding-top:4px;">무엇이</span><span style="font-size:19px;line-height:1.55;font-weight:600;text-wrap:pretty;">비전 기반 외관 검사 판정 서비스 — 라인 4개, 일 평균 48,000장 판정</span></div>
+<div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:14px;letter-spacing:.12em;color:#6B6B6B;width:72px;flex:none;padding-top:4px;">누가</span><span style="font-size:19px;line-height:1.55;font-weight:600;text-wrap:pretty;">현장 작업자 40명 · 품질 엔지니어 6명, 판정 화면과 재검 큐 일상 사용</span></div>
+<div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:14px;letter-spacing:.12em;color:#6B6B6B;width:72px;flex:none;padding-top:4px;">어떻게</span><span style="font-size:19px;line-height:1.55;font-weight:600;text-wrap:pretty;">주 2회 자동 배포 · SLO 99.5% · 사내 운영 인력 2인 인수 완료</span></div>
+</div>
+</div>
+
+<!-- 02 framework -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">02 — FRAMEWORK</span><span style="font-size:22px;font-weight:600;">적용 프레임워크</span></div>
+<div style="flex:999 1 640px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));border-top:1px solid #1F1F1F;">
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">The Twelve-Factor App</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">설정 분리 · 무상태 프로세스 · 로그 스트림</span><span style="font-size:13px;color:#3A3A3A;">→ 코드·설정 구조</span></div>
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">DORA 4대 지표</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">배포 빈도 · 리드타임 · 실패율 · 복구 시간</span><span style="font-size:13px;color:#3A3A3A;">→ 06 운영 지표</span></div>
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">Google SRE</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">SLI · SLO · 에러 버짓</span><span style="font-size:13px;color:#3A3A3A;">→ 가용성 관리 기준</span></div>
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">ISO/IEC 25010</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">소프트웨어 제품 품질 특성</span><span style="font-size:13px;color:#3A3A3A;">→ 07 품질 점검</span></div>
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">OWASP Top 10 · LLM Top 10</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">웹 · LLM 애플리케이션 보안 점검 기준</span><span style="font-size:13px;color:#3A3A3A;">→ 보안 스캔 단계</span></div>
+<div style="padding:18px 20px 18px 0;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.04em;">Semantic Versioning</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;">MAJOR.MINOR.PATCH</span><span style="font-size:13px;color:#3A3A3A;">→ 릴리스 번호 규칙</span></div>
+</div>
+</div>
+
+<!-- 03 repository -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">03 — REPOSITORY</span><span style="font-size:22px;font-weight:600;">저장소 구조</span></div>
+<div style="flex:999 1 640px;position:relative;background:#FFFFFF;border:1px solid #CFCFCF;display:flex;flex-wrap:wrap;">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="flex:1 1 420px;padding:clamp(20px,3vw,32px);font-family:'JetBrains Mono',monospace;font-size:14px;line-height:2;overflow-x:auto;">
+<div style="display:grid;grid-template-columns:max-content minmax(0,1fr);gap:0 28px;min-width:440px;">
+<span style="font-weight:600;">vision-inspect/</span><span style="font-family:Pretendard;color:#8F8F8F;font-size:13px;">main · 1,284 commits</span>
+<span><span style="color:#BDBDBD;">├─ </span><b>src/</b></span><span style="font-family:Pretendard;color:#6B6B6B;font-size:13px;">서비스 코드</span>
+<span><span style="color:#BDBDBD;">│  ├─ </span>api/</span><span style="font-family:Pretendard;color:#6B6B6B;font-size:13px;">판정 API · 요청 검증</span>
+<span><span style="color:#BDBDBD;">│  ├─ </span>inference/</span><span style="font-family:Pretendard;color:#6B6B6B;font-size:13px;">모델 로딩 · 전처리 · 추론</span>
+<span><span style="color:#BDBDBD;">│  └─ </span>config/</span><span style="font-family:Pretendard;color:#6B6B6B;font-size:13px;">환경변수 기반 설정 (12-Factor III)</span>
+<span><span style="color:#BDBDBD;">├─ </span><b>tests/</b></span><span style="font-family:Pretendard;color:#6B6B6B;font-size:13px;">단위 · 통합 테스트 412건</span>
+<span><span style="color:#BDBDBD;">├─ </span><b>infra/</b></span><span style="font-family:Pretendard;color:#6B6B6B;font-size:13px;">k3s 매니페스트 · Helm 차트</span>
+<span><span style="color:#BDBDBD;">├─ </span><b>docs/</b></span><span style="font-family:Pretendard;color:#6B6B6B;font-size:13px;">README · 런북 · ADR</span>
+<span><span style="color:#BDBDBD;">└─ </span><b>scripts/</b></span><span style="font-family:Pretendard;color:#6B6B6B;font-size:13px;">배포 · 롤백 · 데이터 백필</span>
+</div>
+</div>
+<div style="flex:0 1 220px;border-left:1px solid #CFCFCF;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-content:start;">
+<div style="padding:20px;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:4px;"><span style="font-size:12px;color:#6B6B6B;">릴리스</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:28px;line-height:1;">23</span></div>
+<div style="padding:20px;border-bottom:1px solid #CFCFCF;display:flex;flex-direction:column;gap:4px;"><span style="font-size:12px;color:#6B6B6B;">기여자</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:28px;line-height:1;">5</span></div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:4px;"><span style="font-size:12px;color:#6B6B6B;">커버리지</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:28px;line-height:1;">84%</span></div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:4px;"><span style="font-size:12px;color:#6B6B6B;">운영 일수</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:28px;line-height:1;">133</span></div>
+</div>
+</div>
+</div>
+
+<!-- 04 code -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">04 — CODE</span><span style="font-size:22px;font-weight:600;">코드 스니펫</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">판정 API 핵심 로직 · 13줄</span></div>
+<div style="flex:999 1 640px;position:relative;background:#FFFFFF;border:1px solid #CFCFCF;">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="display:flex;justify-content:space-between;gap:12px;padding:10px 16px;background:#EDEDED;border-bottom:1px solid #CFCFCF;font-family:'JetBrains Mono',monospace;font-size:12px;color:#3A3A3A;"><span style="display:flex;gap:16px;"><span style="font-weight:600;">src/api/inspect.py</span><span style="color:#8F8F8F;">Python 3.11</span></span><span style="color:#8F8F8F;">v1.4.2 · a3f9c21</span></div>
+<div style="overflow-x:auto;padding:16px 0;">
+<div style="min-width:720px;font-family:'JetBrains Mono',monospace;font-size:13.5px;line-height:1.9;color:#3A3A3A;">
+<div style="display:flex;"><span style="width:44px;flex:none;text-align:right;padding-right:16px;color:#BDBDBD;">1</span><span style="color:#8F8F8F;font-style:italic;"># 판정 API — 이미지 1장 입력, 양품/불량 판정 반환</span></div>
+<div style="display:flex;"><span style="width:44px;flex:none;text-align:right;padding-right:16px;color:#BDBDBD;">2</span><span><span style="color:#6B6B6B;">@router.post(</span><span style="color:#8F8F8F;">"/v1/inspect"</span><span style="color:#6B6B6B;">)</span></span></div>
+<div style="display:flex;"><span style="width:44px;flex:none;text-align:right;padding-right:16px;color:#BDBDBD;">3</span><span><b style="color:#1F1F1F;">async def</b><span style="color:#1F1F1F;font-weight:600;"> inspect</span><span>(req: InspectRequest) -&gt; InspectResult:</span></span></div>
+<div style="display:flex;"><span style="width:44px;flex:none;text-align:right;padding-right:16px;color:#BDBDBD;">4</span><span style="padding-left:4ch;display:flex;gap:3ch;"><span>img = preprocess(req.image)</span><span style="color:#8F8F8F;font-style:italic;"># 리사이즈 · 정규화</span></span></div>
+<div style="display:flex;"><span style="width:44px;flex:none;text-align:right;padding-right:16px;color:#BDBDBD;">5</span><span style="padding-left:4ch;"><b style="color:#1F1F1F;">with</b><span> tracer.span(</span><span style="color:#8F8F8F;">"inference"</span><span>):</span></span></div>
+<div style="display:flex;"><span style="width:44px;flex:none;text-align:right;padding-right:16px;color:#BDBDBD;">6</span><span style="padding-left:8ch;display:flex;gap:3ch;"><span>score = model.predict(img)</span><span style="color:#8F8F8F;font-style:italic;"># 엣지 GPU 추론</span></span></div>
+<div style="display:flex;"><span style="width:44px;flex:none;text-align:right;padding-right:16px;color:#BDBDBD;">7</span><span style="padding-left:4ch;color:#8F8F8F;font-style:italic;"># 임계치는 코드가 아닌 환경변수로 관리 (12-Factor III)</span></div>
+<div style="display:flex;"><span style="width:44px;flex:none;text-align:right;padding-right:16px;color:#BDBDBD;">8</span><span style="padding-left:4ch;">threshold = settings.DEFECT_THRESHOLD</span></div>
+<div style="display:flex;"><span style="width:44px;flex:none;text-align:right;padding-right:16px;color:#BDBDBD;">9</span><span style="padding-left:4ch;"><span>verdict = </span><span style="color:#8F8F8F;">"NG"</span><b style="color:#1F1F1F;"> if </b><span>score &gt;= threshold</span><b style="color:#1F1F1F;"> else </b><span style="color:#8F8F8F;">"OK"</span></span></div>
+<div style="display:flex;"><span style="width:44px;flex:none;text-align:right;padding-right:16px;color:#BDBDBD;">10</span><span style="padding-left:4ch;"><b style="color:#1F1F1F;">if</b><span> abs(score - threshold) &lt; settings.REVIEW_MARGIN:</span></span></div>
+<div style="display:flex;"><span style="width:44px;flex:none;text-align:right;padding-right:16px;color:#BDBDBD;">11</span><span style="padding-left:8ch;display:flex;gap:3ch;"><span><b style="color:#1F1F1F;">await</b><span> review_queue.put(req.id)</span></span><span style="color:#8F8F8F;font-style:italic;"># 경계 구간은 재검 큐로</span></span></div>
+<div style="display:flex;"><span style="width:44px;flex:none;text-align:right;padding-right:16px;color:#BDBDBD;">12</span><span style="padding-left:4ch;"><span>log.info(</span><span style="color:#8F8F8F;">"inspect"</span><span>, id=req.id, score=score, model=MODEL_VERSION)</span></span></div>
+<div style="display:flex;background:#F2F2F2;"><span style="width:44px;flex:none;text-align:right;padding-right:16px;color:#BDBDBD;">13</span><span style="padding-left:4ch;"><b style="color:#1F1F1F;">return</b><span> InspectResult(verdict=verdict, score=score)</span></span></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 05 pipeline -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">05 — PIPELINE</span><span style="font-size:22px;font-weight:600;">CI/CD 파이프라인</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">커밋 → 운영 평균 2h 14m · 승인 대기 포함</span></div>
+<div style="flex:999 1 640px;display:flex;flex-direction:column;gap:40px;">
+<div style="position:relative;background:#FFFFFF;border:1px solid #CFCFCF;padding:clamp(16px,3vw,32px);">
+<span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span>
+<div style="overflow-x:auto;overflow-y:hidden;">
+<svg viewBox="0 0 1000 230" style="width:100%;min-width:680px;display:block;font-family:Pretendard,sans-serif;">
+<defs><marker id="cd04arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1F1F1F"></path></marker></defs>
+<g stroke="#1F1F1F" stroke-width="1.5" marker-end="url(#cd04arr)"><line x1="140" y1="70" x2="158" y2="70"></line><line x1="280" y1="70" x2="298" y2="70"></line><line x1="420" y1="70" x2="438" y2="70"></line><line x1="560" y1="70" x2="578" y2="70"></line><line x1="700" y1="70" x2="718" y2="70"></line><line x1="840" y1="70" x2="858" y2="70"></line></g>
+<g fill="#FFFFFF" stroke="#1F1F1F" stroke-width="1.5"><rect x="20" y="40" width="120" height="60"></rect><rect x="160" y="40" width="120" height="60"></rect><rect x="300" y="40" width="120" height="60"></rect><rect x="440" y="40" width="120" height="60"></rect><rect x="580" y="40" width="120" height="60"></rect></g>
+<rect x="720" y="40" width="120" height="60" fill="#EDEDED" stroke="#1F1F1F" stroke-width="2.5"></rect>
+<rect x="860" y="40" width="120" height="60" fill="#1F1F1F"></rect>
+<g font-family="'Barlow Semi Condensed',sans-serif" font-size="12" font-weight="700" fill="#8F8F8F" letter-spacing="1.5"><text x="20" y="28">01</text><text x="160" y="28">02</text><text x="300" y="28">03</text><text x="440" y="28">04</text><text x="580" y="28">05</text><text x="720" y="28">06 · MANUAL</text><text x="860" y="28">07</text></g>
+<g font-size="14" font-weight="600" text-anchor="middle"><text x="80" y="68">커밋</text><text x="220" y="68">빌드</text><text x="360" y="68">단위 테스트</text><text x="500" y="68">정적 분석·보안</text><text x="640" y="68">스테이징 배포</text><text x="780" y="68">승인</text><text x="920" y="68" fill="#FFFFFF">운영 배포</text></g>
+<g font-family="'Barlow Semi Condensed',sans-serif" font-size="14" text-anchor="middle" fill="#6B6B6B"><text x="80" y="88">0s</text><text x="220" y="88">2m 10s</text><text x="360" y="88">3m 40s</text><text x="500" y="88">4m 05s</text><text x="640" y="88">1m 30s</text><text x="780" y="88">평균 2h</text><text x="920" y="88" fill="#D6D6D6">2m 50s</text></g>
+<g font-size="11" fill="#6B6B6B" text-anchor="middle"><text x="360" y="120">412건 · 커버리지 84%</text><text x="500" y="120">SAST · 의존성 · 이미지</text><text x="780" y="120">품질팀장 승인</text><text x="920" y="120">카나리 10% → 100%</text></g>
+<path d="M 920 130 L 920 180 L 640 180 L 640 104" fill="none" stroke="#1F1F1F" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#cd04arr)"></path>
+<text x="780" y="204" text-anchor="middle" font-size="13" fill="#3A3A3A" stroke="#FFFFFF" stroke-width="5" paint-order="stroke">롤백 경로 · 직전 안정 이미지 재배포 1m 20s</text>
+</svg>
+</div></div>
+<div style="display:flex;flex-direction:column;gap:12px;">
+<span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.16em;color:#6B6B6B;">최근 배포 이력</span>
+<div style="overflow-x:auto;">
+<table style="width:100%;min-width:600px;border-collapse:collapse;font-size:14px;line-height:1.5;">
+<thead><tr style="border-top:1.5px solid #1F1F1F;border-bottom:1px solid #1F1F1F;"><th style="padding:10px 8px 10px 0;font-weight:600;">버전</th><th style="padding:10px 8px;font-weight:600;">배포일</th><th style="padding:10px 8px;font-weight:600;">유형</th><th style="padding:10px 8px;font-weight:600;">변경 내용</th><th style="padding:10px 0 10px 8px;font-weight:600;">결과</th></tr></thead>
+<tbody>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:10px 8px 10px 0;font-family:'JetBrains Mono',monospace;font-weight:600;">v1.4.2</td><td style="padding:10px 8px;font-family:'Barlow Semi Condensed';font-size:15px;">2026.10.08</td><td style="padding:10px 8px;font-family:'Barlow Semi Condensed';font-weight:700;letter-spacing:.1em;color:#6B6B6B;">PATCH</td><td style="padding:10px 8px;color:#3A3A3A;">재검 큐 타임아웃 수정</td><td style="padding:10px 0 10px 8px;font-weight:600;">정상</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:10px 8px 10px 0;font-family:'JetBrains Mono',monospace;font-weight:600;">v1.4.1</td><td style="padding:10px 8px;font-family:'Barlow Semi Condensed';font-size:15px;">2026.10.01</td><td style="padding:10px 8px;font-family:'Barlow Semi Condensed';font-weight:700;letter-spacing:.1em;color:#6B6B6B;">PATCH</td><td style="padding:10px 8px;color:#3A3A3A;">판정 로그 필드 추가</td><td style="padding:10px 0 10px 8px;font-weight:600;">정상</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:10px 8px 10px 0;font-family:'JetBrains Mono',monospace;font-weight:600;">v1.4.0</td><td style="padding:10px 8px;font-family:'Barlow Semi Condensed';font-size:15px;">2026.09.24</td><td style="padding:10px 8px;font-family:'Barlow Semi Condensed';font-weight:700;letter-spacing:.1em;">MINOR</td><td style="padding:10px 8px;color:#3A3A3A;">라인 4 판정 모델 추가</td><td style="padding:10px 0 10px 8px;font-weight:600;">정상</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;background:#EDEDED;"><td style="padding:10px 8px 10px 0;font-family:'JetBrains Mono',monospace;font-weight:600;text-decoration:line-through;color:#6B6B6B;">v1.3.3</td><td style="padding:10px 8px;font-family:'Barlow Semi Condensed';font-size:15px;">2026.09.17</td><td style="padding:10px 8px;font-family:'Barlow Semi Condensed';font-weight:700;letter-spacing:.1em;color:#6B6B6B;">PATCH</td><td style="padding:10px 8px;color:#3A3A3A;">전처리 메모리 누수 → 18분 내 복구</td><td style="padding:10px 0 10px 8px;font-weight:600;">롤백 → v1.3.2</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:10px 8px 10px 0;font-family:'JetBrains Mono',monospace;font-weight:600;">v1.3.2</td><td style="padding:10px 8px;font-family:'Barlow Semi Condensed';font-size:15px;">2026.09.10</td><td style="padding:10px 8px;font-family:'Barlow Semi Condensed';font-weight:700;letter-spacing:.1em;color:#6B6B6B;">PATCH</td><td style="padding:10px 8px;color:#3A3A3A;">판정 임계치 환경변수화</td><td style="padding:10px 0 10px 8px;font-weight:600;">정상</td></tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 06 operations -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">06 — OPERATIONS</span><span style="font-size:22px;font-weight:600;">운영 지표</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">최근 12주 · 2026.07.20–10.11</span></div>
+<div style="flex:999 1 640px;display:flex;flex-direction:column;gap:24px;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;">
+<div style="position:relative;background:#FFFFFF;border:1px solid #CFCFCF;padding:20px;display:flex;flex-direction:column;gap:8px;"><span style="position:absolute;left:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="font-size:13px;color:#6B6B6B;">배포 빈도</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:40px;line-height:1;">2.1<span style="font-size:18px;font-weight:600;color:#6B6B6B;"> 회/주</span></span><span style="font-size:12px;color:#3A3A3A;">12주 누적 25회</span></div>
+<div style="position:relative;background:#FFFFFF;border:1px solid #CFCFCF;padding:20px;display:flex;flex-direction:column;gap:8px;"><span style="font-size:13px;color:#6B6B6B;">변경 리드타임</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:40px;line-height:1;">2.2<span style="font-size:18px;font-weight:600;color:#6B6B6B;"> 시간</span></span><span style="font-size:12px;color:#3A3A3A;">커밋 → 운영 중앙값</span></div>
+<div style="position:relative;background:#FFFFFF;border:1px solid #CFCFCF;padding:20px;display:flex;flex-direction:column;gap:8px;"><span style="font-size:13px;color:#6B6B6B;">변경 실패율</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:40px;line-height:1;">4.0<span style="font-size:18px;font-weight:600;color:#6B6B6B;"> %</span></span><span style="font-size:12px;color:#3A3A3A;">25회 중 롤백 1회</span></div>
+<div style="position:relative;background:#FFFFFF;border:1px solid #CFCFCF;padding:20px;display:flex;flex-direction:column;gap:8px;"><span style="position:absolute;right:-7px;top:-7px;width:13px;height:13px;background:linear-gradient(#8A8A8A,#8A8A8A) 6px 0/1px 13px no-repeat,linear-gradient(#8A8A8A,#8A8A8A) 0 6px/13px 1px no-repeat;"></span><span style="font-size:13px;color:#6B6B6B;">서비스 복구 시간</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:40px;line-height:1;">18<span style="font-size:18px;font-weight:600;color:#6B6B6B;"> 분</span></span><span style="font-size:12px;color:#3A3A3A;">v1.3.3 장애 기준</span></div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:16px;">
+<div style="flex:2 1 420px;background:#FFFFFF;border:1px solid #CFCFCF;padding:20px 20px 12px;display:flex;flex-direction:column;gap:8px;">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;"><span style="font-size:14px;font-weight:600;">SLO 달성률 · 주간 가용성</span><span style="display:flex;gap:16px;font-size:12px;color:#3A3A3A;"><span style="display:flex;align-items:center;gap:6px;"><span style="width:20px;border-top:2px solid #1F1F1F;"></span>실측</span><span style="display:flex;align-items:center;gap:6px;"><span style="width:20px;border-top:1.5px dashed #6B6B6B;"></span>SLO 99.5%</span></span></div>
+<svg viewBox="0 0 600 210" style="width:100%;display:block;font-family:'Barlow Semi Condensed',sans-serif;">
+<g stroke="#EDEDED"><line x1="50" y1="20" x2="580" y2="20"></line><line x1="50" y1="60" x2="580" y2="60"></line><line x1="50" y1="140" x2="580" y2="140"></line><line x1="50" y1="180" x2="580" y2="180"></line></g>
+<g font-size="12" fill="#8F8F8F" text-anchor="end"><text x="40" y="24">100.0</text><text x="40" y="104">99.5</text><text x="40" y="184">99.0</text></g>
+<line x1="50" y1="100" x2="580" y2="100" stroke="#6B6B6B" stroke-width="1.5" stroke-dasharray="6 4"></line>
+<polyline points="50,48.8 98.2,34.4 146.4,72.8 194.5,28 242.7,39.2 290.9,114.4 339.1,53.6 387.3,31.2 435.5,26.4 483.6,44 531.8,36 580,29.6" fill="none" stroke="#1F1F1F" stroke-width="2"></polyline>
+<g fill="#1F1F1F"><circle cx="50" cy="48.8" r="3"></circle><circle cx="98.2" cy="34.4" r="3"></circle><circle cx="146.4" cy="72.8" r="3"></circle><circle cx="194.5" cy="28" r="3"></circle><circle cx="242.7" cy="39.2" r="3"></circle><circle cx="339.1" cy="53.6" r="3"></circle><circle cx="387.3" cy="31.2" r="3"></circle><circle cx="435.5" cy="26.4" r="3"></circle><circle cx="483.6" cy="44" r="3"></circle><circle cx="531.8" cy="36" r="3"></circle><circle cx="580" cy="29.6" r="3"></circle></g>
+<circle cx="290.9" cy="114.4" r="5" fill="#FFFFFF" stroke="#1F1F1F" stroke-width="2"></circle>
+<text x="300" y="134" font-family="Pretendard,sans-serif" font-size="12" fill="#3A3A3A">W6 99.41% · v1.3.3 롤백</text>
+<g font-size="12" fill="#8F8F8F" text-anchor="middle"><text x="50" y="202">W1</text><text x="146.4" y="202">W3</text><text x="242.7" y="202">W5</text><text x="339.1" y="202">W7</text><text x="435.5" y="202">W9</text><text x="531.8" y="202">W11</text></g>
+</svg>
+</div>
+<div style="flex:1 1 240px;background:#FFFFFF;border:1px solid #CFCFCF;padding:20px;display:flex;flex-direction:column;gap:14px;">
+<span style="font-size:14px;font-weight:600;">에러 버짓 잔량 · 30일</span>
+<span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:44px;line-height:1;">71<span style="font-size:20px;color:#6B6B6B;"> %</span></span>
+<div style="display:flex;height:22px;border:1px solid #1F1F1F;"><div style="width:71%;background:#3A3A3A;"></div><div style="flex:1;background:repeating-linear-gradient(45deg,#FFFFFF 0 3px,#BDBDBD 3px 4px);"></div></div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;font-size:13px;color:#3A3A3A;">
+<span>허용 중단 (99.5%)</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;text-align:right;">216분</span>
+<span>사용</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;text-align:right;">62분</span>
+<span>잔여</span><span style="font-family:'Barlow Semi Condensed';font-weight:700;text-align:right;">154분</span>
+</div>
+<span style="font-size:12px;color:#6B6B6B;line-height:1.6;">잔량 25% 미만 시 기능 배포 동결 · 안정화 우선</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 07 quality -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">07 — QUALITY</span><span style="font-size:22px;font-weight:600;">품질 점검 결과</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">ISO/IEC 25010 특성별</span></div>
+<div style="flex:999 1 640px;overflow-x:auto;">
+<table style="width:100%;min-width:660px;border-collapse:collapse;font-size:14px;line-height:1.6;">
+<thead><tr style="border-top:2px solid #1F1F1F;border-bottom:1px solid #1F1F1F;"><th style="padding:12px 10px 12px 0;font-weight:600;">특성</th><th style="padding:12px 10px;font-weight:600;">점검 항목</th><th style="padding:12px 10px;font-weight:600;">결과</th><th style="padding:12px 0 12px 10px;font-weight:600;">근거</th></tr></thead>
+<tbody>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-weight:600;">기능 적합성</td><td style="padding:12px 10px;color:#3A3A3A;">판정 정확도</td><td style="padding:12px 10px;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:12px;letter-spacing:.12em;background:#1F1F1F;color:#FFFFFF;padding:3px 8px;">적합</span></td><td style="padding:12px 0 12px 10px;color:#3A3A3A;">블라인드 3,000건 · 검출률 95.4%</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-weight:600;">성능 효율성</td><td style="padding:12px 10px;color:#3A3A3A;">p95 응답 시간</td><td style="padding:12px 10px;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:12px;letter-spacing:.12em;background:#1F1F1F;color:#FFFFFF;padding:3px 8px;">적합</span></td><td style="padding:12px 0 12px 10px;color:#3A3A3A;">부하 20장/초 · p95 212ms</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-weight:600;">신뢰성</td><td style="padding:12px 10px;color:#3A3A3A;">장애 자동 복구</td><td style="padding:12px 10px;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:12px;letter-spacing:.12em;background:#1F1F1F;color:#FFFFFF;padding:3px 8px;">적합</span></td><td style="padding:12px 0 12px 10px;color:#3A3A3A;">노드 장애 주입 · 40초 내 재기동</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-weight:600;">보안성</td><td style="padding:12px 10px;color:#3A3A3A;">OWASP Top 10 · LLM Top 10</td><td style="padding:12px 10px;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:12px;letter-spacing:.12em;border:1px solid #1F1F1F;padding:2px 8px;white-space:nowrap;">조건부 적합</span></td><td style="padding:12px 0 12px 10px;color:#3A3A3A;">고위험 0 · 중위험 2건 v1.5 조치 예정</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-weight:600;">유지보수성</td><td style="padding:12px 10px;color:#3A3A3A;">커버리지 · 정적 분석</td><td style="padding:12px 10px;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:12px;letter-spacing:.12em;background:#1F1F1F;color:#FFFFFF;padding:3px 8px;">적합</span></td><td style="padding:12px 0 12px 10px;color:#3A3A3A;">커버리지 84% · 복잡도 경고 0</td></tr>
+<tr style="border-bottom:1px solid #CFCFCF;"><td style="padding:12px 10px 12px 0;font-weight:600;">이식성</td><td style="padding:12px 10px;color:#3A3A3A;">공장 간 재배포</td><td style="padding:12px 10px;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;font-size:12px;letter-spacing:.12em;background:#1F1F1F;color:#FFFFFF;padding:3px 8px;">적합</span></td><td style="padding:12px 0 12px 10px;color:#3A3A3A;">2공장 동일 Helm 차트 설치 35분</td></tr>
+</tbody></table>
+</div>
+</div>
+
+<!-- 08 handover -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">08 — HANDOVER</span><span style="font-size:22px;font-weight:600;">인수인계 패키지</span><span style="font-size:14px;color:#6B6B6B;line-height:1.6;margin-top:6px;">6개 항목 중 5개 완료</span></div>
+<div style="flex:999 1 640px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0 32px;border-top:1px solid #1F1F1F;">
+<div style="display:flex;gap:14px;padding:16px 0;border-bottom:1px solid #CFCFCF;"><span style="width:20px;height:20px;flex:none;background:#1F1F1F;color:#FFFFFF;font-size:13px;display:flex;align-items:center;justify-content:center;">✓</span><span style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:15px;font-weight:600;">README</span><span style="font-size:13px;color:#6B6B6B;">v1.4.2 반영 · 로컬 실행 5단계</span></span></div>
+<div style="display:flex;gap:14px;padding:16px 0;border-bottom:1px solid #CFCFCF;"><span style="width:20px;height:20px;flex:none;background:#1F1F1F;color:#FFFFFF;font-size:13px;display:flex;align-items:center;justify-content:center;">✓</span><span style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:15px;font-weight:600;">설치·배포 매뉴얼</span><span style="font-size:13px;color:#6B6B6B;">신규 공장 설치 · 롤백 절차 포함</span></span></div>
+<div style="display:flex;gap:14px;padding:16px 0;border-bottom:1px solid #CFCFCF;"><span style="width:20px;height:20px;flex:none;background:#1F1F1F;color:#FFFFFF;font-size:13px;display:flex;align-items:center;justify-content:center;">✓</span><span style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:15px;font-weight:600;">장애 대응 런북</span><span style="font-size:13px;color:#6B6B6B;">장애 시나리오 12건 · 연락 체계</span></span></div>
+<div style="display:flex;gap:14px;padding:16px 0;border-bottom:1px solid #CFCFCF;"><span style="width:20px;height:20px;flex:none;background:#1F1F1F;color:#FFFFFF;font-size:13px;display:flex;align-items:center;justify-content:center;">✓</span><span style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:15px;font-weight:600;">테스트 커버리지 보고서</span><span style="font-size:13px;color:#6B6B6B;">라인 84% · 분기 71%</span></span></div>
+<div style="display:flex;gap:14px;padding:16px 0;border-bottom:1px solid #CFCFCF;"><span style="width:20px;height:20px;flex:none;background:#1F1F1F;color:#FFFFFF;font-size:13px;display:flex;align-items:center;justify-content:center;">✓</span><span style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:15px;font-weight:600;">오픈소스 라이선스 목록</span><span style="font-size:13px;color:#6B6B6B;">패키지 186개 · GPL 계열 0</span></span></div>
+<div style="display:flex;gap:14px;padding:16px 0;border-bottom:1px solid #CFCFCF;"><span style="width:20px;height:20px;flex:none;box-sizing:border-box;border:1.5px solid #1F1F1F;background:linear-gradient(90deg,#8F8F8F 66%,#FFFFFF 66%);"></span><span style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:15px;font-weight:600;">운영 교육 이력</span><span style="font-size:13px;color:#6B6B6B;">3회 중 2회 완료 · 최종 2026.10.20</span></span></div>
+</div>
+</div>
+
+<!-- 09 reference -->
+<div style="display:flex;flex-wrap:wrap;gap:24px 40px;padding:40px 0;">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:#6B6B6B;">09 — REFERENCE</span><span style="font-size:22px;font-weight:600;">출처</span></div>
+<ol style="flex:999 1 640px;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;font-size:14px;line-height:1.6;color:#3A3A3A;border-top:1px solid #1F1F1F;">
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">1</span><span>Wiggins, A. <i>The Twelve-Factor App</i>. 12factor.net.</span></li>
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">2</span><span>Forsgren, N., Humble, J., &amp; Kim, G. (2018). <i>Accelerate</i>. IT Revolution · DORA State of DevOps Reports.</span></li>
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">3</span><span>Beyer, B., Jones, C., Petoff, J., &amp; Murphy, N. R. (2016). <i>Site Reliability Engineering</i>. O’Reilly.</span></li>
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">4</span><span>ISO/IEC 25010. Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model.</span></li>
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">5</span><span>OWASP Foundation. OWASP Top 10 · OWASP Top 10 for LLM Applications.</span></li>
+<li style="display:flex;gap:16px;padding:10px 0;border-bottom:1px solid #CFCFCF;"><span style="font-family:'Barlow Semi Condensed';font-weight:700;color:#BDBDBD;width:20px;flex:none;">6</span><span>Preston-Werner, T. <i>Semantic Versioning 2.0.0</i>. semver.org.</span></li>
+</ol>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:40px;margin-top:24px;border-top:1px solid #CFCFCF;font-size:13px;color:#6B6B6B;">
+<span>본 페이지의 수치와 사례는 설명을 위한 가상 예시임</span>
+<span style="font-family:'Barlow Semi Condensed',sans-serif;letter-spacing:.12em;">SW-REL-2026-142 · 04 / 06</span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showGrid&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showGrid: this.props.showGrid ?? false, cols: Array.from({ length: 12 }, (_, i) => i) };
+  }
+}
+</script>
+</body>
+</html>
